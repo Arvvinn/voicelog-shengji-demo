@@ -1,13 +1,13 @@
 /* Single delegate; input handlers attach to their own stable element. */
 function getActiveGraph(){return fullGraphView||graphView}
-function openRelated(scope,selected){S.graphScope=scope;openFullGraph(scope,selected)}
+function openRelated(scope,selected){S.graphScope=scope;openFullGraph(scope,selected);updateDesktopGuideActive()}
 function leaveOverlays(){S.graphResume=null;if(S.graphFull)closeFullGraph();if(S.sheet)closeSheet(true)}
 function selectedContext(){return S.route==='block'?{kind:'block',id:S.blockId}:currentGraphScope()}
 function renderDesktopGuide(){
  const host=document.querySelector('.desktop-note');if(!host)return;
  const entries=[
-  ['01','时间线','按真实时段回看这一天','nav','data-route="home"'],
-  ['02','人物交汇','拖动时间线，看谁在场','desktop-people',''],
+  ['01','时间线','按真实时段回看这一天','desktop-timeline',''],
+  ['02','人物交汇','上下滑动时间线，看谁在场','desktop-people',''],
   ['03','交流理解','候选解释与回应草稿','person','data-id="lin"'],
   ['04','原话与来源','核对出处并回到记录','ref','data-id="r-e02-2"'],
   ['05','日历与提醒','草稿确认、保存和导出','calendar',''],
@@ -22,10 +22,15 @@ function renderDesktopGuide(){
   ['14','夜间声音','查看夜间预览的边界','sleep',''],
   ['15','记录与隐私','采集、保存与撤销','privacy','']
  ];
- const item=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item" data-act="${act}" ${attrs}><span class="desktop-guide-index">${index}</span><span class="desktop-guide-copy"><strong>${title}</strong><small>${desc}</small></span><span class="desktop-guide-arrow" aria-hidden="true">↗</span></button>`;
- host.innerHTML=`<div class="desktop-guide-head"><div class="desktop-brand"><span class="logo-mark">∿</span><b>VoiceLog</b><span>声迹</span></div><p>从一句原话，走到可追溯的下一步。<small>15 项直达 ↓</small></p></div><div class="desktop-guide-product"><img src="${PRODUCT}" alt="soundcore Work 3200 录音豆"><div><strong>Work 3200</strong><small>录音豆采集示例</small></div></div><nav class="desktop-guide-nav" aria-label="评委演示直达"><div class="desktop-guide-group">演示主线 <span>01—05</span></div>${entries.slice(0,5).map(item).join('')}<div class="desktop-guide-group">探索更多 <span>06—10</span></div>${entries.slice(5,10).map(item).join('')}<div class="desktop-guide-group">细节亮点 <span>11—15</span></div>${entries.slice(10).map(item).join('')}</nav><div class="desktop-guide-foot">离线交互样例 · 示例资料<br>所有入口均可点击体验</div>`;
+ const tile=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item desktop-guide-tile" data-guide-index="${index}" data-act="${act}" ${attrs} aria-label="${title}：${desc}"><small>${index}</small><strong>${title}</strong><span aria-hidden="true">↗</span></button>`;
+ const row=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item desktop-guide-row" data-guide-index="${index}" data-act="${act}" ${attrs}><span class="desktop-guide-index">${index}</span><span class="desktop-guide-copy"><strong>${title}</strong><small>${desc}</small></span><span class="desktop-guide-arrow" aria-hidden="true">↗</span></button>`;
+ host.innerHTML=`<div class="desktop-guide-topline"><span>声迹 · 功能直达</span><span>15 项入口</span></div><div class="desktop-guide-story"><span>EXPLORE 01—15</span><h2>从一天，看到下一步</h2><p>点击右侧功能，左边的应用会直接打开对应页面；也可以跟着演示走一遍。</p></div><button type="button" class="desktop-guide-product" data-act="device" aria-label="查看 Work 3200 录音豆"><img src="${PRODUCT}" alt="soundcore Work 3200 录音豆"><span class="desktop-guide-product-copy"><strong>Work 3200</strong><small>录音豆 · 采集入口在第一屏</small></span><span aria-hidden="true">↗</span></button><button type="button" class="desktop-demo-entry" data-demo-action="open"><span class="desktop-demo-play">▶</span><span><strong>一键演示</strong><small>约 50 秒 · 自动走过核心路径</small></span><span aria-hidden="true">→</span></button><nav class="desktop-guide-nav" aria-label="评委功能直达"><div class="desktop-guide-section"><strong>演示主线</strong><span>点击功能直达</span></div><div class="desktop-guide-grid">${entries.slice(0,9).map(tile).join('')}</div><div class="desktop-guide-section desktop-guide-section-more"><strong>继续探索</strong><span>10—15</span></div><div class="desktop-guide-list">${entries.slice(9).map(row).join('')}</div></nav><div class="desktop-guide-foot">离线示例 · 点击入口在左侧查看</div>`;
 }
 renderDesktopGuide();
+function updateDesktopGuideActive(){
+ const active=S.graphFull?'07':S.route==='home'?(S.homeMode==='people'?'02':'01'):{person:'03',calendar:'05',scenes:'06',relations:'07',chat:'08',device:'09',appearance:'10',recap:'11',learning:'12',mood:'13',sleep:'14',privacy:'15'}[S.route];
+ document.querySelectorAll('.desktop-guide-item').forEach(el=>{const on=el.dataset.guideIndex===active;el.classList.toggle('active',on);el.setAttribute('aria-current',on?'page':'false')});
+}
 function animateBlock(id){const content=$('#content'),old=document.querySelector(`[data-block="${id}"]`),oldY=old?.getBoundingClientRect().top;S.expandedBlock=S.expandedBlock===id?null:id;const scroll=content.scrollTop;render();const next=document.querySelector(`[data-block="${id}"]`);if(next&&oldY!=null)content.scrollTop=scroll+next.getBoundingClientRect().top-oldY;const bd=next?.querySelector('.block-body');if(bd&&!reduced())bd.animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'translateY(0)'}],{duration:200,easing:'cubic-bezier(.23,1,.32,1)'})}
 function copyText(text){if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(text).then(()=>toast('已复制，未发送。')).catch(()=>fallback());return fallback();function fallback(){const t=document.createElement('textarea');t.value=text;t.style.cssText='position:fixed;left:-9999px';document.body.append(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}t.remove();toast(ok?'已复制，未发送。':'可以选中并复制草稿文字。')}}
 function startRecording(){if(S.record==='idle'){if(!S.connected){openSheet('record');toast('设备状态待核实，先连接录音豆。');return}S.record='recording';S.recordSeconds=0;S.recordMarks=[];S.recordNote='';clearInterval(S.recordTimer);S.recordTimer=setInterval(()=>{if(S.record==='recording'){S.recordSeconds++;let el=$('#record-clock');if(el)el.textContent=clock(S.recordSeconds)}},1000)}openSheet('record');header()}
@@ -33,6 +38,8 @@ function stopRecording(){if(!['recording','paused'].includes(S.record))return;S.
 function graphNavigate(action,id){const g=getActiveGraph(),n=g?.g.nodes.find(n=>n.id===id);let scope=n?.episodeId?{kind:'episode',id:n.episodeId}:n?.blockId?{kind:'block',id:n.blockId}:n?.personId?{kind:'person',id:n.personId}:clone(g?.scope||S.graphScope);leaveOverlays();if(action==='chat'){navigate('chat',{scope});return}if(action==='episode')navigate('episode',{selectedEpisode:id,recordTab:'记录'});else if(action==='person')navigate('person',{person:id});}
 function dispatch(act,d={}){
  switch(act){
+ case 'tour-open':window.VoiceLogDemo?.open({play:true});return;
+ case 'desktop-timeline':leaveOverlays();S.route='home';S.homeMode='time';S.stack=[];render();$('#content').scrollTop=0;return;
  case 'nav':leaveOverlays();S.stack=[];S.route=d.route;S.tab='总览';if(d.route==='chat')S.scope=S.date==='all'?{kind:'all'}:{kind:'date',id:S.date};render();$('#content').scrollTop=0;return;
  case 'back':return back();case 'close-sheet':return closeSheet();
  case 'date':if(S.sheet?.kind==='date-picker')closeSheet(true);S.date=d.date;S.peopleDate=d.date==='all'?DATA.dates[0]:d.date;S.expandedBlock=d.date===DATA.dates[1]?'b-day2':'b-am';S.peopleOrder=[];render();$('#content').scrollTop=0;return;

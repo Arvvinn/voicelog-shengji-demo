@@ -1005,6 +1005,187 @@ body,.stage {
 /* Route changes must start at the top, even after scrolling another destination. */
 .content { scroll-behavior: auto; }
 .graph-canvas:focus-visible { outline: 1px solid rgb(36 92 71 / 22%); outline-offset: -1px; }
+
+.desktop-demo-entry{display:flex;align-items:center;gap:11px;width:100%;min-height:66px;margin:1px 0 14px;padding:10px 13px;border:1px solid rgba(255,255,255,.9);border-radius:17px;background:linear-gradient(135deg,#c9e975,#e8f6c7 68%,#f6fbec);color:#204f3e;text-align:left;box-shadow:0 8px 20px rgba(46,89,49,.12),inset 0 1px 0 #fff;}
+.desktop-demo-entry:hover{transform:translateY(-2px);box-shadow:0 12px 24px rgba(46,89,49,.17),inset 0 1px 0 #fff;}
+.desktop-demo-entry>span:nth-child(2){display:grid;flex:1;min-width:0;gap:2px}.desktop-demo-entry strong{font-size:15px;font-weight:750}.desktop-demo-entry small{font-size:10px;color:#54745b;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.desktop-demo-entry>span:last-child{font-size:17px}.desktop-demo-play{display:grid;place-items:center;width:34px;height:34px;border-radius:11px;background:#245e48;color:#fff;font-size:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.28)}
+body.demo-presentation{height:100dvh;overflow:hidden;background:radial-gradient(circle at 8% 12%,#e2eecb 0,transparent 36%),radial-gradient(circle at 93% 83%,#dce9dd 0,transparent 38%),#edf2e9}
+.demo-presentation .stage{height:calc(100dvh - 62px);padding:13px 16px 22px;gap:24px;align-items:center;justify-content:center}
+.demo-presentation .desktop-note{display:none!important}
+.demo-presentation .phone{width:390px;height:min(844px,calc(100dvh - 94px));min-height:0;flex:none;box-shadow:0 24px 66px rgba(35,57,39,.17),0 0 0 1px rgba(255,255,255,.82)}
+.demo-topbar{height:62px;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:0 clamp(20px,4vw,60px);border-bottom:1px solid rgba(88,115,83,.12);background:linear-gradient(115deg,rgba(255,255,255,.68),rgba(244,250,235,.38));box-shadow:inset 0 1px 0 rgba(255,255,255,.9)}
+.demo-wordmark,.demo-top-actions{display:flex;align-items:center;gap:11px}.demo-wordmark strong{font-size:17px;letter-spacing:-.4px}.demo-wordmark small{font-size:12px;font-weight:500;color:#71806d}.demo-mark{display:grid;place-items:center;width:31px;height:31px;border-radius:10px;background:#c6e66f;color:#245e48;font-size:27px;line-height:1}.demo-top-label{margin-left:5px;padding-left:15px;border-left:1px solid #bacbb5;color:#536b57;font-size:12px;letter-spacing:.12em}.demo-offline{font-size:11px;color:#6f7e70}.demo-top-actions button{min-height:36px;padding:8px 12px;border:1px solid rgba(255,255,255,.85);border-radius:10px;background:rgba(255,255,255,.55);font-size:11px;color:#315b47;box-shadow:inset 0 1px 0 #fff}.demo-top-actions button:hover{background:#fff}
+#demo-board{width:390px;height:min(844px,calc(100dvh - 94px));min-height:0;flex:none;overflow:auto;scrollbar-width:thin;padding:29px 26px 21px;border:1px solid rgba(255,255,255,.92);border-radius:25px;background:linear-gradient(145deg,rgba(255,255,255,.78),rgba(245,251,237,.5) 70%,rgba(230,245,219,.38));-webkit-backdrop-filter:blur(18px) saturate(1.24);backdrop-filter:blur(18px) saturate(1.24);box-shadow:0 24px 68px rgba(36,65,38,.1),inset 0 1px 0 rgba(255,255,255,.98),inset 0 -1px 0 rgba(135,168,132,.14);color:#20372b}
+.demo-board-top{display:flex;align-items:center;gap:8px}.demo-eyebrow{font-size:11px;font-weight:700;letter-spacing:.14em;color:#527255}.demo-count{font-size:11px;color:#799477;font-variant-numeric:tabular-nums}.demo-status{display:flex;align-items:center;gap:6px;margin-left:auto;font-size:10px;color:#71816f;white-space:nowrap}.demo-status i{width:7px;height:7px;border-radius:50%;background:#9aae8b}.demo-status.playing i{background:#83bb4e;box-shadow:0 0 0 4px rgba(148,199,84,.2)}
+.demo-story{min-height:213px;padding:27px 0 16px}.demo-chapter-no{display:inline-block;color:#76916c;font-size:10px;font-weight:700;letter-spacing:.18em}.demo-story h2{margin:12px 0 9px;font-size:32px;line-height:1.27;letter-spacing:-1.35px;color:#1c362a}.demo-story p{margin:0;font-size:14px;line-height:1.8;color:#617460;min-height:78px}
+.demo-route{padding:13px 15px;border:1px solid rgba(111,151,104,.22);border-radius:15px;background:rgba(243,250,235,.5)}.demo-route>span{display:block;margin-bottom:7px;color:#70816c;font-size:10px;letter-spacing:.1em}.demo-route strong{display:block;color:#7b8a77;font-size:10px;font-weight:500;line-height:1.8}.demo-route b{font-weight:400;color:#adc1a6}.demo-route em{color:#245e48;font-style:normal;font-weight:750}.demo-progress{height:5px;margin:20px 0 16px;border-radius:99px;background:#dce8d4;overflow:hidden}.demo-progress i{display:block;height:100%;border-radius:inherit;background:linear-gradient(90deg,#3b7a58,#bee369);transition:width .25s ease}
+.demo-controls{display:grid;grid-template-columns:42px minmax(0,1fr) 42px 49px;gap:7px}.demo-controls button{height:43px;border-radius:12px;border:1px solid rgba(118,148,111,.17);background:rgba(255,255,255,.68);font-size:14px;box-shadow:inset 0 1px 0 #fff}.demo-controls button:hover{background:#fff}.demo-controls .demo-primary{background:#245e48;color:#fff;font-size:13px;font-weight:650;box-shadow:0 5px 13px rgba(34,91,65,.2),inset 0 1px 0 rgba(255,255,255,.28)}.demo-controls .demo-primary:hover{background:#2e6c51}.demo-controls .demo-speed{font-size:11px;color:#245e48;font-weight:700;font-variant-numeric:tabular-nums}
+.demo-chapter-head{display:flex;justify-content:space-between;margin:23px 1px 9px;color:#73856e;font-size:10px}.demo-chapter-head span:first-child{color:#315b42;font-weight:750}.demo-chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.demo-chapters button{min-height:42px;display:flex;align-items:center;gap:5px;padding:7px 8px;border:1px solid rgba(160,184,150,.24);border-radius:10px;background:rgba(255,255,255,.5);font-size:11px;white-space:nowrap}.demo-chapters button small{font-size:9px;color:#9aa998;font-variant-numeric:tabular-nums}.demo-chapters button.active{background:#e0f0bd;border-color:#c8e099;color:#22543f;font-weight:700}.demo-chapters button.active small{color:#558655}.demo-chapters button:hover{border-color:#b5d48e;background:#f5fbeb}
+.demo-board-foot{display:flex;align-items:center;gap:8px;margin-top:17px;padding-top:13px;border-top:1px solid rgba(82,112,80,.12);color:#83907e;font-size:10px;line-height:1.6}.demo-board-foot span{flex:1}.demo-board-foot button{flex:none;padding:5px 7px;border-radius:7px;background:rgba(255,255,255,.5);color:#42664d;font-size:10px}
+.demo-focus{position:absolute;z-index:95;pointer-events:none;border:2px solid #80ba56;border-radius:15px;background:rgba(204,238,149,.075);box-shadow:0 0 0 4px rgba(231,250,199,.45),0 8px 30px rgba(71,130,72,.1);transition:left .3s ease,top .3s ease,width .3s ease,height .3s ease;animation:demo-focus-enter .35s ease both}.demo-focus[hidden]{display:none}@keyframes demo-focus-enter{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:scale(1)}}
+@media(max-width:835px){.demo-topbar{height:46px;padding:0 13px}.demo-wordmark{gap:6px}.demo-wordmark strong{font-size:14px}.demo-wordmark small,.demo-top-label,.demo-offline{display:none}.demo-mark{width:27px;height:27px;font-size:23px}.demo-top-actions{gap:5px}.demo-top-actions button{min-height:30px;padding:5px 7px;font-size:10px}.demo-presentation .stage{height:calc(100dvh - 46px);display:flex;flex-direction:column;gap:0;padding:0;justify-content:flex-start}.demo-presentation .phone{width:100%;max-width:480px;height:auto;min-height:0;flex:1;border-radius:0;box-shadow:none}.demo-presentation #demo-board{width:100%;max-width:480px;height:190px;flex:none;overflow:auto;border-radius:20px 20px 0 0;padding:11px 15px calc(10px + env(safe-area-inset-bottom,0px));box-shadow:0 -10px 32px rgba(38,75,46,.11)}.demo-board-top{gap:5px}.demo-eyebrow,.demo-count,.demo-status{font-size:9px}.demo-story{min-height:0;padding:7px 0 5px}.demo-chapter-no{display:none}.demo-story h2{font-size:18px;margin:0 0 2px;letter-spacing:-.4px}.demo-story p{min-height:30px;max-height:30px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font-size:10px;line-height:1.5;white-space:normal;overflow:hidden}.demo-route,.demo-chapter-head,.demo-board-foot{display:none}.demo-progress{height:3px;margin:6px 0 8px}.demo-controls{grid-template-columns:36px minmax(0,1fr) 36px 45px;gap:5px}.demo-controls button{height:34px;border-radius:9px;font-size:12px}.demo-controls .demo-primary{font-size:11px}.demo-chapters{display:flex;overflow:auto;scrollbar-width:none;gap:5px;margin-top:8px}.demo-chapters button{min-height:27px;flex:none;padding:5px 7px;font-size:10px}.demo-chapters button small{font-size:8px}.demo-presentation #phone .content{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}.demo-presentation #phone .nav{height:67px;min-height:67px;padding-bottom:13px}.demo-presentation #phone .nav:after{bottom:3px}.demo-presentation #phone .people-viewport{height:265px}.demo-presentation #phone .graph-stage{min-height:155px}.demo-presentation #phone .graph-inspector{height:125px;min-height:125px;max-height:34%;padding:9px 14px}.demo-presentation #phone .graph-inspector h3{font-size:14px}}
+@media(max-width:359px){.demo-presentation #demo-board{height:185px}.demo-story h2{font-size:16px}}
+@media(prefers-reduced-motion:reduce){.demo-focus,.demo-progress i{animation:none;transition:none}}
+
+/* The desktop guide shares the presentation board's two-phone composition. */
+@media (min-width:836px) {
+  body:not(.demo-presentation) .stage {
+    flex-direction: row-reverse;
+    gap: 24px;
+    padding: 16px;
+  }
+  body:not(.demo-presentation) .desktop-note {
+    width: 390px;
+    height: min(844px, calc(100dvh - 32px));
+    max-height: none;
+    flex: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 27px 25px 20px;
+    border: 1px solid rgba(255,255,255,.92);
+    border-radius: 25px;
+    background: linear-gradient(145deg,rgba(255,255,255,.78),rgba(245,251,237,.5) 70%,rgba(230,245,219,.38));
+    -webkit-backdrop-filter: blur(18px) saturate(1.24);
+    backdrop-filter: blur(18px) saturate(1.24);
+    box-shadow: 0 24px 68px rgba(36,65,38,.1),inset 0 1px 0 rgba(255,255,255,.98),inset 0 -1px 0 rgba(135,168,132,.14);
+    scrollbar-width: thin;
+    scrollbar-color: rgba(68,105,75,.28) transparent;
+  }
+  body:not(.demo-presentation) .phone {
+    width: 390px;
+    height: min(844px, calc(100dvh - 32px));
+    flex: none;
+  }
+  .desktop-note::-webkit-scrollbar { width: 5px; }
+  .desktop-note::-webkit-scrollbar-thumb { border-radius: 10px; background: rgba(68,105,75,.26); }
+}
+.desktop-guide-topline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: #4b7053;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.desktop-guide-topline span:last-child {
+  color: #81967d;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.desktop-guide-story { padding: 13px 0 9px; }
+.desktop-guide-story>span {
+  color: #799270;
+  font-size: 10px;
+  letter-spacing: .18em;
+  font-weight: 700;
+}
+.desktop-guide-story h2 {
+  margin: 5px 0 4px;
+  color: #1d382b;
+  font-size: 26px;
+  line-height: 1.24;
+  letter-spacing: -1px;
+  font-weight: 750;
+}
+.desktop-guide-story p {
+  margin: 0;
+  color: #657961;
+  font-size: 11.5px;
+  line-height: 1.55;
+}
+.desktop-guide-product {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  width: 100%;
+  min-height: 58px;
+  padding: 7px 11px;
+  border: 1px solid rgba(255,255,255,.88);
+  border-radius: 15px;
+  background: rgba(255,255,255,.53);
+  box-shadow: inset 0 1px 0 #fff;
+  text-align: left;
+}
+.desktop-guide-product img { width: 47px; height: 47px; object-fit: contain; mix-blend-mode: multiply; }
+.desktop-guide-product .desktop-guide-product-copy { flex: 1; display: grid; gap: 1px; min-width: 0; }
+.desktop-guide-product strong { font-size: 13px; color: #263e30; }
+.desktop-guide-product small { font-size: 10px; color: #788875; }
+.desktop-guide-product>span { color: #748e78; font-size: 15px; }
+.desktop-guide-product:hover { background: rgba(255,255,255,.76); border-color: #c8dea9; }
+.desktop-note .desktop-demo-entry {
+  min-height: 55px;
+  margin: 8px 0 12px;
+  padding: 9px 12px;
+  border-radius: 15px;
+  background: linear-gradient(120deg,#245e48,#367a57);
+  color: #fff;
+  box-shadow: 0 8px 17px rgba(35,89,64,.19),inset 0 1px 0 rgba(255,255,255,.3);
+}
+.desktop-note .desktop-demo-entry:hover { background: linear-gradient(120deg,#2c6e51,#418761); }
+.desktop-note .desktop-demo-play { width: 36px; height: 36px; background: rgba(255,255,255,.19); box-shadow: inset 0 1px 0 rgba(255,255,255,.27); }
+.desktop-note .desktop-demo-entry strong { color: #fff; font-size: 14px; }
+.desktop-note .desktop-demo-entry small { color: #d3ead7; font-size: 10px; }
+.desktop-note .desktop-demo-entry>span:last-child { color: #e9f6e7; }
+.desktop-guide-nav { display: block; margin-top: 0; }
+.desktop-guide-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 1px 9px;
+  color: #315c42;
+  font-size: 11px;
+}
+.desktop-guide-section strong { font-weight: 750; }
+.desktop-guide-section span { color: #82917d; font-size: 10px; }
+.desktop-guide-section-more { margin-top: 12px; padding-top: 11px; border-top: 1px solid rgba(84,115,80,.13); }
+.desktop-guide-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 7px; }
+.desktop-guide-tile {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  gap: 1px 4px;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  padding: 7px 8px;
+  border: 1px solid rgba(156,183,146,.23);
+  border-radius: 11px;
+  background: rgba(255,255,255,.52);
+  text-align: left;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8);
+}
+.desktop-guide-tile small { grid-column: 1; grid-row: 1; color: #93a28f; font-size: 9px; font-variant-numeric: tabular-nums; }
+.desktop-guide-tile strong { grid-column: 1 / 3; grid-row: 2; color: #304638; font-size: 12px; line-height: 17px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.desktop-guide-tile>span { grid-column: 2; grid-row: 1; color: #8aa486; font-size: 12px; line-height: 13px; }
+.desktop-guide-tile:hover,.desktop-guide-tile:focus-visible { border-color: #b8d797; background: #f5fbea; transform: translateY(-1px); }
+.desktop-guide-tile.active { border-color: #c3e090; background: linear-gradient(145deg,#dff0b8,#eaf7d2); }
+.desktop-guide-tile.active small,.desktop-guide-tile.active strong,.desktop-guide-tile.active>span { color: #245e48; }
+.desktop-guide-list { display: grid; gap: 1px; }
+.desktop-guide-row {
+  min-height: 43px;
+  padding: 5px 5px;
+  border: 1px solid transparent;
+  border-bottom-color: rgba(84,115,80,.11);
+  border-radius: 9px;
+}
+.desktop-guide-row:last-child { border-bottom-color: transparent; }
+.desktop-guide-row:hover,.desktop-guide-row:focus-visible { border-color: rgba(178,211,155,.64); background: rgba(255,255,255,.66); }
+.desktop-guide-row.active { border-color: #c8dfa4; background: rgba(223,241,188,.69); }
+.desktop-guide-row .desktop-guide-index { padding-top: 3px; }
+.desktop-guide-row .desktop-guide-copy { gap: 0; }
+.desktop-guide-row .desktop-guide-copy strong { font-size: 12px; line-height: 17px; }
+.desktop-guide-row .desktop-guide-copy small { font-size: 10px; line-height: 15px; }
+.desktop-guide-foot { margin: 11px 4px 0; padding-top: 11px; font-size: 10px; }
+@media (max-width:835px) {
+  body:not(.demo-presentation) .desktop-note { display: none; }
+  body:not(.demo-presentation) .stage { padding: 0; gap: 0; }
+  body:not(.demo-presentation) .phone { width: 100%; max-width: 480px; height: 100dvh; border-radius: 0; box-shadow: none; }
+}
 </style></head><body><div class="stage"><aside class="desktop-note"><div class="desktop-brand"><span class="logo-mark">∿</span><b>VoiceLog</b><span>声迹</span></div><img class="desktop-product" src="data:image/webp;base64,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" alt="用户提供的 soundcore Work 3200 实物图"><div class="desktop-tools"><button data-act="nav" data-route="home">01　我的一天 <span>↗</span></button><button data-act="desktop-people">02　人物交汇 <span>↗</span></button><button data-act="open-full-graph" data-scope="all">03　关联记忆 <span>↗</span></button></div><div class="desktop-meta">v1.1 · 离线交互样例<br>示例资料 · 不连接外部服务</div></aside><section id="phone" class="phone" aria-label="VoiceLog 应用"><div class="statusbar"><span>9:41</span><span class="status-icons" aria-hidden="true"><svg viewBox="0 0 43 16"><path d="M2 13V10m4 3V7m4 6V4m4 9V2" stroke-width="2.4"/><path d="M22 6c4-4 10-4 14 0m-11 3c2-2 6-2 8 0m-5 3h2" stroke-width="1.8"/></svg><i></i></span></div><header id="appheader" class="appheader"></header><main id="content" class="content"></main><nav id="nav" class="nav" aria-label="主导航"></nav><div id="overlays"></div><div id="toast-root" aria-live="polite"></div></section></div><script id="fixture" type="application/json">{
   "version": "1.1.0",
   "brand": "VoiceLog / 声迹",
@@ -5161,7 +5342,7 @@ function recapPage(){let blocks=C.sceneBlocks(DATA,S.date),stats=C.dayStats(DATA
 function learningPage(){const shift=S.intervalShift??8,sets=[[0,12],[shift,shift+10]],total=C.durationMinutes(sets.map(v=>v.map(n=>n*60000)));return `<div class="path">学习与答疑 · 11:20</div><h2>重叠的时间，<br>只记一次</h2><div class="quote">同一个人的重叠交流区间，先合并，再累计。${ref('r-e04-1','原话')}</div><div class="card"><span class="tag blue">交互讲解</span><div class="plot"><svg viewBox="0 0 300 152" aria-label="两段交流的区间并集"><line x1="15" y1="128" x2="285" y2="128" stroke="#c6d2bc"/>${[0,5,10,15,20,25,30].map(n=>`<text x="${15+n*9}" y="145" text-anchor="middle" font-size="9" fill="#7c8b71">${n}</text>`).join('')}<rect x="15" y="26" width="108" height="26" rx="8" fill="#bedf55"/><text x="25" y="43" font-size="10" fill="#1a2921">交流 A · 12 分</text><rect x="${15+shift*9}" y="65" width="90" height="26" rx="8" fill="#285e4e"/><text x="${24+shift*9}" y="82" font-size="10" fill="white">交流 B · 10 分</text>${C.unionIntervals(sets).map(v=>`<rect x="${15+v[0]*9}" y="108" width="${(v[1]-v[0])*9}" height="8" rx="4" fill="#336cdd"/>`).join('')}</svg></div><label class="sub" for="interval-range">B 从第 ${shift} 分钟开始</label><input id="interval-range" type="range" min="0" max="18" value="${shift}" aria-label="调整第二段开始时间"><div class="metrics two"><div class="metric"><strong>22</strong><small>直接相加 / 分钟</small></div><div class="metric"><strong id="union-total">${total}</strong><small>合并后 / 分钟</small></div></div></div><div class="sub">练习：把 B 移到第 12 分钟，两段还重叠吗？</div><div class="actions-row" style="margin-top:12px">${b('learning-answer','不重叠','pill','data-answer="correct"')}${b('learning-answer','还重叠','pill','data-answer="wrong"')}</div>${S.learningFeedback?`<div class="notice">${esc(S.learningFeedback)}</div>`:''}${b('ask-learning',icon('chat')+' 接着问这段答疑','fullbtn')}`}
 function sleepPage(){return `<div class="card dark"><span class="tag" style="background:#3c5143;color:#deead7">后续预览</span><div style="margin:26px 0 20px">${icon('moon')}</div><h2>夜间声音</h2><p style="color:#ccd9c3;font-size:13px">未来可以接到一天的末尾。</p></div><div class="metrics two">${['鼾声片段','夜间人声','环境声音','活动声音'].map(t=>`<div class="metric"><strong>—</strong><small>${t}</small></div>`).join('')}</div><div class="preview">尚未接入睡眠分析。当前没有检测结果。</div>${b('dream-note','记下醒后的梦','fullbtn secondary')}`}
 function devicePage(){return `<img src="${PRODUCT}" alt="soundcore Work 3200 实际产品图" style="width:190px;height:210px;object-fit:contain;margin:8px auto 22px;mix-blend-mode:multiply"><h2 style="text-align:center">Work 3200</h2><p class="sub" style="text-align:center">${S.connected?'示例连接 · 84%':'连接中断 · 设备状态待核实'}</p><div class="card"><div class="fact-line">录音状态 <span style="float:right">${S.record==='recording'?'记录中':S.record==='paused'?'已暂停':'待机'}</span></div><div class="fact-line">同步状态 <span style="float:right">${S.record==='syncing'?'取回中':'演示数据'}</span></div></div>${b('record',icon('mic')+' '+(S.record==='idle'?'开始记录':'返回录音控制'),'fullbtn')}${b('disconnect',icon('refresh')+' '+(S.connected?'模拟断开连接':'模拟重新连接'),'fullbtn secondary')}${b('privacy','记录与隐私','fullbtn secondary')}`}
-function mePage(){return `<div class="person-hero" style="margin:17px 0 25px">${av('me')}<div><h2>我的声迹</h2><span class="sub">开发者 · 示例账户</span></div></div><div class="card lime"><span class="tag dark">我的偏好</span><p>${esc(store.preference||'先看这一天，需要时再展开细节。')}</p>${b('memory','查看与修改 '+icon('arrow'),'text-button')}</div>${[['device','录音豆','wave','Work 3200'],['mood','心情历程','spark','本人感受与交流线索'],['relations','我的关联记忆','link','原话、想法和后续行动'],['calendar','日历与提醒','calendar','我的安排'],['privacy','记录与隐私','shield','采集、保存与撤销'],['appearance','外观与玻璃','spark','调节导航玻璃的透镜感'],['about','关于与数据','info','VoiceLog 1.1']].map(([a,t,i,c])=>b(a,`<span class="tileicon">${icon(i)}</span><span class="grow"><strong>${t}</strong><span class="sub">${c}</span></span>${icon('chevron')}`,'rowlink')).join('')}`}
+function mePage(){return `<div class="person-hero" style="margin:17px 0 25px">${av('me')}<div><h2>我的声迹</h2><span class="sub">开发者 · 示例账户</span></div></div><div class="card lime"><span class="tag dark">我的偏好</span><p>${esc(store.preference||'先看这一天，需要时再展开细节。')}</p>${b('memory','查看与修改 '+icon('arrow'),'text-button')}</div>${[['device','录音豆','wave','Work 3200'],['tour-open','一键演示','play','自动走完时间线与来源'],['mood','心情历程','spark','本人感受与交流线索'],['relations','我的关联记忆','link','原话、想法和后续行动'],['calendar','日历与提醒','calendar','我的安排'],['privacy','记录与隐私','shield','采集、保存与撤销'],['appearance','外观与玻璃','spark','调节导航玻璃的透镜感'],['about','关于与数据','info','VoiceLog 1.1']].map(([a,t,i,c])=>b(a,`<span class="tileicon">${icon(i)}</span><span class="grow"><strong>${t}</strong><span class="sub">${c}</span></span>${icon('chevron')}`,'rowlink')).join('')}`}
 function appearancePage(){const level=Math.max(0,Math.min(100,Number(store.glassLevel) || 0));return `<div class="appearance-page"><div class="appearance-intro"><span class="appearance-spark">${icon('spark')}</span><h2>让导航像一片轻透玻璃</h2><p>拖动强度，直接看底部导航的变化。</p></div><section class="appearance-setting"><div class="appearance-setting-head"><label for="glass-range">玻璃强度</label><output id="glass-value" for="glass-range">${level}%</output></div><input id="glass-range" type="range" min="0" max="100" step="1" value="${level}" aria-label="调节导航玻璃强度"><div class="appearance-scale"><span>轻透</span><span>透镜感更强</span></div></section><div class="appearance-preview" aria-hidden="true"><div class="appearance-preview-shape"></div><div class="appearance-preview-lens"><span>${icon('wave')} 声迹</span><span>轻触 · 流动 · 清晰</span></div></div><p class="appearance-note">底部导航会实时预览，并保存在本机。若系统要求减少透明度，界面会优先使用实色。</p></div>`}
 function privacyPage(){return `<div class="card"><h3>长时记录，随时暂停</h3><p>在获得同意的场合记录。休息、私人交流或不方便录音时，可以只留时间。</p>${b('record',icon('mic')+' 录音控制','pill')}</div><div class="card"><h3>人物与身份</h3><p>未确认的说话人保持匿名。跨记录识别需要对应参与者同意。</p>${b('all-people','查看人物','pill')}</div><div class="card"><h3>本机数据</h3><p>转写修订、笔记与日历样例保存在当前浏览器。导入音频不会上传。</p>${b('export-data',icon('download')+' 导出当前记录','fullbtn secondary')}${b('reset','清除本机样例修改','fullbtn danger')}</div>`}
 function searchPage(){const q=S.search.trim().toLowerCase();let es=DATA.episodes.filter(e=>!e.deleted&&e.status!=='preview'&&(!q||(e.title+e.summary+e.segments.map(s=>s.text).join('')).toLowerCase().includes(q)));return `<label class="sronly" for="search-input">搜索原话、人物或事情</label><input id="search-input" type="search" value="${esc(S.search)}" placeholder="搜索原话、人物、事情…" style="margin:10px 0 16px"><div class="sub">${es.length} 条相关记录</div>${es.map(recordRow).join('')||'<div class="empty">没有找到相关记录</div>'}`}
@@ -5170,7 +5351,7 @@ function render(){
  const content=$('#content'),old=content.scrollTop;header();nav();
  const pages={home,scenes,scene:scenePage,episode:episodePage,chat:chatPage,calendar:calendarPage,recap:recapPage,person:personPage,device:devicePage,me:mePage,appearance:appearancePage,sleep:sleepPage,learning:learningPage,relations:relationView,privacy:privacyPage,search:searchPage,block:blockPage,mood:moodPage};
  content.innerHTML=(pages[S.route]||home)();content.style.overflowY=S.route==='chat'?'hidden':'auto';content.style.paddingBottom=S.route==='chat'?'0':'';content.classList.toggle('under-glass',S.route!=='chat');content.scrollTop=old;
- document.body.classList.toggle('reduce-motion',!!store.reduceMotion);renderSheet();wireLocalInputs();mountGraphs();if(S.route==='home'&&S.homeMode==='people')peopleViewController=new PeopleTimeline();
+ document.body.classList.toggle('reduce-motion',!!store.reduceMotion);renderSheet();wireLocalInputs();mountGraphs();if(S.route==='home'&&S.homeMode==='people')peopleViewController=new PeopleTimeline();updateDesktopGuideActive();
 }
 
 /* Person identity, interval geometry and one-encounter explanation views. */
@@ -5349,7 +5530,7 @@ function openFullGraph(scope,selected){
  $('#graph-search').oninput=e=>{let q=e.target.value.trim();$('#graph-search-results').innerHTML=q?fullGraphView.g.nodes.filter(n=>(n.label+' '+(n.summary||'')).includes(q)).slice(0,8).map(n=>b('graph-select',esc(n.label),'',`data-id="${n.id}"`)).join('')||'<div class="empty">没有找到</div>':''};
  $('#full-graph-canvas').focus({preventScroll:true});
 }
-function closeFullGraph(){if(fullGraphView){fullGraphView.destroy();fullGraphView=null}$('#graph-overlay')?.remove();S.graphFull=false;[...$('#phone').children].forEach(el=>el.inert=false);document.querySelector('.desktop-note').inert=false;$('#appheader button')?.focus({preventScroll:true})}
+function closeFullGraph(){if(fullGraphView){fullGraphView.destroy();fullGraphView=null}$('#graph-overlay')?.remove();S.graphFull=false;[...$('#phone').children].forEach(el=>el.inert=false);document.querySelector('.desktop-note').inert=false;updateDesktopGuideActive();$('#appheader button')?.focus({preventScroll:true})}
 
 /* Dialogs share one source resolver and keep the underlying scroll position. */
 function rememberSheetInputs(){if(!S.sheet)return;S.sheet.inputs={};document.querySelectorAll('#overlays input,#overlays textarea,#overlays select').forEach(el=>{if(el.id)S.sheet.inputs[el.id]=el.type==='checkbox'?el.checked:el.value})}
@@ -5410,14 +5591,14 @@ function wireSheetInputs(){
 
 /* Single delegate; input handlers attach to their own stable element. */
 function getActiveGraph(){return fullGraphView||graphView}
-function openRelated(scope,selected){S.graphScope=scope;openFullGraph(scope,selected)}
+function openRelated(scope,selected){S.graphScope=scope;openFullGraph(scope,selected);updateDesktopGuideActive()}
 function leaveOverlays(){S.graphResume=null;if(S.graphFull)closeFullGraph();if(S.sheet)closeSheet(true)}
 function selectedContext(){return S.route==='block'?{kind:'block',id:S.blockId}:currentGraphScope()}
 function renderDesktopGuide(){
  const host=document.querySelector('.desktop-note');if(!host)return;
  const entries=[
-  ['01','时间线','按真实时段回看这一天','nav','data-route="home"'],
-  ['02','人物交汇','拖动时间线，看谁在场','desktop-people',''],
+  ['01','时间线','按真实时段回看这一天','desktop-timeline',''],
+  ['02','人物交汇','上下滑动时间线，看谁在场','desktop-people',''],
   ['03','交流理解','候选解释与回应草稿','person','data-id="lin"'],
   ['04','原话与来源','核对出处并回到记录','ref','data-id="r-e02-2"'],
   ['05','日历与提醒','草稿确认、保存和导出','calendar',''],
@@ -5432,10 +5613,15 @@ function renderDesktopGuide(){
   ['14','夜间声音','查看夜间预览的边界','sleep',''],
   ['15','记录与隐私','采集、保存与撤销','privacy','']
  ];
- const item=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item" data-act="${act}" ${attrs}><span class="desktop-guide-index">${index}</span><span class="desktop-guide-copy"><strong>${title}</strong><small>${desc}</small></span><span class="desktop-guide-arrow" aria-hidden="true">↗</span></button>`;
- host.innerHTML=`<div class="desktop-guide-head"><div class="desktop-brand"><span class="logo-mark">∿</span><b>VoiceLog</b><span>声迹</span></div><p>从一句原话，走到可追溯的下一步。<small>15 项直达 ↓</small></p></div><div class="desktop-guide-product"><img src="${PRODUCT}" alt="soundcore Work 3200 录音豆"><div><strong>Work 3200</strong><small>录音豆采集示例</small></div></div><nav class="desktop-guide-nav" aria-label="评委演示直达"><div class="desktop-guide-group">演示主线 <span>01—05</span></div>${entries.slice(0,5).map(item).join('')}<div class="desktop-guide-group">探索更多 <span>06—10</span></div>${entries.slice(5,10).map(item).join('')}<div class="desktop-guide-group">细节亮点 <span>11—15</span></div>${entries.slice(10).map(item).join('')}</nav><div class="desktop-guide-foot">离线交互样例 · 示例资料<br>所有入口均可点击体验</div>`;
+ const tile=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item desktop-guide-tile" data-guide-index="${index}" data-act="${act}" ${attrs} aria-label="${title}：${desc}"><small>${index}</small><strong>${title}</strong><span aria-hidden="true">↗</span></button>`;
+ const row=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item desktop-guide-row" data-guide-index="${index}" data-act="${act}" ${attrs}><span class="desktop-guide-index">${index}</span><span class="desktop-guide-copy"><strong>${title}</strong><small>${desc}</small></span><span class="desktop-guide-arrow" aria-hidden="true">↗</span></button>`;
+ host.innerHTML=`<div class="desktop-guide-topline"><span>声迹 · 功能直达</span><span>15 项入口</span></div><div class="desktop-guide-story"><span>EXPLORE 01—15</span><h2>从一天，看到下一步</h2><p>点击右侧功能，左边的应用会直接打开对应页面；也可以跟着演示走一遍。</p></div><button type="button" class="desktop-guide-product" data-act="device" aria-label="查看 Work 3200 录音豆"><img src="${PRODUCT}" alt="soundcore Work 3200 录音豆"><span class="desktop-guide-product-copy"><strong>Work 3200</strong><small>录音豆 · 采集入口在第一屏</small></span><span aria-hidden="true">↗</span></button><button type="button" class="desktop-demo-entry" data-demo-action="open"><span class="desktop-demo-play">▶</span><span><strong>一键演示</strong><small>约 50 秒 · 自动走过核心路径</small></span><span aria-hidden="true">→</span></button><nav class="desktop-guide-nav" aria-label="评委功能直达"><div class="desktop-guide-section"><strong>演示主线</strong><span>点击功能直达</span></div><div class="desktop-guide-grid">${entries.slice(0,9).map(tile).join('')}</div><div class="desktop-guide-section desktop-guide-section-more"><strong>继续探索</strong><span>10—15</span></div><div class="desktop-guide-list">${entries.slice(9).map(row).join('')}</div></nav><div class="desktop-guide-foot">离线示例 · 点击入口在左侧查看</div>`;
 }
 renderDesktopGuide();
+function updateDesktopGuideActive(){
+ const active=S.graphFull?'07':S.route==='home'?(S.homeMode==='people'?'02':'01'):{person:'03',calendar:'05',scenes:'06',relations:'07',chat:'08',device:'09',appearance:'10',recap:'11',learning:'12',mood:'13',sleep:'14',privacy:'15'}[S.route];
+ document.querySelectorAll('.desktop-guide-item').forEach(el=>{const on=el.dataset.guideIndex===active;el.classList.toggle('active',on);el.setAttribute('aria-current',on?'page':'false')});
+}
 function animateBlock(id){const content=$('#content'),old=document.querySelector(`[data-block="${id}"]`),oldY=old?.getBoundingClientRect().top;S.expandedBlock=S.expandedBlock===id?null:id;const scroll=content.scrollTop;render();const next=document.querySelector(`[data-block="${id}"]`);if(next&&oldY!=null)content.scrollTop=scroll+next.getBoundingClientRect().top-oldY;const bd=next?.querySelector('.block-body');if(bd&&!reduced())bd.animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'translateY(0)'}],{duration:200,easing:'cubic-bezier(.23,1,.32,1)'})}
 function copyText(text){if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(text).then(()=>toast('已复制，未发送。')).catch(()=>fallback());return fallback();function fallback(){const t=document.createElement('textarea');t.value=text;t.style.cssText='position:fixed;left:-9999px';document.body.append(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}t.remove();toast(ok?'已复制，未发送。':'可以选中并复制草稿文字。')}}
 function startRecording(){if(S.record==='idle'){if(!S.connected){openSheet('record');toast('设备状态待核实，先连接录音豆。');return}S.record='recording';S.recordSeconds=0;S.recordMarks=[];S.recordNote='';clearInterval(S.recordTimer);S.recordTimer=setInterval(()=>{if(S.record==='recording'){S.recordSeconds++;let el=$('#record-clock');if(el)el.textContent=clock(S.recordSeconds)}},1000)}openSheet('record');header()}
@@ -5443,6 +5629,8 @@ function stopRecording(){if(!['recording','paused'].includes(S.record))return;S.
 function graphNavigate(action,id){const g=getActiveGraph(),n=g?.g.nodes.find(n=>n.id===id);let scope=n?.episodeId?{kind:'episode',id:n.episodeId}:n?.blockId?{kind:'block',id:n.blockId}:n?.personId?{kind:'person',id:n.personId}:clone(g?.scope||S.graphScope);leaveOverlays();if(action==='chat'){navigate('chat',{scope});return}if(action==='episode')navigate('episode',{selectedEpisode:id,recordTab:'记录'});else if(action==='person')navigate('person',{person:id});}
 function dispatch(act,d={}){
  switch(act){
+ case 'tour-open':window.VoiceLogDemo?.open({play:true});return;
+ case 'desktop-timeline':leaveOverlays();S.route='home';S.homeMode='time';S.stack=[];render();$('#content').scrollTop=0;return;
  case 'nav':leaveOverlays();S.stack=[];S.route=d.route;S.tab='总览';if(d.route==='chat')S.scope=S.date==='all'?{kind:'all'}:{kind:'date',id:S.date};render();$('#content').scrollTop=0;return;
  case 'back':return back();case 'close-sheet':return closeSheet();
  case 'date':if(S.sheet?.kind==='date-picker')closeSheet(true);S.date=d.date;S.peopleDate=d.date==='all'?DATA.dates[0]:d.date;S.expandedBlock=d.date===DATA.dates[1]?'b-day2':'b-am';S.peopleOrder=[];render();$('#content').scrollTop=0;return;
@@ -5566,4 +5754,203 @@ render();
 initLiquidGlass();
 // Read-only/debug adapters used by reproducible local test scripts, no network calls.
 window.VoiceLogTest={get data(){return DATA},get state(){return S},get store(){return store},dispatch,render,core:C,get graph(){return getActiveGraph()},get people(){return peopleViewController},scopeLabel};
+
+/* One source of truth for the optional, local presentation. All steps use the live UI. */
+const VOICELOG_DEMO = {
+  speeds: [1, 1.35, 1.75, 2.25],
+  defaultSpeed: 1.35,
+  idleMs: 12000,
+  chapters: [
+    { id:'day', name:'我的一天', short:'时间线', summary:'先看一天的真实节奏，再展开一段记录。', steps:[
+      { title:'从一天开始', copy:'声迹先把记录按真实时段收成一条时间线。每段都能展开，空白时间也如实保留。', action:{kind:'home'}, target:'.date-row', hold:2900 },
+      { title:'展开上午', copy:'同一时段里的事情按发生顺序展开，不把上午压成一张摘要卡。', action:{kind:'block',id:'b-am'}, target:'[data-block="b-am"] .block-head', hold:2450 },
+      { title:'打开这件事', copy:'从时间线进入完整记录，继续查看原话、人物和本次结果。', action:{kind:'episode',id:'e02'}, target:'.event-summary', hold:2600 }
+    ]},
+    { id:'people', name:'人物交汇', short:'人物', summary:'时间线仍是主体；上下滑动，人物随时间靠近。', steps:[
+      { title:'切到人物交汇', copy:'按真实起止时间绘制交流区间；同一个人的重叠片段先合并。', action:{kind:'people'}, target:'.people-chart-card', hold:3000 },
+      { title:'沿时间往下看', copy:'这根时间线可以上下滑动；移动到 09:50，看看此刻谁在交流。', action:{kind:'people-time',minute:590}, target:'.people-chart-card', hold:2550 },
+      { title:'短交流也能找到', copy:'下方列表给短区间一个可靠入口，触碰色块也能打开当次交汇。', action:{kind:'scroll',selector:'.people-association-list'}, target:'.people-association-list', hold:2450 }
+    ]},
+    { id:'understand', name:'交流理解', short:'理解', summary:'每次交流分开理解，候选解释由人选择。', steps:[
+      { title:'打开这次交流', copy:'人物身份保持稳定；理解只针对当次交流，不给人贴永久标签。', action:{kind:'person',id:'lin'}, target:'.encounter-hero', hold:2550 },
+      { title:'先看他说了什么', copy:'上方保留当次原话，下方展示多种可能的解释。', action:{kind:'scroll',selector:'.analysis-quote-card'}, target:'.analysis-quote-card', hold:2650 },
+      { title:'候选由你判断', copy:'解释卡附有引用。选择或否定都由用户决定，演示不会替你做选择。', action:{kind:'scroll',selector:'.candidate-card'}, target:'.candidate-card', hold:2600 }
+    ]},
+    { id:'source', name:'原话与来源', short:'原话', summary:'从分析打开原话，再回到完整记录。', steps:[
+      { title:'查看来源原话', copy:'每条引用都能定位到对应的记录和原话版本。', action:{kind:'ref',id:'r-e08-1'}, target:'#overlays .transcript-line.selected', hold:2750 },
+      { title:'返回交流', copy:'关闭来源后，仍回到刚才的交流理解位置。', action:{kind:'close-sheet'}, target:'.person-tabs', hold:2200 },
+      { title:'打开原话页', copy:'完整转写逐句呈现；音频若未绑定，会如实标明。', action:{kind:'person-tab',tab:'原话'}, target:'.transcript-line', hold:2700 }
+    ]},
+    { id:'graph', name:'关联记忆', short:'关联', summary:'真实关系连成图；拖动节点会带动相邻节点。', steps:[
+      { title:'进入关联记忆', copy:'人物、事件、要点、安排和来源由真实资料关系连接。', action:{kind:'graph'}, target:'#full-graph-canvas', hold:3350 },
+      { title:'聚焦一个节点', copy:'点选节点后，右侧能继续查看相邻关系与对应资料。', action:{kind:'graph-select',id:'project'}, target:'#graph-inspector', hold:2850 },
+      { title:'关系可以探索', copy:'图谱支持拖动、缩放和节点列表；拖动时相邻节点会一起响应。', action:{kind:'graph-select',id:'decision'}, target:'#full-graph-canvas', hold:2850 }
+    ]},
+    { id:'chat', name:'有据对话', short:'对话', summary:'提问有范围，回答附可点开的来源。', steps:[
+      { title:'限定本次资料', copy:'对话顶部明确显示资料范围，不会悄悄跨出当前范围。', action:{kind:'chat'}, target:'.chat-head', hold:2350 },
+      { title:'用原话回答', copy:'这条示例回答由本机资料生成，并附上能打开的引用。', action:{kind:'chat-answer',question:'今天的方向怎么改了？'}, target:'.bubble.assistant', hold:3200 }
+    ]},
+    { id:'calendar', name:'日历与提醒', short:'日历', summary:'草稿先核对，确认后才会成为本机安排。', steps:[
+      { title:'安排仍是草稿', copy:'日历把待确认、本机已存和待补全分开；跨日事项也能找到。', action:{kind:'calendar'}, target:'.calendar-filters', hold:2700 },
+      { title:'只看待确认', copy:'明确时间的安排先作为草稿出现，来源可随时核对。', action:{kind:'calendar-filter',filter:'pending'}, target:'.plan-card', hold:2700 },
+      { title:'确认前再核对', copy:'确认面板再次展示时间、地点和来源。演示不会替你按下保存。', action:{kind:'calendar-preview',id:'a-sync'}, target:'#overlays .card.soft', hold:2850 }
+    ]},
+    { id:'device', name:'录音豆与场景', short:'采集', summary:'采集入口在前，场景把记录归纳起来。', steps:[
+      { title:'录音豆在前', copy:'首页第一屏保留 Work 3200 状态与记录入口。', action:{kind:'home'}, target:'.device-record-row', hold:2400 },
+      { title:'设备状态可见', copy:'设备页区分示例状态与真实采集，不会假装已经录到音频。', action:{kind:'device'}, target:'#content', hold:2450 },
+      { title:'按场景回看', copy:'项目、协作、访谈和学习能从同一批记录进入。', action:{kind:'scenes'}, target:'.scene-list-card', hold:2550 }
+    ]},
+    { id:'recap', name:'回看与偏好', short:'复盘', summary:'把有来源的变化留下，再交给明天。', steps:[
+      { title:'看今天的变化', copy:'复盘把决定、交流和待完成的事连起来，每一处仍可追溯。', action:{kind:'recap'}, target:'.card.lime', hold:2750 },
+      { title:'最后仍由你掌控', copy:'演示到这里结束。你可以继续手动探索，或从左侧入口再播一遍。', action:{kind:'home'}, target:'.recap-link', hold:3100 }
+    ]}
+  ]
+};
+
+/* Optional in-app walkthrough. It never writes application data. */
+(() => {
+  const chapters=VOICELOG_DEMO.chapters;
+  const steps=chapters.flatMap((chapter,chapterIndex)=>chapter.steps.map((step,localIndex)=>({...step,chapter,chapterIndex,localIndex})));
+  const firstIndex=id=>steps.findIndex(step=>step.chapter.id===id);
+  const state={active:false,manual:false,locked:false,exiting:false,recovering:false,automation:false,playing:false,ended:false,step:0,timer:null,token:0,speed:VOICELOG_DEMO.defaultSpeed,autoResume:true};
+  const phone=document.querySelector('#phone');
+  let board=null,headerBar=null,focusRing=null,idleTimer=null,lastHumanSignal=0;
+
+  function clearTimers(){clearTimeout(idleTimer);idleTimer=null}
+  function invalidate(){state.token++;clearTimers();clearFocus()}
+  function updateUrl(enabled){const url=new URL(location.href);if(enabled)url.searchParams.set('demo','1');else{url.searchParams.delete('demo');url.searchParams.delete('kiosk')}history.replaceState(null,'',url)}
+  function clearFocus(){if(focusRing)focusRing.hidden=true}
+  function shell(){
+    if(board)return;
+    document.body.classList.add('demo-presentation');
+    headerBar=document.createElement('header');headerBar.className='demo-topbar';
+    headerBar.innerHTML=`<div class="demo-wordmark"><span class="demo-mark">∿</span><strong>VoiceLog <small>声迹</small></strong><span class="demo-top-label">交互演示</span></div><div class="demo-top-actions"><span class="demo-offline">离线示例 · 全程可接手</span><button type="button" data-demo-action="fullscreen">全屏观看</button><button type="button" data-demo-action="close">退出演示</button></div>`;
+    document.body.prepend(headerBar);
+    board=document.createElement('aside');board.id='demo-board';board.setAttribute('aria-label','一键演示讲解面板');
+    document.querySelector('.stage').append(board);
+    focusRing=document.createElement('div');focusRing.className='demo-focus';focusRing.hidden=true;phone.append(focusRing);
+    renderBoard();
+  }
+  function renderBoard(){
+    if(!board)return;
+    const current=steps[Math.min(state.step,steps.length-1)],index=current?.chapterIndex??0;
+    const progress=state.ended?100:Math.round(100*state.step/steps.length);
+    const label=state.manual?'手动体验中':state.playing?'正在演示':state.ended?'演示结束':'已暂停';
+    const main=state.ended?'再播一遍':state.manual?'继续演示':state.playing?'暂停演示':'开始演示';
+    board.innerHTML=`<div class="demo-board-top"><span class="demo-eyebrow">声迹 · 一键演示</span><span class="demo-count">${String(index+1).padStart(2,'0')} / ${String(chapters.length).padStart(2,'0')}</span><span class="demo-status ${state.playing?'playing':''}"><i></i>${label}</span></div><div class="demo-story"><span class="demo-chapter-no">CHAPTER ${String(index+1).padStart(2,'0')}</span><h2>${esc(state.ended?'演示已完成':current?.title||'从这一天开始')}</h2><p>${esc(state.ended?'点击左侧任意功能继续体验，或再播一遍完整路径。':current?.copy||'沿时间线，走到人物、原话、关联与安排。')}</p></div><div class="demo-route"><span>演示路线</span><strong>${chapters.map((c,i)=>i===index?`<em>${esc(c.name)}</em>`:esc(c.name)).join('<b> / </b>')}</strong></div><div class="demo-progress" role="progressbar" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100" aria-label="演示进度"><i style="width:${progress}%"></i></div><div class="demo-controls"><button type="button" class="demo-secondary" data-demo-action="previous" aria-label="上一步">←</button><button type="button" class="demo-primary" data-demo-action="toggle">${state.playing?'Ⅱ':'▶'}　${main}</button><button type="button" class="demo-secondary" data-demo-action="next" aria-label="下一步">→</button><button type="button" class="demo-speed" data-demo-action="speed" aria-label="切换演示速度">${state.speed}×</button></div><div class="demo-chapter-head"><span>快速跳到</span><span>点击章节直达</span></div><div class="demo-chapters">${chapters.map((c,i)=>`<button type="button" data-demo-action="chapter" data-chapter="${c.id}" class="${i===index?'active':''}" aria-pressed="${i===index}"><small>${String(i+1).padStart(2,'0')}</small>${esc(c.short)}</button>`).join('')}</div><div class="demo-board-foot"><span>${state.manual?'正在手动体验，停下 12 秒后继续当前讲解。':'可以随时触碰手机，自由体验当前功能。'}</span><button type="button" data-demo-action="auto-resume" aria-pressed="${state.autoResume}">${state.autoResume?'自动续播 开':'自动续播 关'}</button></div>`;
+  }
+  function open({play=false}={}){
+    if(!state.active){state.active=true;state.ended=false;state.manual=false;state.playing=false;state.step=0;shell();updateUrl(true)}
+    if(play)run(state.step);else renderBoard();
+  }
+  function close(){
+    if(!state.active)return;
+    state.exiting=true;invalidate();state.active=false;state.manual=false;state.playing=false;state.ended=false;
+    if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});
+    board?.remove();headerBar?.remove();focusRing?.remove();board=headerBar=focusRing=null;
+    document.body.classList.remove('demo-presentation');updateUrl(false);state.exiting=false;
+  }
+  function pause(manual=false){
+    if(!state.active)return;
+    invalidate();state.playing=false;state.manual=manual;renderBoard();if(manual)scheduleIdle();
+  }
+  function scheduleIdle(){
+    clearTimeout(idleTimer);
+    if(!state.autoResume||!state.manual)return;
+    const token=state.token;
+    idleTimer=setTimeout(()=>{if(!state.active||!state.manual||state.token!==token)return;state.recovering=true;run(state.step);state.recovering=false},VOICELOG_DEMO.idleMs);
+  }
+  function wait(ms,token){return new Promise(resolve=>{state.timer=setTimeout(()=>{state.timer=null;resolve(state.token===token)},ms)})}
+  function ensureVisible(selector){
+    if(!selector)return null;
+    const element=phone.querySelector(selector);if(!element)return null;
+    const rect=element.getBoundingClientRect(),pr=phone.getBoundingClientRect();
+    if(rect.bottom>pr.bottom-100||rect.top<pr.top+83)element.scrollIntoView({block:'center',behavior:'smooth'});
+    return element;
+  }
+  function focus(selector){
+    const element=ensureVisible(selector);if(!element||!focusRing)return;
+    const token=state.token;
+    requestAnimationFrame(()=>setTimeout(()=>{
+      if(!state.active||token!==state.token||!element.isConnected||!focusRing)return;
+      const pr=phone.getBoundingClientRect(),r=element.getBoundingClientRect(),pad=5;
+      const left=Math.max(5,r.left-pr.left-pad),top=Math.max(5,r.top-pr.top-pad);
+      const right=Math.min(pr.width-5,r.right-pr.left+pad),bottom=Math.min(pr.height-5,r.bottom-pr.top+pad);
+      if(right<=left||bottom<=top){clearFocus();return}
+      Object.assign(focusRing.style,{left:left+'px',top:top+'px',width:(right-left)+'px',height:(bottom-top)+'px'});
+      focusRing.hidden=false;
+    },340));
+  }
+  function act(action){
+    const a=action||{},kind=a.kind;
+    state.automation=true;
+    try{
+      if(kind==='home'){leaveOverlays();S.date=DATA.dates[0];S.homeMode='time';S.groupFilter='全部';S.expandedBlock='b-am';dispatch('nav',{route:'home'})}
+      else if(kind==='block'){leaveOverlays();S.route='home';S.homeMode='time';S.expandedBlock=a.id;render()}
+      else if(kind==='episode')dispatch('episode',{id:a.id});
+      else if(kind==='people'){leaveOverlays();S.date=DATA.dates[0];S.peopleWindow={startMinute:540,endMinute:660};S.focus=590;dispatch('desktop-people')}
+      else if(kind==='people-time'){peopleViewController?.selectWindow(540);peopleViewController?.seek(a.minute)}
+      else if(kind==='person')dispatch('person',{id:a.id});
+      else if(kind==='person-tab')dispatch('person-tab',{tab:a.tab});
+      else if(kind==='ref')dispatch('ref',{id:a.id});
+      else if(kind==='close-sheet')closeSheet(true);
+      else if(kind==='graph'){leaveOverlays();dispatch('open-full-graph',{scope:'all'})}
+      else if(kind==='graph-select')getActiveGraph()?.select(a.id,true);
+      else if(kind==='chat'){leaveOverlays();dispatch('nav',{route:'chat'});S.scope={kind:'date',id:DATA.dates[0]};render()}
+      else if(kind==='chat-answer'){
+        const result=answer(a.question,{kind:'date',id:DATA.dates[0]}),thread=document.querySelector('#chat-thread');
+        if(thread){thread.innerHTML=`<article class="bubble user">${esc(a.question)}</article><article class="bubble assistant"><div class="author"><span class="tag">声迹</span><span>示例回答</span></div>${esc(result.text)}${result.refs.length?`<div class="citations">${result.refs.map((r,i)=>ref(r,two(i+1))).join('')}</div>`:''}</article>`;thread.scrollTop=thread.scrollHeight}
+      }
+      else if(kind==='calendar'){leaveOverlays();S.calendarDate=DATA.dates[1];S.calendarFilter='all';dispatch('calendar')}
+      else if(kind==='calendar-filter')dispatch('calendar-filter',{filter:a.filter});
+      else if(kind==='calendar-preview')dispatch('save-action',{id:a.id});
+      else if(kind==='device'){leaveOverlays();dispatch('device')}
+      else if(kind==='scenes'){leaveOverlays();dispatch('nav',{route:'scenes'})}
+      else if(kind==='recap'){leaveOverlays();dispatch('recap')}
+      else if(kind==='scroll')ensureVisible(a.selector);
+      else throw new Error('未知演示动作: '+kind);
+    } finally {state.automation=false}
+  }
+  async function run(start=state.step){
+    if(!state.active)return;
+    invalidate();const token=state.token;
+    state.playing=true;state.manual=false;state.ended=false;
+    for(let i=Math.max(0,Math.min(start,steps.length-1));i<steps.length;i++){
+      if(token!==state.token||!state.active)return;
+      state.step=i;const step=steps[i];renderBoard();
+      try{act(step.action)}catch(error){console.error('演示步骤未完成',step,error);pause();toast('这一步暂时无法打开，可以手动继续。');return}
+      focus(step.target);
+      if(!await wait(Math.max(850,Math.round((step.hold||2300)/state.speed)),token))return;
+    }
+    if(token!==state.token||!state.active)return;
+    state.playing=false;state.ended=true;clearFocus();renderBoard();
+  }
+  function jump(index,play=true){
+    if(!state.active)open();
+    invalidate();state.step=Math.max(0,Math.min(index,steps.length-1));state.manual=false;state.ended=false;
+    if(play)run(state.step);else renderBoard();
+  }
+  function handleControl(button){
+    const action=button.dataset.demoAction;
+    if(action==='open'){open({play:true});return}
+    if(action==='close'){close();return}
+    if(action==='fullscreen'){if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});else document.documentElement.requestFullscreen?.().catch(()=>toast('浏览器未允许全屏，可以继续在当前窗口观看。'));return}
+    if(action==='toggle'){if(state.playing)pause();else if(state.ended)jump(0);else run(state.step);return}
+    if(action==='previous'){jump(state.step-1);return}
+    if(action==='next'){jump(state.step+1);return}
+    if(action==='chapter'){jump(firstIndex(button.dataset.chapter));return}
+    if(action==='speed'){const i=VOICELOG_DEMO.speeds.indexOf(state.speed);state.speed=VOICELOG_DEMO.speeds[(i+1)%VOICELOG_DEMO.speeds.length];renderBoard();return}
+    if(action==='auto-resume'){state.autoResume=!state.autoResume;renderBoard();if(state.manual)scheduleIdle()}
+  }
+  document.addEventListener('click',event=>{const button=event.target.closest('[data-demo-action]');if(!button)return;event.preventDefault();event.stopImmediatePropagation();handleControl(button)},true);
+  for(const type of ['pointerdown','touchstart','wheel','focusin','input','keydown'])document.addEventListener(type,event=>{
+    if(!state.active||state.automation||!event.isTrusted||!phone.contains(event.target)||event.target.closest('[data-demo-action]'))return;
+    if(type==='focusin'||type==='input'){if(performance.now()-lastHumanSignal>700)return}
+    else lastHumanSignal=performance.now();
+    if(state.manual){scheduleIdle();return}
+    if(state.playing)pause(true);
+  },{capture:true,passive:true});
+  if(new URLSearchParams(location.search).get('demo')==='1'||new URLSearchParams(location.search).get('kiosk')==='1')open();
+  window.VoiceLogDemo={get state(){return {...state}},get steps(){return steps},open,close,run,pause,jump};
+})();
 </script></body></html>

@@ -218,7 +218,7 @@ function recapPage(){let blocks=C.sceneBlocks(DATA,S.date),stats=C.dayStats(DATA
 function learningPage(){const shift=S.intervalShift??8,sets=[[0,12],[shift,shift+10]],total=C.durationMinutes(sets.map(v=>v.map(n=>n*60000)));return `<div class="path">学习与答疑 · 11:20</div><h2>重叠的时间，<br>只记一次</h2><div class="quote">同一个人的重叠交流区间，先合并，再累计。${ref('r-e04-1','原话')}</div><div class="card"><span class="tag blue">交互讲解</span><div class="plot"><svg viewBox="0 0 300 152" aria-label="两段交流的区间并集"><line x1="15" y1="128" x2="285" y2="128" stroke="#c6d2bc"/>${[0,5,10,15,20,25,30].map(n=>`<text x="${15+n*9}" y="145" text-anchor="middle" font-size="9" fill="#7c8b71">${n}</text>`).join('')}<rect x="15" y="26" width="108" height="26" rx="8" fill="#bedf55"/><text x="25" y="43" font-size="10" fill="#1a2921">交流 A · 12 分</text><rect x="${15+shift*9}" y="65" width="90" height="26" rx="8" fill="#285e4e"/><text x="${24+shift*9}" y="82" font-size="10" fill="white">交流 B · 10 分</text>${C.unionIntervals(sets).map(v=>`<rect x="${15+v[0]*9}" y="108" width="${(v[1]-v[0])*9}" height="8" rx="4" fill="#336cdd"/>`).join('')}</svg></div><label class="sub" for="interval-range">B 从第 ${shift} 分钟开始</label><input id="interval-range" type="range" min="0" max="18" value="${shift}" aria-label="调整第二段开始时间"><div class="metrics two"><div class="metric"><strong>22</strong><small>直接相加 / 分钟</small></div><div class="metric"><strong id="union-total">${total}</strong><small>合并后 / 分钟</small></div></div></div><div class="sub">练习：把 B 移到第 12 分钟，两段还重叠吗？</div><div class="actions-row" style="margin-top:12px">${b('learning-answer','不重叠','pill','data-answer="correct"')}${b('learning-answer','还重叠','pill','data-answer="wrong"')}</div>${S.learningFeedback?`<div class="notice">${esc(S.learningFeedback)}</div>`:''}${b('ask-learning',icon('chat')+' 接着问这段答疑','fullbtn')}`}
 function sleepPage(){return `<div class="card dark"><span class="tag" style="background:#3c5143;color:#deead7">后续预览</span><div style="margin:26px 0 20px">${icon('moon')}</div><h2>夜间声音</h2><p style="color:#ccd9c3;font-size:13px">未来可以接到一天的末尾。</p></div><div class="metrics two">${['鼾声片段','夜间人声','环境声音','活动声音'].map(t=>`<div class="metric"><strong>—</strong><small>${t}</small></div>`).join('')}</div><div class="preview">尚未接入睡眠分析。当前没有检测结果。</div>${b('dream-note','记下醒后的梦','fullbtn secondary')}`}
 function devicePage(){return `<img src="${PRODUCT}" alt="soundcore Work 3200 实际产品图" style="width:190px;height:210px;object-fit:contain;margin:8px auto 22px;mix-blend-mode:multiply"><h2 style="text-align:center">Work 3200</h2><p class="sub" style="text-align:center">${S.connected?'示例连接 · 84%':'连接中断 · 设备状态待核实'}</p><div class="card"><div class="fact-line">录音状态 <span style="float:right">${S.record==='recording'?'记录中':S.record==='paused'?'已暂停':'待机'}</span></div><div class="fact-line">同步状态 <span style="float:right">${S.record==='syncing'?'取回中':'演示数据'}</span></div></div>${b('record',icon('mic')+' '+(S.record==='idle'?'开始记录':'返回录音控制'),'fullbtn')}${b('disconnect',icon('refresh')+' '+(S.connected?'模拟断开连接':'模拟重新连接'),'fullbtn secondary')}${b('privacy','记录与隐私','fullbtn secondary')}`}
-function mePage(){return `<div class="person-hero" style="margin:17px 0 25px">${av('me')}<div><h2>我的声迹</h2><span class="sub">开发者 · 示例账户</span></div></div><div class="card lime"><span class="tag dark">我的偏好</span><p>${esc(store.preference||'先看这一天，需要时再展开细节。')}</p>${b('memory','查看与修改 '+icon('arrow'),'text-button')}</div>${[['device','录音豆','wave','Work 3200'],['mood','心情历程','spark','本人感受与交流线索'],['relations','我的关联记忆','link','原话、想法和后续行动'],['calendar','日历与提醒','calendar','我的安排'],['privacy','记录与隐私','shield','采集、保存与撤销'],['appearance','外观与玻璃','spark','调节导航玻璃的透镜感'],['about','关于与数据','info','VoiceLog 1.1']].map(([a,t,i,c])=>b(a,`<span class="tileicon">${icon(i)}</span><span class="grow"><strong>${t}</strong><span class="sub">${c}</span></span>${icon('chevron')}`,'rowlink')).join('')}`}
+function mePage(){return `<div class="person-hero" style="margin:17px 0 25px">${av('me')}<div><h2>我的声迹</h2><span class="sub">开发者 · 示例账户</span></div></div><div class="card lime"><span class="tag dark">我的偏好</span><p>${esc(store.preference||'先看这一天，需要时再展开细节。')}</p>${b('memory','查看与修改 '+icon('arrow'),'text-button')}</div>${[['device','录音豆','wave','Work 3200'],['tour-open','一键演示','play','自动走完时间线与来源'],['mood','心情历程','spark','本人感受与交流线索'],['relations','我的关联记忆','link','原话、想法和后续行动'],['calendar','日历与提醒','calendar','我的安排'],['privacy','记录与隐私','shield','采集、保存与撤销'],['appearance','外观与玻璃','spark','调节导航玻璃的透镜感'],['about','关于与数据','info','VoiceLog 1.1']].map(([a,t,i,c])=>b(a,`<span class="tileicon">${icon(i)}</span><span class="grow"><strong>${t}</strong><span class="sub">${c}</span></span>${icon('chevron')}`,'rowlink')).join('')}`}
 function appearancePage(){const level=Math.max(0,Math.min(100,Number(store.glassLevel) || 0));return `<div class="appearance-page"><div class="appearance-intro"><span class="appearance-spark">${icon('spark')}</span><h2>让导航像一片轻透玻璃</h2><p>拖动强度，直接看底部导航的变化。</p></div><section class="appearance-setting"><div class="appearance-setting-head"><label for="glass-range">玻璃强度</label><output id="glass-value" for="glass-range">${level}%</output></div><input id="glass-range" type="range" min="0" max="100" step="1" value="${level}" aria-label="调节导航玻璃强度"><div class="appearance-scale"><span>轻透</span><span>透镜感更强</span></div></section><div class="appearance-preview" aria-hidden="true"><div class="appearance-preview-shape"></div><div class="appearance-preview-lens"><span>${icon('wave')} 声迹</span><span>轻触 · 流动 · 清晰</span></div></div><p class="appearance-note">底部导航会实时预览，并保存在本机。若系统要求减少透明度，界面会优先使用实色。</p></div>`}
 function privacyPage(){return `<div class="card"><h3>长时记录，随时暂停</h3><p>在获得同意的场合记录。休息、私人交流或不方便录音时，可以只留时间。</p>${b('record',icon('mic')+' 录音控制','pill')}</div><div class="card"><h3>人物与身份</h3><p>未确认的说话人保持匿名。跨记录识别需要对应参与者同意。</p>${b('all-people','查看人物','pill')}</div><div class="card"><h3>本机数据</h3><p>转写修订、笔记与日历样例保存在当前浏览器。导入音频不会上传。</p>${b('export-data',icon('download')+' 导出当前记录','fullbtn secondary')}${b('reset','清除本机样例修改','fullbtn danger')}</div>`}
 function searchPage(){const q=S.search.trim().toLowerCase();let es=DATA.episodes.filter(e=>!e.deleted&&e.status!=='preview'&&(!q||(e.title+e.summary+e.segments.map(s=>s.text).join('')).toLowerCase().includes(q)));return `<label class="sronly" for="search-input">搜索原话、人物或事情</label><input id="search-input" type="search" value="${esc(S.search)}" placeholder="搜索原话、人物、事情…" style="margin:10px 0 16px"><div class="sub">${es.length} 条相关记录</div>${es.map(recordRow).join('')||'<div class="empty">没有找到相关记录</div>'}`}
@@ -227,7 +227,7 @@ function render(){
  const content=$('#content'),old=content.scrollTop;header();nav();
  const pages={home,scenes,scene:scenePage,episode:episodePage,chat:chatPage,calendar:calendarPage,recap:recapPage,person:personPage,device:devicePage,me:mePage,appearance:appearancePage,sleep:sleepPage,learning:learningPage,relations:relationView,privacy:privacyPage,search:searchPage,block:blockPage,mood:moodPage};
  content.innerHTML=(pages[S.route]||home)();content.style.overflowY=S.route==='chat'?'hidden':'auto';content.style.paddingBottom=S.route==='chat'?'0':'';content.classList.toggle('under-glass',S.route!=='chat');content.scrollTop=old;
- document.body.classList.toggle('reduce-motion',!!store.reduceMotion);renderSheet();wireLocalInputs();mountGraphs();if(S.route==='home'&&S.homeMode==='people')peopleViewController=new PeopleTimeline();
+ document.body.classList.toggle('reduce-motion',!!store.reduceMotion);renderSheet();wireLocalInputs();mountGraphs();if(S.route==='home'&&S.homeMode==='people')peopleViewController=new PeopleTimeline();updateDesktopGuideActive();
 }
 
 /* Person identity, interval geometry and one-encounter explanation views. */
@@ -406,7 +406,7 @@ function openFullGraph(scope,selected){
  $('#graph-search').oninput=e=>{let q=e.target.value.trim();$('#graph-search-results').innerHTML=q?fullGraphView.g.nodes.filter(n=>(n.label+' '+(n.summary||'')).includes(q)).slice(0,8).map(n=>b('graph-select',esc(n.label),'',`data-id="${n.id}"`)).join('')||'<div class="empty">没有找到</div>':''};
  $('#full-graph-canvas').focus({preventScroll:true});
 }
-function closeFullGraph(){if(fullGraphView){fullGraphView.destroy();fullGraphView=null}$('#graph-overlay')?.remove();S.graphFull=false;[...$('#phone').children].forEach(el=>el.inert=false);document.querySelector('.desktop-note').inert=false;$('#appheader button')?.focus({preventScroll:true})}
+function closeFullGraph(){if(fullGraphView){fullGraphView.destroy();fullGraphView=null}$('#graph-overlay')?.remove();S.graphFull=false;[...$('#phone').children].forEach(el=>el.inert=false);document.querySelector('.desktop-note').inert=false;updateDesktopGuideActive();$('#appheader button')?.focus({preventScroll:true})}
 
 /* Dialogs share one source resolver and keep the underlying scroll position. */
 function rememberSheetInputs(){if(!S.sheet)return;S.sheet.inputs={};document.querySelectorAll('#overlays input,#overlays textarea,#overlays select').forEach(el=>{if(el.id)S.sheet.inputs[el.id]=el.type==='checkbox'?el.checked:el.value})}
@@ -467,14 +467,14 @@ function wireSheetInputs(){
 
 /* Single delegate; input handlers attach to their own stable element. */
 function getActiveGraph(){return fullGraphView||graphView}
-function openRelated(scope,selected){S.graphScope=scope;openFullGraph(scope,selected)}
+function openRelated(scope,selected){S.graphScope=scope;openFullGraph(scope,selected);updateDesktopGuideActive()}
 function leaveOverlays(){S.graphResume=null;if(S.graphFull)closeFullGraph();if(S.sheet)closeSheet(true)}
 function selectedContext(){return S.route==='block'?{kind:'block',id:S.blockId}:currentGraphScope()}
 function renderDesktopGuide(){
  const host=document.querySelector('.desktop-note');if(!host)return;
  const entries=[
-  ['01','时间线','按真实时段回看这一天','nav','data-route="home"'],
-  ['02','人物交汇','拖动时间线，看谁在场','desktop-people',''],
+  ['01','时间线','按真实时段回看这一天','desktop-timeline',''],
+  ['02','人物交汇','上下滑动时间线，看谁在场','desktop-people',''],
   ['03','交流理解','候选解释与回应草稿','person','data-id="lin"'],
   ['04','原话与来源','核对出处并回到记录','ref','data-id="r-e02-2"'],
   ['05','日历与提醒','草稿确认、保存和导出','calendar',''],
@@ -489,10 +489,15 @@ function renderDesktopGuide(){
   ['14','夜间声音','查看夜间预览的边界','sleep',''],
   ['15','记录与隐私','采集、保存与撤销','privacy','']
  ];
- const item=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item" data-act="${act}" ${attrs}><span class="desktop-guide-index">${index}</span><span class="desktop-guide-copy"><strong>${title}</strong><small>${desc}</small></span><span class="desktop-guide-arrow" aria-hidden="true">↗</span></button>`;
- host.innerHTML=`<div class="desktop-guide-head"><div class="desktop-brand"><span class="logo-mark">∿</span><b>VoiceLog</b><span>声迹</span></div><p>从一句原话，走到可追溯的下一步。<small>15 项直达 ↓</small></p></div><div class="desktop-guide-product"><img src="${PRODUCT}" alt="soundcore Work 3200 录音豆"><div><strong>Work 3200</strong><small>录音豆采集示例</small></div></div><nav class="desktop-guide-nav" aria-label="评委演示直达"><div class="desktop-guide-group">演示主线 <span>01—05</span></div>${entries.slice(0,5).map(item).join('')}<div class="desktop-guide-group">探索更多 <span>06—10</span></div>${entries.slice(5,10).map(item).join('')}<div class="desktop-guide-group">细节亮点 <span>11—15</span></div>${entries.slice(10).map(item).join('')}</nav><div class="desktop-guide-foot">离线交互样例 · 示例资料<br>所有入口均可点击体验</div>`;
+ const tile=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item desktop-guide-tile" data-guide-index="${index}" data-act="${act}" ${attrs} aria-label="${title}：${desc}"><small>${index}</small><strong>${title}</strong><span aria-hidden="true">↗</span></button>`;
+ const row=([index,title,desc,act,attrs])=>`<button type="button" class="desktop-guide-item desktop-guide-row" data-guide-index="${index}" data-act="${act}" ${attrs}><span class="desktop-guide-index">${index}</span><span class="desktop-guide-copy"><strong>${title}</strong><small>${desc}</small></span><span class="desktop-guide-arrow" aria-hidden="true">↗</span></button>`;
+ host.innerHTML=`<div class="desktop-guide-topline"><span>声迹 · 功能直达</span><span>15 项入口</span></div><div class="desktop-guide-story"><span>EXPLORE 01—15</span><h2>从一天，看到下一步</h2><p>点击右侧功能，左边的应用会直接打开对应页面；也可以跟着演示走一遍。</p></div><button type="button" class="desktop-guide-product" data-act="device" aria-label="查看 Work 3200 录音豆"><img src="${PRODUCT}" alt="soundcore Work 3200 录音豆"><span class="desktop-guide-product-copy"><strong>Work 3200</strong><small>录音豆 · 采集入口在第一屏</small></span><span aria-hidden="true">↗</span></button><button type="button" class="desktop-demo-entry" data-demo-action="open"><span class="desktop-demo-play">▶</span><span><strong>一键演示</strong><small>约 50 秒 · 自动走过核心路径</small></span><span aria-hidden="true">→</span></button><nav class="desktop-guide-nav" aria-label="评委功能直达"><div class="desktop-guide-section"><strong>演示主线</strong><span>点击功能直达</span></div><div class="desktop-guide-grid">${entries.slice(0,9).map(tile).join('')}</div><div class="desktop-guide-section desktop-guide-section-more"><strong>继续探索</strong><span>10—15</span></div><div class="desktop-guide-list">${entries.slice(9).map(row).join('')}</div></nav><div class="desktop-guide-foot">离线示例 · 点击入口在左侧查看</div>`;
 }
 renderDesktopGuide();
+function updateDesktopGuideActive(){
+ const active=S.graphFull?'07':S.route==='home'?(S.homeMode==='people'?'02':'01'):{person:'03',calendar:'05',scenes:'06',relations:'07',chat:'08',device:'09',appearance:'10',recap:'11',learning:'12',mood:'13',sleep:'14',privacy:'15'}[S.route];
+ document.querySelectorAll('.desktop-guide-item').forEach(el=>{const on=el.dataset.guideIndex===active;el.classList.toggle('active',on);el.setAttribute('aria-current',on?'page':'false')});
+}
 function animateBlock(id){const content=$('#content'),old=document.querySelector(`[data-block="${id}"]`),oldY=old?.getBoundingClientRect().top;S.expandedBlock=S.expandedBlock===id?null:id;const scroll=content.scrollTop;render();const next=document.querySelector(`[data-block="${id}"]`);if(next&&oldY!=null)content.scrollTop=scroll+next.getBoundingClientRect().top-oldY;const bd=next?.querySelector('.block-body');if(bd&&!reduced())bd.animate([{opacity:0,transform:'translateY(-6px)'},{opacity:1,transform:'translateY(0)'}],{duration:200,easing:'cubic-bezier(.23,1,.32,1)'})}
 function copyText(text){if(navigator.clipboard&&window.isSecureContext)return navigator.clipboard.writeText(text).then(()=>toast('已复制，未发送。')).catch(()=>fallback());return fallback();function fallback(){const t=document.createElement('textarea');t.value=text;t.style.cssText='position:fixed;left:-9999px';document.body.append(t);t.select();let ok=false;try{ok=document.execCommand('copy')}catch(_){}t.remove();toast(ok?'已复制，未发送。':'可以选中并复制草稿文字。')}}
 function startRecording(){if(S.record==='idle'){if(!S.connected){openSheet('record');toast('设备状态待核实，先连接录音豆。');return}S.record='recording';S.recordSeconds=0;S.recordMarks=[];S.recordNote='';clearInterval(S.recordTimer);S.recordTimer=setInterval(()=>{if(S.record==='recording'){S.recordSeconds++;let el=$('#record-clock');if(el)el.textContent=clock(S.recordSeconds)}},1000)}openSheet('record');header()}
@@ -500,6 +505,8 @@ function stopRecording(){if(!['recording','paused'].includes(S.record))return;S.
 function graphNavigate(action,id){const g=getActiveGraph(),n=g?.g.nodes.find(n=>n.id===id);let scope=n?.episodeId?{kind:'episode',id:n.episodeId}:n?.blockId?{kind:'block',id:n.blockId}:n?.personId?{kind:'person',id:n.personId}:clone(g?.scope||S.graphScope);leaveOverlays();if(action==='chat'){navigate('chat',{scope});return}if(action==='episode')navigate('episode',{selectedEpisode:id,recordTab:'记录'});else if(action==='person')navigate('person',{person:id});}
 function dispatch(act,d={}){
  switch(act){
+ case 'tour-open':window.VoiceLogDemo?.open({play:true});return;
+ case 'desktop-timeline':leaveOverlays();S.route='home';S.homeMode='time';S.stack=[];render();$('#content').scrollTop=0;return;
  case 'nav':leaveOverlays();S.stack=[];S.route=d.route;S.tab='总览';if(d.route==='chat')S.scope=S.date==='all'?{kind:'all'}:{kind:'date',id:S.date};render();$('#content').scrollTop=0;return;
  case 'back':return back();case 'close-sheet':return closeSheet();
  case 'date':if(S.sheet?.kind==='date-picker')closeSheet(true);S.date=d.date;S.peopleDate=d.date==='all'?DATA.dates[0]:d.date;S.expandedBlock=d.date===DATA.dates[1]?'b-day2':'b-am';S.peopleOrder=[];render();$('#content').scrollTop=0;return;
@@ -623,3 +630,202 @@ render();
 initLiquidGlass();
 // Read-only/debug adapters used by reproducible local test scripts, no network calls.
 window.VoiceLogTest={get data(){return DATA},get state(){return S},get store(){return store},dispatch,render,core:C,get graph(){return getActiveGraph()},get people(){return peopleViewController},scopeLabel};
+
+/* One source of truth for the optional, local presentation. All steps use the live UI. */
+const VOICELOG_DEMO = {
+  speeds: [1, 1.35, 1.75, 2.25],
+  defaultSpeed: 1.35,
+  idleMs: 12000,
+  chapters: [
+    { id:'day', name:'我的一天', short:'时间线', summary:'先看一天的真实节奏，再展开一段记录。', steps:[
+      { title:'从一天开始', copy:'声迹先把记录按真实时段收成一条时间线。每段都能展开，空白时间也如实保留。', action:{kind:'home'}, target:'.date-row', hold:2900 },
+      { title:'展开上午', copy:'同一时段里的事情按发生顺序展开，不把上午压成一张摘要卡。', action:{kind:'block',id:'b-am'}, target:'[data-block="b-am"] .block-head', hold:2450 },
+      { title:'打开这件事', copy:'从时间线进入完整记录，继续查看原话、人物和本次结果。', action:{kind:'episode',id:'e02'}, target:'.event-summary', hold:2600 }
+    ]},
+    { id:'people', name:'人物交汇', short:'人物', summary:'时间线仍是主体；上下滑动，人物随时间靠近。', steps:[
+      { title:'切到人物交汇', copy:'按真实起止时间绘制交流区间；同一个人的重叠片段先合并。', action:{kind:'people'}, target:'.people-chart-card', hold:3000 },
+      { title:'沿时间往下看', copy:'这根时间线可以上下滑动；移动到 09:50，看看此刻谁在交流。', action:{kind:'people-time',minute:590}, target:'.people-chart-card', hold:2550 },
+      { title:'短交流也能找到', copy:'下方列表给短区间一个可靠入口，触碰色块也能打开当次交汇。', action:{kind:'scroll',selector:'.people-association-list'}, target:'.people-association-list', hold:2450 }
+    ]},
+    { id:'understand', name:'交流理解', short:'理解', summary:'每次交流分开理解，候选解释由人选择。', steps:[
+      { title:'打开这次交流', copy:'人物身份保持稳定；理解只针对当次交流，不给人贴永久标签。', action:{kind:'person',id:'lin'}, target:'.encounter-hero', hold:2550 },
+      { title:'先看他说了什么', copy:'上方保留当次原话，下方展示多种可能的解释。', action:{kind:'scroll',selector:'.analysis-quote-card'}, target:'.analysis-quote-card', hold:2650 },
+      { title:'候选由你判断', copy:'解释卡附有引用。选择或否定都由用户决定，演示不会替你做选择。', action:{kind:'scroll',selector:'.candidate-card'}, target:'.candidate-card', hold:2600 }
+    ]},
+    { id:'source', name:'原话与来源', short:'原话', summary:'从分析打开原话，再回到完整记录。', steps:[
+      { title:'查看来源原话', copy:'每条引用都能定位到对应的记录和原话版本。', action:{kind:'ref',id:'r-e08-1'}, target:'#overlays .transcript-line.selected', hold:2750 },
+      { title:'返回交流', copy:'关闭来源后，仍回到刚才的交流理解位置。', action:{kind:'close-sheet'}, target:'.person-tabs', hold:2200 },
+      { title:'打开原话页', copy:'完整转写逐句呈现；音频若未绑定，会如实标明。', action:{kind:'person-tab',tab:'原话'}, target:'.transcript-line', hold:2700 }
+    ]},
+    { id:'graph', name:'关联记忆', short:'关联', summary:'真实关系连成图；拖动节点会带动相邻节点。', steps:[
+      { title:'进入关联记忆', copy:'人物、事件、要点、安排和来源由真实资料关系连接。', action:{kind:'graph'}, target:'#full-graph-canvas', hold:3350 },
+      { title:'聚焦一个节点', copy:'点选节点后，右侧能继续查看相邻关系与对应资料。', action:{kind:'graph-select',id:'project'}, target:'#graph-inspector', hold:2850 },
+      { title:'关系可以探索', copy:'图谱支持拖动、缩放和节点列表；拖动时相邻节点会一起响应。', action:{kind:'graph-select',id:'decision'}, target:'#full-graph-canvas', hold:2850 }
+    ]},
+    { id:'chat', name:'有据对话', short:'对话', summary:'提问有范围，回答附可点开的来源。', steps:[
+      { title:'限定本次资料', copy:'对话顶部明确显示资料范围，不会悄悄跨出当前范围。', action:{kind:'chat'}, target:'.chat-head', hold:2350 },
+      { title:'用原话回答', copy:'这条示例回答由本机资料生成，并附上能打开的引用。', action:{kind:'chat-answer',question:'今天的方向怎么改了？'}, target:'.bubble.assistant', hold:3200 }
+    ]},
+    { id:'calendar', name:'日历与提醒', short:'日历', summary:'草稿先核对，确认后才会成为本机安排。', steps:[
+      { title:'安排仍是草稿', copy:'日历把待确认、本机已存和待补全分开；跨日事项也能找到。', action:{kind:'calendar'}, target:'.calendar-filters', hold:2700 },
+      { title:'只看待确认', copy:'明确时间的安排先作为草稿出现，来源可随时核对。', action:{kind:'calendar-filter',filter:'pending'}, target:'.plan-card', hold:2700 },
+      { title:'确认前再核对', copy:'确认面板再次展示时间、地点和来源。演示不会替你按下保存。', action:{kind:'calendar-preview',id:'a-sync'}, target:'#overlays .card.soft', hold:2850 }
+    ]},
+    { id:'device', name:'录音豆与场景', short:'采集', summary:'采集入口在前，场景把记录归纳起来。', steps:[
+      { title:'录音豆在前', copy:'首页第一屏保留 Work 3200 状态与记录入口。', action:{kind:'home'}, target:'.device-record-row', hold:2400 },
+      { title:'设备状态可见', copy:'设备页区分示例状态与真实采集，不会假装已经录到音频。', action:{kind:'device'}, target:'#content', hold:2450 },
+      { title:'按场景回看', copy:'项目、协作、访谈和学习能从同一批记录进入。', action:{kind:'scenes'}, target:'.scene-list-card', hold:2550 }
+    ]},
+    { id:'recap', name:'回看与偏好', short:'复盘', summary:'把有来源的变化留下，再交给明天。', steps:[
+      { title:'看今天的变化', copy:'复盘把决定、交流和待完成的事连起来，每一处仍可追溯。', action:{kind:'recap'}, target:'.card.lime', hold:2750 },
+      { title:'最后仍由你掌控', copy:'演示到这里结束。你可以继续手动探索，或从左侧入口再播一遍。', action:{kind:'home'}, target:'.recap-link', hold:3100 }
+    ]}
+  ]
+};
+
+/* Optional in-app walkthrough. It never writes application data. */
+(() => {
+  const chapters=VOICELOG_DEMO.chapters;
+  const steps=chapters.flatMap((chapter,chapterIndex)=>chapter.steps.map((step,localIndex)=>({...step,chapter,chapterIndex,localIndex})));
+  const firstIndex=id=>steps.findIndex(step=>step.chapter.id===id);
+  const state={active:false,manual:false,locked:false,exiting:false,recovering:false,automation:false,playing:false,ended:false,step:0,timer:null,token:0,speed:VOICELOG_DEMO.defaultSpeed,autoResume:true};
+  const phone=document.querySelector('#phone');
+  let board=null,headerBar=null,focusRing=null,idleTimer=null,lastHumanSignal=0;
+
+  function clearTimers(){clearTimeout(idleTimer);idleTimer=null}
+  function invalidate(){state.token++;clearTimers();clearFocus()}
+  function updateUrl(enabled){const url=new URL(location.href);if(enabled)url.searchParams.set('demo','1');else{url.searchParams.delete('demo');url.searchParams.delete('kiosk')}history.replaceState(null,'',url)}
+  function clearFocus(){if(focusRing)focusRing.hidden=true}
+  function shell(){
+    if(board)return;
+    document.body.classList.add('demo-presentation');
+    headerBar=document.createElement('header');headerBar.className='demo-topbar';
+    headerBar.innerHTML=`<div class="demo-wordmark"><span class="demo-mark">∿</span><strong>VoiceLog <small>声迹</small></strong><span class="demo-top-label">交互演示</span></div><div class="demo-top-actions"><span class="demo-offline">离线示例 · 全程可接手</span><button type="button" data-demo-action="fullscreen">全屏观看</button><button type="button" data-demo-action="close">退出演示</button></div>`;
+    document.body.prepend(headerBar);
+    board=document.createElement('aside');board.id='demo-board';board.setAttribute('aria-label','一键演示讲解面板');
+    document.querySelector('.stage').append(board);
+    focusRing=document.createElement('div');focusRing.className='demo-focus';focusRing.hidden=true;phone.append(focusRing);
+    renderBoard();
+  }
+  function renderBoard(){
+    if(!board)return;
+    const current=steps[Math.min(state.step,steps.length-1)],index=current?.chapterIndex??0;
+    const progress=state.ended?100:Math.round(100*state.step/steps.length);
+    const label=state.manual?'手动体验中':state.playing?'正在演示':state.ended?'演示结束':'已暂停';
+    const main=state.ended?'再播一遍':state.manual?'继续演示':state.playing?'暂停演示':'开始演示';
+    board.innerHTML=`<div class="demo-board-top"><span class="demo-eyebrow">声迹 · 一键演示</span><span class="demo-count">${String(index+1).padStart(2,'0')} / ${String(chapters.length).padStart(2,'0')}</span><span class="demo-status ${state.playing?'playing':''}"><i></i>${label}</span></div><div class="demo-story"><span class="demo-chapter-no">CHAPTER ${String(index+1).padStart(2,'0')}</span><h2>${esc(state.ended?'演示已完成':current?.title||'从这一天开始')}</h2><p>${esc(state.ended?'点击左侧任意功能继续体验，或再播一遍完整路径。':current?.copy||'沿时间线，走到人物、原话、关联与安排。')}</p></div><div class="demo-route"><span>演示路线</span><strong>${chapters.map((c,i)=>i===index?`<em>${esc(c.name)}</em>`:esc(c.name)).join('<b> / </b>')}</strong></div><div class="demo-progress" role="progressbar" aria-valuenow="${progress}" aria-valuemin="0" aria-valuemax="100" aria-label="演示进度"><i style="width:${progress}%"></i></div><div class="demo-controls"><button type="button" class="demo-secondary" data-demo-action="previous" aria-label="上一步">←</button><button type="button" class="demo-primary" data-demo-action="toggle">${state.playing?'Ⅱ':'▶'}　${main}</button><button type="button" class="demo-secondary" data-demo-action="next" aria-label="下一步">→</button><button type="button" class="demo-speed" data-demo-action="speed" aria-label="切换演示速度">${state.speed}×</button></div><div class="demo-chapter-head"><span>快速跳到</span><span>点击章节直达</span></div><div class="demo-chapters">${chapters.map((c,i)=>`<button type="button" data-demo-action="chapter" data-chapter="${c.id}" class="${i===index?'active':''}" aria-pressed="${i===index}"><small>${String(i+1).padStart(2,'0')}</small>${esc(c.short)}</button>`).join('')}</div><div class="demo-board-foot"><span>${state.manual?'正在手动体验，停下 12 秒后继续当前讲解。':'可以随时触碰手机，自由体验当前功能。'}</span><button type="button" data-demo-action="auto-resume" aria-pressed="${state.autoResume}">${state.autoResume?'自动续播 开':'自动续播 关'}</button></div>`;
+  }
+  function open({play=false}={}){
+    if(!state.active){state.active=true;state.ended=false;state.manual=false;state.playing=false;state.step=0;shell();updateUrl(true)}
+    if(play)run(state.step);else renderBoard();
+  }
+  function close(){
+    if(!state.active)return;
+    state.exiting=true;invalidate();state.active=false;state.manual=false;state.playing=false;state.ended=false;
+    if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});
+    board?.remove();headerBar?.remove();focusRing?.remove();board=headerBar=focusRing=null;
+    document.body.classList.remove('demo-presentation');updateUrl(false);state.exiting=false;
+  }
+  function pause(manual=false){
+    if(!state.active)return;
+    invalidate();state.playing=false;state.manual=manual;renderBoard();if(manual)scheduleIdle();
+  }
+  function scheduleIdle(){
+    clearTimeout(idleTimer);
+    if(!state.autoResume||!state.manual)return;
+    const token=state.token;
+    idleTimer=setTimeout(()=>{if(!state.active||!state.manual||state.token!==token)return;state.recovering=true;run(state.step);state.recovering=false},VOICELOG_DEMO.idleMs);
+  }
+  function wait(ms,token){return new Promise(resolve=>{state.timer=setTimeout(()=>{state.timer=null;resolve(state.token===token)},ms)})}
+  function ensureVisible(selector){
+    if(!selector)return null;
+    const element=phone.querySelector(selector);if(!element)return null;
+    const rect=element.getBoundingClientRect(),pr=phone.getBoundingClientRect();
+    if(rect.bottom>pr.bottom-100||rect.top<pr.top+83)element.scrollIntoView({block:'center',behavior:'smooth'});
+    return element;
+  }
+  function focus(selector){
+    const element=ensureVisible(selector);if(!element||!focusRing)return;
+    const token=state.token;
+    requestAnimationFrame(()=>setTimeout(()=>{
+      if(!state.active||token!==state.token||!element.isConnected||!focusRing)return;
+      const pr=phone.getBoundingClientRect(),r=element.getBoundingClientRect(),pad=5;
+      const left=Math.max(5,r.left-pr.left-pad),top=Math.max(5,r.top-pr.top-pad);
+      const right=Math.min(pr.width-5,r.right-pr.left+pad),bottom=Math.min(pr.height-5,r.bottom-pr.top+pad);
+      if(right<=left||bottom<=top){clearFocus();return}
+      Object.assign(focusRing.style,{left:left+'px',top:top+'px',width:(right-left)+'px',height:(bottom-top)+'px'});
+      focusRing.hidden=false;
+    },340));
+  }
+  function act(action){
+    const a=action||{},kind=a.kind;
+    state.automation=true;
+    try{
+      if(kind==='home'){leaveOverlays();S.date=DATA.dates[0];S.homeMode='time';S.groupFilter='全部';S.expandedBlock='b-am';dispatch('nav',{route:'home'})}
+      else if(kind==='block'){leaveOverlays();S.route='home';S.homeMode='time';S.expandedBlock=a.id;render()}
+      else if(kind==='episode')dispatch('episode',{id:a.id});
+      else if(kind==='people'){leaveOverlays();S.date=DATA.dates[0];S.peopleWindow={startMinute:540,endMinute:660};S.focus=590;dispatch('desktop-people')}
+      else if(kind==='people-time'){peopleViewController?.selectWindow(540);peopleViewController?.seek(a.minute)}
+      else if(kind==='person')dispatch('person',{id:a.id});
+      else if(kind==='person-tab')dispatch('person-tab',{tab:a.tab});
+      else if(kind==='ref')dispatch('ref',{id:a.id});
+      else if(kind==='close-sheet')closeSheet(true);
+      else if(kind==='graph'){leaveOverlays();dispatch('open-full-graph',{scope:'all'})}
+      else if(kind==='graph-select')getActiveGraph()?.select(a.id,true);
+      else if(kind==='chat'){leaveOverlays();dispatch('nav',{route:'chat'});S.scope={kind:'date',id:DATA.dates[0]};render()}
+      else if(kind==='chat-answer'){
+        const result=answer(a.question,{kind:'date',id:DATA.dates[0]}),thread=document.querySelector('#chat-thread');
+        if(thread){thread.innerHTML=`<article class="bubble user">${esc(a.question)}</article><article class="bubble assistant"><div class="author"><span class="tag">声迹</span><span>示例回答</span></div>${esc(result.text)}${result.refs.length?`<div class="citations">${result.refs.map((r,i)=>ref(r,two(i+1))).join('')}</div>`:''}</article>`;thread.scrollTop=thread.scrollHeight}
+      }
+      else if(kind==='calendar'){leaveOverlays();S.calendarDate=DATA.dates[1];S.calendarFilter='all';dispatch('calendar')}
+      else if(kind==='calendar-filter')dispatch('calendar-filter',{filter:a.filter});
+      else if(kind==='calendar-preview')dispatch('save-action',{id:a.id});
+      else if(kind==='device'){leaveOverlays();dispatch('device')}
+      else if(kind==='scenes'){leaveOverlays();dispatch('nav',{route:'scenes'})}
+      else if(kind==='recap'){leaveOverlays();dispatch('recap')}
+      else if(kind==='scroll')ensureVisible(a.selector);
+      else throw new Error('未知演示动作: '+kind);
+    } finally {state.automation=false}
+  }
+  async function run(start=state.step){
+    if(!state.active)return;
+    invalidate();const token=state.token;
+    state.playing=true;state.manual=false;state.ended=false;
+    for(let i=Math.max(0,Math.min(start,steps.length-1));i<steps.length;i++){
+      if(token!==state.token||!state.active)return;
+      state.step=i;const step=steps[i];renderBoard();
+      try{act(step.action)}catch(error){console.error('演示步骤未完成',step,error);pause();toast('这一步暂时无法打开，可以手动继续。');return}
+      focus(step.target);
+      if(!await wait(Math.max(850,Math.round((step.hold||2300)/state.speed)),token))return;
+    }
+    if(token!==state.token||!state.active)return;
+    state.playing=false;state.ended=true;clearFocus();renderBoard();
+  }
+  function jump(index,play=true){
+    if(!state.active)open();
+    invalidate();state.step=Math.max(0,Math.min(index,steps.length-1));state.manual=false;state.ended=false;
+    if(play)run(state.step);else renderBoard();
+  }
+  function handleControl(button){
+    const action=button.dataset.demoAction;
+    if(action==='open'){open({play:true});return}
+    if(action==='close'){close();return}
+    if(action==='fullscreen'){if(document.fullscreenElement)document.exitFullscreen().catch(()=>{});else document.documentElement.requestFullscreen?.().catch(()=>toast('浏览器未允许全屏，可以继续在当前窗口观看。'));return}
+    if(action==='toggle'){if(state.playing)pause();else if(state.ended)jump(0);else run(state.step);return}
+    if(action==='previous'){jump(state.step-1);return}
+    if(action==='next'){jump(state.step+1);return}
+    if(action==='chapter'){jump(firstIndex(button.dataset.chapter));return}
+    if(action==='speed'){const i=VOICELOG_DEMO.speeds.indexOf(state.speed);state.speed=VOICELOG_DEMO.speeds[(i+1)%VOICELOG_DEMO.speeds.length];renderBoard();return}
+    if(action==='auto-resume'){state.autoResume=!state.autoResume;renderBoard();if(state.manual)scheduleIdle()}
+  }
+  document.addEventListener('click',event=>{const button=event.target.closest('[data-demo-action]');if(!button)return;event.preventDefault();event.stopImmediatePropagation();handleControl(button)},true);
+  for(const type of ['pointerdown','touchstart','wheel','focusin','input','keydown'])document.addEventListener(type,event=>{
+    if(!state.active||state.automation||!event.isTrusted||!phone.contains(event.target)||event.target.closest('[data-demo-action]'))return;
+    if(type==='focusin'||type==='input'){if(performance.now()-lastHumanSignal>700)return}
+    else lastHumanSignal=performance.now();
+    if(state.manual){scheduleIdle();return}
+    if(state.playing)pause(true);
+  },{capture:true,passive:true});
+  if(new URLSearchParams(location.search).get('demo')==='1'||new URLSearchParams(location.search).get('kiosk')==='1')open();
+  window.VoiceLogDemo={get state(){return {...state}},get steps(){return steps},open,close,run,pause,jump};
+})();

@@ -107,4 +107,4 @@ function openFullGraph(scope,selected){
  $('#graph-search').oninput=e=>{let q=e.target.value.trim();$('#graph-search-results').innerHTML=q?fullGraphView.g.nodes.filter(n=>(n.label+' '+(n.summary||'')).includes(q)).slice(0,8).map(n=>b('graph-select',esc(n.label),'',`data-id="${n.id}"`)).join('')||'<div class="empty">没有找到</div>':''};
  $('#full-graph-canvas').focus({preventScroll:true});
 }
-function closeFullGraph(){if(fullGraphView){fullGraphView.destroy();fullGraphView=null}$('#graph-overlay')?.remove();S.graphFull=false;[...$('#phone').children].forEach(el=>el.inert=false);document.querySelector('.desktop-note').inert=false;$('#appheader button')?.focus({preventScroll:true})}
+function closeFullGraph(){if(fullGraphView){fullGraphView.destroy();fullGraphView=null}$('#graph-overlay')?.remove();S.graphFull=false;[...$('#phone').children].forEach(el=>el.inert=false);document.querySelector('.desktop-note').inert=false;updateDesktopGuideActive();$('#appheader button')?.focus({preventScroll:true})}
