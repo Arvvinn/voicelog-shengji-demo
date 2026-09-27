@@ -1,0 +1,370 @@
+{
+  "kind": "synthetic unit/property tests, no live services",
+  "passed": 72,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "brand and version",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "episode and block IDs unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all episodes belong to exactly one outer interval",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nested events remain inside their outer time window",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "day blocks remain chronological and nonoverlapping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "morning has three events and afternoon has six",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "work filtering does not merge separate times",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "multi-day includes next-day work, in order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "deleted episodes disappear from block view",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "empty block disappears after its only event is deleted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "sleep preview contains no source recording",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "private rest does not create audio or graph evidence",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "interval union known overlap",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "invalid and reversed intervals excluded",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "window clips intervals",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "people plot maps exact minutes to proportional pixel positions",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "people track uses exact clipped interval height with no minimum stretch",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same interval scales linearly when the plot height changes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "short encounter geometry remains minute-proportional",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "randomized interval union matches independent integer bitmap oracle (500 cases)",
+      "passed": true,
+      "detail": {
+        "cases": 500,
+        "seed": 77831
+      }
+    },
+    {
+      "name": "union invariant to input order and duplication",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "Xiaolin union is 110 minutes, raw sum 117",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown/anonymous identity excluded from confirmed-person durations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "day selector does not count next-day encounters",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "deleted encounter source removed from duration",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preview not included as observed daytime episode",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "day counts refer to selected range",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "current people rank before inactive people",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "stable ordering remains stable across times",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "pin takes priority without duplicating IDs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same relevance preserves previous order",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all source references resolve",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "every summary item has explicit source mapping",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "references point inside the exact segment",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unknown ref rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong record scope rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong block scope rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "matching block scope accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong date scope rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wrong person scope rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "removed source is unavailable",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonfinite, negative and overlong reference offsets rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "unexpected locator kind rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "incorrect immutable media version rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "correction preserves old text and marks old citation stale",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "blank correction rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "draft depending on changed source becomes stale",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "saved event not silently rewritten after correction",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three-level scene tree accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fourth level rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cycle rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "duplicate and orphan scene IDs rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "graph has no dangling edge endpoints",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "graph identifiers and edge IDs unique",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "graph every cited source exists",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "graph one-hop expansion actually includes neighbors",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "graph depth zero only contains selected node",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no manufactured proven-causal relation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "default no calendar write",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "explicit confirmation allows one valid self event",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "preauthorization permits bounded self event",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "expired preauthorization rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "wish is never executed even with authorization",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ambiguous action remains pending details",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "other-person event is not auto-managed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "revoked, stale, conflict states block execution",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "nonfinite duration rejected",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calendar retry does not add duplicate receipt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "cancelled event not rebuilt",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "calendar overlap detected, adjacent boundary accepted",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "ICS is valid-sized CRLF lines with UTC time and stable UID",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source-sharing/graph interpretation contains no personality label fields",
+      "passed": true,
+      "detail": null
+    }
+  ]
+}

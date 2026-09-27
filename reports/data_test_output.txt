@@ -1,0 +1,69 @@
+PASS brand and version
+PASS episode and block IDs unique
+PASS all episodes belong to exactly one outer interval
+PASS nested events remain inside their outer time window
+PASS day blocks remain chronological and nonoverlapping
+PASS morning has three events and afternoon has six
+PASS work filtering does not merge separate times
+PASS multi-day includes next-day work, in order
+PASS deleted episodes disappear from block view
+PASS empty block disappears after its only event is deleted
+PASS sleep preview contains no source recording
+PASS private rest does not create audio or graph evidence
+PASS interval union known overlap
+PASS invalid and reversed intervals excluded
+PASS window clips intervals
+PASS randomized interval union matches independent integer bitmap oracle (500 cases)
+PASS union invariant to input order and duplication
+PASS Xiaolin union is 110 minutes, raw sum 117
+PASS unknown/anonymous identity excluded from confirmed-person durations
+PASS day selector does not count next-day encounters
+PASS deleted encounter source removed from duration
+PASS preview not included as observed daytime episode
+PASS day counts refer to selected range
+PASS current people rank before inactive people
+PASS stable ordering remains stable across times
+PASS pin takes priority without duplicating IDs
+PASS same relevance preserves previous order
+PASS all source references resolve
+PASS every summary item has explicit source mapping
+PASS references point inside the exact segment
+PASS unknown ref rejected
+PASS wrong record scope rejected
+PASS wrong block scope rejected
+PASS matching block scope accepted
+PASS wrong date scope rejected
+PASS wrong person scope rejected
+PASS removed source is unavailable
+PASS nonfinite, negative and overlong reference offsets rejected
+PASS unexpected locator kind rejected
+PASS incorrect immutable media version rejected
+PASS correction preserves old text and marks old citation stale
+PASS blank correction rejected
+PASS draft depending on changed source becomes stale
+PASS saved event not silently rewritten after correction
+PASS three-level scene tree accepted
+PASS fourth level rejected
+PASS cycle rejected
+PASS duplicate and orphan scene IDs rejected
+PASS graph has no dangling edge endpoints
+PASS graph identifiers and edge IDs unique
+PASS graph every cited source exists
+PASS graph one-hop expansion actually includes neighbors
+PASS graph depth zero only contains selected node
+PASS no manufactured proven-causal relation
+PASS default no calendar write
+PASS explicit confirmation allows one valid self event
+PASS preauthorization permits bounded self event
+PASS expired preauthorization rejected
+PASS wish is never executed even with authorization
+PASS ambiguous action remains pending details
+PASS other-person event is not auto-managed
+PASS revoked, stale, conflict states block execution
+PASS nonfinite duration rejected
+PASS calendar retry does not add duplicate receipt
+PASS cancelled event not rebuilt
+PASS calendar overlap detected, adjacent boundary accepted
+PASS ICS is valid-sized CRLF lines with UTC time and stable UID
+PASS source-sharing/graph interpretation contains no personality label fields
+DATA 68 passed 0 failed

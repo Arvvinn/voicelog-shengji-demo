@@ -1,0 +1,28 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.2", nodesep="0.27", ranksep="0.38", splines=polyline];
+node [shape=box,style="rounded,filled",fillcolor="#EFF3E7",color="#CFDCC1",penwidth=1,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#203A2C",margin="0.14,0.11"];
+edge [color="#8FA782",arrowsize=.55,penwidth=1.1,fontname="Noto Sans CJK SC",fontsize=9,fontcolor="#6A7F5F"];
+n0 [label="总览",shape=box,fillcolor="#BDDF58"];
+n1 [label="分块时间线",shape=box,fillcolor="#EFF3E7"];
+n2 [label="人物交汇",shape=box,fillcolor="#EFF3E7"];
+n3 [label="时段内事情",shape=box,fillcolor="#EFF3E7"];
+n4 [label="记录详情与原话",shape=box,fillcolor="#EFF3E7"];
+n5 [label="人物与交流理解",shape=box,fillcolor="#EFF3E7"];
+n6 [label="场景",shape=box,fillcolor="#EFF3E7"];
+n7 [label="总览 · 记录 · \n分析 · 关系",shape=box,fillcolor="#EFF3E7"];
+n8 [label="完整关系画布",shape=box,fillcolor="#EFF3E7"];
+n9 [label="统一范围对话",shape=box,fillcolor="#EFF3E7"];
+n10 [label="日历草稿与回执",shape=box,fillcolor="#EFF3E7"];
+n0 -> n1 [label="",style=solid];
+n0 -> n2 [label="",style=solid];
+n1 -> n3 [label="",style=solid];
+n3 -> n4 [label="",style=solid];
+n2 -> n5 [label="",style=solid];
+n6 -> n7 [label="",style=solid];
+n7 -> n4 [label="",style=solid];
+n7 -> n8 [label="",style=solid];
+n4 -> n9 [label="",style=solid];
+n5 -> n9 [label="",style=solid];
+n8 -> n9 [label="",style=solid];
+n9 -> n10 [label="",style=solid];
+}

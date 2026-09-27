@@ -1,0 +1,18 @@
+digraph G {
+graph [rankdir=LR, bgcolor="transparent", pad="0.2", nodesep="0.27", ranksep="0.38", splines=polyline];
+node [shape=box,style="rounded,filled",fillcolor="#EFF3E7",color="#CFDCC1",penwidth=1,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#203A2C",margin="0.14,0.11"];
+edge [color="#8FA782",arrowsize=.55,penwidth=1.1,fontname="Noto Sans CJK SC",fontsize=9,fontcolor="#6A7F5F"];
+n0 [label="原句被纠正",shape=box,fillcolor="#BDDF58"];
+n1 [label="保存转写新版本",shape=box,fillcolor="#EFF3E7"];
+n2 [label="原引用保留历史版本",shape=box,fillcolor="#EFF3E7"];
+n3 [label="相关整理标为待更新",shape=box,fillcolor="#EFF3E7"];
+n4 [label="未执行安排暂停核对",shape=box,fillcolor="#EFF3E7"];
+n5 [label="已存安排提示变更",shape=box,fillcolor="#EFF3E7"];
+n6 [label="用户仍可回到原引用",shape=box,fillcolor="#EFF3E7"];
+n0 -> n1 [label="",style=solid];
+n1 -> n2 [label="",style=solid];
+n1 -> n3 [label="",style=solid];
+n1 -> n4 [label="",style=solid];
+n1 -> n5 [label="",style=solid];
+n2 -> n6 [label="",style=solid];
+}

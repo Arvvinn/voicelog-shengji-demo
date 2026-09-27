@@ -1,0 +1,53 @@
+{
+  "version": "1.1.0",
+  "product": "VoiceLog / 声迹",
+  "implemented": [
+    "contiguous_scene_blocks",
+    "nested_event_timeline",
+    "multi_day_scope",
+    "animated_people_lanes",
+    "pin_and_stable_order",
+    "cytoscape_interactive_graph",
+    "quoted_evidence_and_revision",
+    "local_media_import_seek",
+    "candidate_feedback_and_reply_draft",
+    "self_report_mood_edit",
+    "local_calendar_confirmation_conflicts_ics",
+    "local_data_export"
+  ],
+  "simulated": [
+    "recorder_connection",
+    "recorder_control",
+    "transcription",
+    "speaker_identity",
+    "conversation_candidate_judgment",
+    "voice_chat"
+  ],
+  "not_connected": [
+    "actual_Anker_SDK",
+    "ASR",
+    "Jev_API",
+    "external_calendar",
+    "server_access_control"
+  ],
+  "preview_only": [
+    "sleep_analysis"
+  ],
+  "fixture": {
+    "episodes": 16,
+    "blocks": 8,
+    "persons": 10,
+    "raw_graph_nodes": 75,
+    "raw_graph_edges": 89,
+    "dates": [
+      "2026-10-16",
+      "2026-10-17"
+    ],
+    "fictional": true
+  },
+  "tests": {
+    "data_checks": 68,
+    "browser_checks": 130,
+    "motion_layout_checks": 74
+  }
+}

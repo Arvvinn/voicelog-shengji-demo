@@ -1,0 +1,3550 @@
+{
+  "version": "1.1.0",
+  "brand": "VoiceLog / 声迹",
+  "fixtureNotice": "离线产品样例。人物、日期、转写及分析均为预置示例；未连接真实录音豆、ASR、Jev或外部日历。",
+  "dates": [
+    "2026-10-16",
+    "2026-10-17"
+  ],
+  "project": {
+    "id": "voicelog-day",
+    "title": "VoiceLog · 我的比赛日",
+    "label": "项目主题",
+    "description": "一次比赛，贯穿协作、访谈、学习与复盘。"
+  },
+  "scenes": [
+    {
+      "id": "collaboration",
+      "name": "项目协作",
+      "domain": "工作",
+      "icon": "layers",
+      "caption": "讨论、决定、交接与后续想法",
+      "status": "demo",
+      "fields": [
+        "议题与决定",
+        "理由与分歧",
+        "我的承诺",
+        "下一步安排"
+      ]
+    },
+    {
+      "id": "interview",
+      "name": "访谈与交流",
+      "domain": "工作",
+      "icon": "mic",
+      "caption": "原话、诉求、我的推论与待验证点",
+      "status": "demo",
+      "fields": [
+        "对方原话",
+        "明确诉求",
+        "候选解释",
+        "下次要问"
+      ]
+    },
+    {
+      "id": "learning",
+      "name": "学习与答疑",
+      "domain": "学习",
+      "icon": "book",
+      "caption": "重点有出处，疑问可以接着问",
+      "status": "demo",
+      "fields": [
+        "讲解重点",
+        "我的疑问",
+        "动态讲解",
+        "复习线索"
+      ]
+    },
+    {
+      "id": "making",
+      "name": "独立制作",
+      "domain": "工作",
+      "icon": "code",
+      "caption": "保留口述与本人记录，不推断屏幕操作",
+      "status": "demo",
+      "fields": [
+        "本人补记",
+        "设计想法",
+        "问题与试验",
+        "待处理"
+      ]
+    },
+    {
+      "id": "reflection",
+      "name": "个人复盘",
+      "domain": "生活",
+      "icon": "spark",
+      "caption": "今天定下的，留给明天接着做",
+      "status": "demo",
+      "fields": [
+        "变化与决定",
+        "未完成事项",
+        "关键交流",
+        "下一天"
+      ]
+    },
+    {
+      "id": "break",
+      "name": "日常与休息",
+      "domain": "生活",
+      "icon": "cup",
+      "caption": "留白也在一天里，不强行分析",
+      "status": "demo",
+      "fields": [
+        "本人记录",
+        "隐私时段",
+        "可选片段"
+      ]
+    },
+    {
+      "id": "sleep",
+      "name": "夜间声音",
+      "domain": "夜间",
+      "icon": "moon",
+      "caption": "扩展预览 · 本轮无睡眠分析逻辑",
+      "status": "preview",
+      "fields": [
+        "夜间事件",
+        "梦话回听",
+        "晨间感受",
+        "未来多晚比较"
+      ]
+    }
+  ],
+  "persons": [
+    {
+      "id": "me",
+      "name": "我",
+      "initial": "我",
+      "role": "开发者",
+      "consent": "self",
+      "color": "#203d32"
+    },
+    {
+      "id": "lin",
+      "name": "小林",
+      "initial": "林",
+      "role": "产品协作",
+      "consent": "confirmed_demo",
+      "color": "#2d6856"
+    },
+    {
+      "id": "yuan",
+      "name": "阿远",
+      "initial": "远",
+      "role": "工程协作",
+      "consent": "confirmed_demo",
+      "color": "#7a843c"
+    },
+    {
+      "id": "zhou",
+      "name": "小周",
+      "initial": "周",
+      "role": "技术交流",
+      "consent": "confirmed_demo",
+      "color": "#647caf"
+    },
+    {
+      "id": "guest",
+      "name": "访谈对象 A",
+      "initial": "A",
+      "role": "本次匿名",
+      "consent": "session_only",
+      "color": "#a77e63"
+    },
+    {
+      "id": "host",
+      "name": "活动说明者",
+      "initial": "说",
+      "role": "本次匿名",
+      "consent": "session_only",
+      "color": "#81897c"
+    },
+    {
+      "id": "chen",
+      "name": "阿晨",
+      "initial": "晨",
+      "role": "设计协作",
+      "consent": "confirmed_demo",
+      "color": "#9A725A"
+    },
+    {
+      "id": "ning",
+      "name": "小宁",
+      "initial": "宁",
+      "role": "接口联调",
+      "consent": "confirmed_demo",
+      "color": "#7771A4"
+    },
+    {
+      "id": "judge",
+      "name": "评审交流者",
+      "initial": "评",
+      "role": "本次匿名 · 示例",
+      "consent": "session_only",
+      "color": "#477F94"
+    },
+    {
+      "id": "fang",
+      "name": "小方",
+      "initial": "方",
+      "role": "开发者交流",
+      "consent": "confirmed_demo",
+      "color": "#9A7947"
+    }
+  ],
+  "episodes": [
+    {
+      "id": "e01",
+      "date": "2026-10-16",
+      "start": "2026-10-16T08:45:00+08:00",
+      "end": "2026-10-16T09:10:00+08:00",
+      "kind": "arrival",
+      "domain": "生活",
+      "projectId": "voicelog-day",
+      "title": "到场，确认今天的安排",
+      "summary": "开场信息里，留下一条明天下午的安排。",
+      "participants": [
+        "host"
+      ],
+      "segments": [
+        {
+          "id": "e01-s1",
+          "speaker": "host",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "明天下午三点在主会场进行颁奖环节，大家提前十分钟到场。",
+          "revision": 1
+        },
+        {
+          "id": "e01-s2",
+          "speaker": "me",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "今天先把产品方向和两个核心交互做好。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "明日 15:00 · 参加颁奖环节",
+        "今天先完成方向和两个核心交互"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "到场与今天的安排",
+      "itemRefs": [
+        [
+          "r-e01-1"
+        ],
+        [
+          "r-e01-2"
+        ]
+      ],
+      "laneLabel": "到场与今天的安排"
+    },
+    {
+      "id": "e02",
+      "date": "2026-10-16",
+      "start": "2026-10-16T09:15:00+08:00",
+      "end": "2026-10-16T10:25:00+08:00",
+      "kind": "collaboration",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "和小林、阿远，定下产品主线",
+      "summary": "用场景收起一天，再从人物视角看交流。",
+      "participants": [
+        "lin",
+        "yuan",
+        "chen"
+      ],
+      "segments": [
+        {
+          "id": "e02-s1",
+          "speaker": "lin",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "首页先讲清楚今天做了什么，每段都能展开，别把所有东西铺满。",
+          "revision": 1
+        },
+        {
+          "id": "e02-s2",
+          "speaker": "yuan",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "人物交汇和场景时间线可以读同一份记录，只是换一个视角。",
+          "revision": 1
+        },
+        {
+          "id": "e02-s3",
+          "speaker": "me",
+          "start_ms": 46000,
+          "end_ms": 58000,
+          "text": "那就先做白天，夜间保留预览。今天把时间线和人物线做顺。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "决定：白天为主，夜间仅预览",
+        "交互：时间线和人物线共用资料"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "1 处交叠人声 · 建议回听",
+        "events": [
+          {
+            "label": "重叠人声",
+            "start_ms": 28000,
+            "end_ms": 34000,
+            "status": "candidate"
+          }
+        ]
+      },
+      "public": true,
+      "shortTitle": "确定今天的主线",
+      "itemRefs": [
+        [
+          "r-e02-3"
+        ],
+        [
+          "r-e02-2"
+        ]
+      ],
+      "laneLabel": "主线讨论"
+    },
+    {
+      "id": "e03",
+      "date": "2026-10-16",
+      "start": "2026-10-16T10:40:00+08:00",
+      "end": "2026-10-16T11:10:00+08:00",
+      "kind": "interview",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "听一位体验者说，哪里不好找",
+      "summary": "对方想先回到刚才，不想先选分类。",
+      "participants": [
+        "guest"
+      ],
+      "segments": [
+        {
+          "id": "e03-s1",
+          "speaker": "guest",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "我想先看到刚才和谁说过什么，别让我一进来就选文件夹。",
+          "revision": 1
+        },
+        {
+          "id": "e03-s2",
+          "speaker": "me",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "如果点一句话就能回到原声，会比一大段总结更方便吗？",
+          "revision": 1
+        },
+        {
+          "id": "e03-s3",
+          "speaker": "guest",
+          "start_ms": 46000,
+          "end_ms": 58000,
+          "text": "会。但我不希望吃饭聊天也被自动公开。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "原话诉求：先看刚才的交流",
+        "分享边界：休息谈话不默认公开"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "背景交谈 · 一段待核对",
+        "events": [
+          {
+            "label": "背景交谈",
+            "start_ms": 11000,
+            "end_ms": 20000,
+            "status": "candidate"
+          }
+        ]
+      },
+      "public": true,
+      "shortTitle": "体验者反馈",
+      "itemRefs": [
+        [
+          "r-e03-1"
+        ],
+        [
+          "r-e03-3"
+        ]
+      ],
+      "laneLabel": "体验访谈"
+    },
+    {
+      "id": "e04",
+      "date": "2026-10-16",
+      "start": "2026-10-16T11:20:00+08:00",
+      "end": "2026-10-16T11:45:00+08:00",
+      "kind": "learning",
+      "domain": "学习",
+      "projectId": "voicelog-day",
+      "title": "向小周请教，交谈时长怎么算",
+      "summary": "重叠区间先合并，沉默不等于离开。",
+      "participants": [
+        "zhou"
+      ],
+      "segments": [
+        {
+          "id": "e04-s1",
+          "speaker": "zhou",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "同一个人的两个交流区间如果重叠，要先求并集，不能直接把分钟加起来。",
+          "revision": 1
+        },
+        {
+          "id": "e04-s2",
+          "speaker": "zhou",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "录到说话能说明这个时段有交流，沉默不能直接当作离开。",
+          "revision": 1
+        },
+        {
+          "id": "e04-s3",
+          "speaker": "me",
+          "start_ms": 46000,
+          "end_ms": 58000,
+          "text": "那我们把指标叫已确认交流时段，保留原话和时间边界。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "重点：区间求并集",
+        "统计边界：沉默不能当作离开"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "交流时长，怎么算",
+      "itemRefs": [
+        [
+          "r-e04-1"
+        ],
+        [
+          "r-e04-2"
+        ]
+      ],
+      "laneLabel": "技术答疑"
+    },
+    {
+      "id": "e05",
+      "date": "2026-10-16",
+      "start": "2026-10-16T12:00:00+08:00",
+      "end": "2026-10-16T12:40:00+08:00",
+      "kind": "break",
+      "domain": "生活",
+      "projectId": null,
+      "title": "吃饭，给这段时间留白",
+      "summary": "本人标记为休息，这段没有保存谈话。",
+      "participants": [],
+      "segments": [],
+      "items": [
+        "休息由本人补记",
+        "未采集，不纳入交流统计"
+      ],
+      "source": "manual_private_gap",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "not_collected",
+        "label": "隐私时段 · 未采集",
+        "events": []
+      },
+      "public": false,
+      "shortTitle": "午饭与休息",
+      "itemRefs": [
+        [],
+        []
+      ],
+      "laneLabel": "午饭与休息"
+    },
+    {
+      "id": "e06",
+      "date": "2026-10-16",
+      "start": "2026-10-16T13:00:00+08:00",
+      "end": "2026-10-16T15:10:00+08:00",
+      "kind": "making",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "独立制作，把首页接起来",
+      "summary": "制作进度来自本人补记，录音只保留短口述。",
+      "participants": [],
+      "segments": [
+        {
+          "id": "e06-s1",
+          "speaker": "me",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "我在做时间线展开，返回上一层应该留在原来的位置。",
+          "revision": 1
+        },
+        {
+          "id": "e06-s2",
+          "speaker": "me",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "人物轨道不要一边滚动一边乱换列，当前相关的人突出就好。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "实现目标：原位展开与返回",
+        "人物交汇：当前相关的人突出"
+      ],
+      "source": "manual_with_audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "风扇类声音候选 · 声源待确认",
+        "events": [
+          {
+            "label": "持续机械声",
+            "start_ms": 12000,
+            "end_ms": 24000,
+            "status": "candidate"
+          }
+        ]
+      },
+      "public": true,
+      "shortTitle": "首页与播放器制作",
+      "itemRefs": [
+        [
+          "r-e06-1"
+        ],
+        [
+          "r-e06-2"
+        ]
+      ],
+      "laneLabel": "首页与播放器制作"
+    },
+    {
+      "id": "e14",
+      "date": "2026-10-16",
+      "start": "2026-10-16T14:10:00+08:00",
+      "end": "2026-10-16T14:35:00+08:00",
+      "title": "和小宁核对引用接口",
+      "shortTitle": "和小宁核对引用接口",
+      "kind": "collaboration",
+      "projectId": "voicelog-day",
+      "participants": [
+        "ning"
+      ],
+      "status": "ready",
+      "source": "audio_fixture",
+      "revision": 1,
+      "public": true,
+      "summary": "把原话播放和页面返回的交接约定说清。",
+      "items": [
+        "引用带时间定位",
+        "返回保持阅读位置"
+      ],
+      "sound": {
+        "label": "收声可用 · 局部人声重叠",
+        "events": [
+          {
+            "label": "重叠人声",
+            "start_ms": 32000,
+            "end_ms": 38000
+          }
+        ]
+      },
+      "segments": [
+        {
+          "id": "e14-s1",
+          "speaker": "ning",
+          "text": "点击引用时直接带录音和句子的时间，别让用户再从头找。",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "revision": 1
+        },
+        {
+          "id": "e14-s2",
+          "speaker": "me",
+          "text": "我会保存返回的位置，关掉原话后仍回到刚才那张卡。",
+          "start_ms": 30000,
+          "end_ms": 42000,
+          "revision": 1
+        }
+      ],
+      "itemRefs": [
+        [
+          "r-e14-1"
+        ],
+        [
+          "r-e14-2"
+        ]
+      ],
+      "laneLabel": "接口核对"
+    },
+    {
+      "id": "e07",
+      "date": "2026-10-16",
+      "start": "2026-10-16T15:20:00+08:00",
+      "end": "2026-10-16T16:05:00+08:00",
+      "kind": "collaboration",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "重新碰头，把页面和数据对齐",
+      "summary": "明确下一次碰头时间，也留下一个分歧。",
+      "participants": [
+        "lin",
+        "yuan"
+      ],
+      "segments": [
+        {
+          "id": "e07-s1",
+          "speaker": "lin",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "明天上午九点半，我们在协作区一起检查页面和数据。",
+          "revision": 1
+        },
+        {
+          "id": "e07-s2",
+          "speaker": "yuan",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "录音没取回来的地方要留空，不能写成没有发生。",
+          "revision": 1
+        },
+        {
+          "id": "e07-s3",
+          "speaker": "me",
+          "start_ms": 46000,
+          "end_ms": 58000,
+          "text": "我负责把引用播放器接上，今晚把新版本发给大家看。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "明确安排：明日 09:30 联调",
+        "我的承诺：今晚发新版给大家"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "页面和数据交接",
+      "itemRefs": [
+        [
+          "r-e07-1"
+        ],
+        [
+          "r-e07-3"
+        ]
+      ],
+      "laneLabel": "联调交接"
+    },
+    {
+      "id": "e08",
+      "date": "2026-10-16",
+      "start": "2026-10-16T16:20:00+08:00",
+      "end": "2026-10-16T16:40:00+08:00",
+      "kind": "collaboration",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "走廊聊了几句，弄清小林的顾虑",
+      "summary": "讨论的是入口可达性，先保留原话再解释。",
+      "participants": [
+        "lin"
+      ],
+      "segments": [
+        {
+          "id": "e08-s1",
+          "speaker": "lin",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "这不是否定你的方案，我是担心第一次进来找不到录音按钮。",
+          "revision": 1
+        },
+        {
+          "id": "e08-s2",
+          "speaker": "me",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "那我把设备条和快速记录放到第一屏，其他内容收起来。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "明确顾虑：录音入口不够直接",
+        "我的回应：第一屏保留设备和录音"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "再聊一次录音入口",
+      "itemRefs": [
+        [
+          "r-e08-1"
+        ],
+        [
+          "r-e08-2"
+        ]
+      ],
+      "laneLabel": "入口调整"
+    },
+    {
+      "id": "e15",
+      "date": "2026-10-16",
+      "start": "2026-10-16T16:50:00+08:00",
+      "end": "2026-10-16T17:15:00+08:00",
+      "title": "与评审交流产品取舍",
+      "shortTitle": "与评审交流产品取舍",
+      "kind": "interview",
+      "projectId": "voicelog-day",
+      "participants": [
+        "judge"
+      ],
+      "status": "ready",
+      "source": "audio_fixture",
+      "revision": 1,
+      "public": true,
+      "summary": "这段反馈集中在人物分析的依据与可核对性。",
+      "items": [
+        "认可时间线的可读性",
+        "希望人物分析能够打开依据",
+        "保留不同解释，避免单一人物分数"
+      ],
+      "sound": {
+        "label": "收声可用 · 局部人声重叠",
+        "events": [
+          {
+            "label": "重叠人声",
+            "start_ms": 32000,
+            "end_ms": 38000
+          }
+        ]
+      },
+      "segments": [
+        {
+          "id": "e15-s1",
+          "speaker": "judge",
+          "text": "时间线让我能看清今天做了什么。人物这边如果只给一个分数，我看不出是怎么来的。",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "revision": 1
+        },
+        {
+          "id": "e15-s2",
+          "speaker": "judge",
+          "text": "如果能点到他说的原话，再看你为什么这样理解，我会更容易判断这个分析有没有价值。",
+          "start_ms": 30000,
+          "end_ms": 42000,
+          "revision": 1
+        },
+        {
+          "id": "e15-s3",
+          "speaker": "me",
+          "text": "我们保留几种解释和原话，不把它变成一个人的性格标签。",
+          "start_ms": 50000,
+          "end_ms": 62000,
+          "revision": 1
+        }
+      ],
+      "itemRefs": [
+        [
+          "r-e15-1"
+        ],
+        [
+          "r-e15-2"
+        ],
+        [
+          "r-e15-3"
+        ]
+      ],
+      "laneLabel": "评审反馈"
+    },
+    {
+      "id": "e16",
+      "date": "2026-10-16",
+      "start": "2026-10-16T17:25:00+08:00",
+      "end": "2026-10-16T17:45:00+08:00",
+      "title": "和小方聊下一步接入",
+      "shortTitle": "和小方聊下一步接入",
+      "kind": "collaboration",
+      "projectId": "voicelog-day",
+      "participants": [
+        "fang"
+      ],
+      "status": "ready",
+      "source": "audio_fixture",
+      "revision": 1,
+      "public": true,
+      "summary": "明确下一步接入时的数据边界。",
+      "items": [
+        "优先明确资料范围",
+        "模型接入与界面体验分开验证"
+      ],
+      "sound": {
+        "label": "收声可用 · 局部人声重叠",
+        "events": [
+          {
+            "label": "重叠人声",
+            "start_ms": 32000,
+            "end_ms": 38000
+          }
+        ]
+      },
+      "segments": [
+        {
+          "id": "e16-s1",
+          "speaker": "fang",
+          "text": "先把这次对话的范围说清，后面再接真实模型，别让一个回答拿到所有资料。",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "revision": 1
+        },
+        {
+          "id": "e16-s2",
+          "speaker": "me",
+          "text": "先用当前记录和同意的关联，切范围也能看得见。",
+          "start_ms": 30000,
+          "end_ms": 42000,
+          "revision": 1
+        }
+      ],
+      "itemRefs": [
+        [
+          "r-e16-1"
+        ],
+        [
+          "r-e16-2"
+        ]
+      ],
+      "laneLabel": "接入讨论"
+    },
+    {
+      "id": "e09",
+      "date": "2026-10-16",
+      "start": "2026-10-16T18:00:00+08:00",
+      "end": "2026-10-16T18:25:00+08:00",
+      "kind": "break",
+      "domain": "生活",
+      "projectId": null,
+      "title": "晚饭与短暂休息",
+      "summary": "本人补记。没有采集，无须补出一段故事。",
+      "participants": [],
+      "segments": [],
+      "items": [
+        "未采集"
+      ],
+      "source": "manual_private_gap",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "not_collected",
+        "label": "未采集",
+        "events": []
+      },
+      "public": false,
+      "shortTitle": "晚饭与休息",
+      "itemRefs": [
+        []
+      ],
+      "laneLabel": "晚饭与休息"
+    },
+    {
+      "id": "e10",
+      "date": "2026-10-16",
+      "start": "2026-10-16T20:30:00+08:00",
+      "end": "2026-10-16T21:00:00+08:00",
+      "kind": "reflection",
+      "domain": "生活",
+      "projectId": "voicelog-day",
+      "title": "收一下今天，留给明天接着做",
+      "summary": "把今天的决定、疑问和已说定的事接起来。",
+      "participants": [],
+      "segments": [
+        {
+          "id": "e10-s1",
+          "speaker": "me",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "今天把方向从两个业务功能，收到了开发者的一天。",
+          "revision": 1
+        },
+        {
+          "id": "e10-s2",
+          "speaker": "me",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "我这套设计简直精妙绝伦，明天是不是该准备上台领奖了？开个玩笑。",
+          "revision": 1
+        },
+        {
+          "id": "e10-s3",
+          "speaker": "me",
+          "start_ms": 46000,
+          "end_ms": 58000,
+          "text": "明天先把联调和展示准备好，颁奖环节记得参加就行。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "本人复盘：主线聚焦开发者的一天",
+        "愿望便签：上台领奖是玩笑"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "今天的收获与明天",
+      "itemRefs": [
+        [
+          "r-e10-1"
+        ],
+        [
+          "r-e10-2"
+        ]
+      ],
+      "laneLabel": "今天的收获与明天"
+    },
+    {
+      "id": "e11",
+      "date": "2026-10-16",
+      "start": "2026-10-16T23:00:00+08:00",
+      "end": "2026-10-16T23:59:00+08:00",
+      "kind": "sleep",
+      "domain": "夜间",
+      "projectId": null,
+      "title": "夜间声音",
+      "summary": "后续能力预览，不计入本日已分析数据。",
+      "participants": [],
+      "segments": [],
+      "items": [],
+      "source": "preview_only",
+      "status": "preview",
+      "revision": 1,
+      "sound": {
+        "status": "not_implemented",
+        "label": "未接入夜间分析",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "夜间声音",
+      "itemRefs": [],
+      "laneLabel": "夜间声音"
+    },
+    {
+      "id": "e12",
+      "date": "2026-10-17",
+      "start": "2026-10-17T09:30:00+08:00",
+      "end": "2026-10-17T10:05:00+08:00",
+      "kind": "collaboration",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "接着昨天，联调时间线和引用",
+      "summary": "昨天的明确安排，今天有了新的跟进记录。",
+      "participants": [
+        "lin",
+        "yuan"
+      ],
+      "segments": [
+        {
+          "id": "e12-s1",
+          "speaker": "lin",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "昨天提的录音入口已经调整了，今天看着清楚多了。",
+          "revision": 1
+        },
+        {
+          "id": "e12-s2",
+          "speaker": "yuan",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "现在点引用能返回正确片段，下一步测试断连状态。",
+          "revision": 1
+        },
+        {
+          "id": "e12-s3",
+          "speaker": "me",
+          "start_ms": 46000,
+          "end_ms": 58000,
+          "text": "这次先把可操作原型交出来，实际硬件接入单独验证。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "昨天的入口问题，今天已调整",
+        "接下来：核对断连状态"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "接续昨天的联调",
+      "itemRefs": [
+        [
+          "r-e12-1"
+        ],
+        [
+          "r-e12-2"
+        ]
+      ],
+      "laneLabel": "次日联调"
+    },
+    {
+      "id": "e13",
+      "date": "2026-10-17",
+      "start": "2026-10-17T10:20:00+08:00",
+      "end": "2026-10-17T10:45:00+08:00",
+      "kind": "interview",
+      "domain": "工作",
+      "projectId": "voicelog-day",
+      "title": "请小周看第二版，继续收反馈",
+      "summary": "这次针对昨天的交汇统计与解释再核对。",
+      "participants": [
+        "zhou"
+      ],
+      "segments": [
+        {
+          "id": "e13-s1",
+          "speaker": "zhou",
+          "start_ms": 10000,
+          "end_ms": 22000,
+          "text": "人物线现在能看出何时聊过，别把这叫陪伴的全部时长。",
+          "revision": 1
+        },
+        {
+          "id": "e13-s2",
+          "speaker": "me",
+          "start_ms": 28000,
+          "end_ms": 40000,
+          "text": "说明里已经写了只统计已记录、确认的交流区间。",
+          "revision": 1
+        }
+      ],
+      "items": [
+        "反馈：清楚区分交流与陪伴",
+        "统计范围：已记录、已确认的交流"
+      ],
+      "source": "audio_fixture",
+      "status": "ready",
+      "revision": 1,
+      "sound": {
+        "status": "fixture",
+        "label": "收声可用 · 示例结果",
+        "events": []
+      },
+      "public": true,
+      "shortTitle": "第二版体验反馈",
+      "itemRefs": [
+        [
+          "r-e13-1"
+        ],
+        [
+          "r-e13-2"
+        ]
+      ],
+      "laneLabel": "继续反馈"
+    }
+  ],
+  "encounters": [
+    {
+      "personId": "lin",
+      "episodeId": "e02",
+      "start": "2026-10-16T09:20:00+08:00",
+      "end": "2026-10-16T09:55:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "lin",
+      "episodeId": "e02",
+      "start": "2026-10-16T09:48:00+08:00",
+      "end": "2026-10-16T10:15:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "yuan",
+      "episodeId": "e02",
+      "start": "2026-10-16T09:25:00+08:00",
+      "end": "2026-10-16T10:20:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "guest",
+      "episodeId": "e03",
+      "start": "2026-10-16T10:40:00+08:00",
+      "end": "2026-10-16T11:10:00+08:00",
+      "basis": "session_anonymous"
+    },
+    {
+      "personId": "zhou",
+      "episodeId": "e04",
+      "start": "2026-10-16T11:22:00+08:00",
+      "end": "2026-10-16T11:42:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "lin",
+      "episodeId": "e07",
+      "start": "2026-10-16T15:20:00+08:00",
+      "end": "2026-10-16T15:55:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "yuan",
+      "episodeId": "e07",
+      "start": "2026-10-16T15:30:00+08:00",
+      "end": "2026-10-16T16:05:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "lin",
+      "episodeId": "e08",
+      "start": "2026-10-16T16:20:00+08:00",
+      "end": "2026-10-16T16:40:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "lin",
+      "episodeId": "e12",
+      "start": "2026-10-17T09:30:00+08:00",
+      "end": "2026-10-17T10:00:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "yuan",
+      "episodeId": "e12",
+      "start": "2026-10-17T09:40:00+08:00",
+      "end": "2026-10-17T10:05:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "zhou",
+      "episodeId": "e13",
+      "start": "2026-10-17T10:20:00+08:00",
+      "end": "2026-10-17T10:40:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "chen",
+      "episodeId": "e02",
+      "start": "2026-10-16T09:50:00+08:00",
+      "end": "2026-10-16T10:10:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "ning",
+      "episodeId": "e14",
+      "start": "2026-10-16T14:10:00+08:00",
+      "end": "2026-10-16T14:35:00+08:00",
+      "basis": "confirmed_fixture"
+    },
+    {
+      "personId": "judge",
+      "episodeId": "e15",
+      "start": "2026-10-16T16:50:00+08:00",
+      "end": "2026-10-16T17:15:00+08:00",
+      "basis": "session_anonymous"
+    },
+    {
+      "personId": "fang",
+      "episodeId": "e16",
+      "start": "2026-10-16T17:25:00+08:00",
+      "end": "2026-10-16T17:45:00+08:00",
+      "basis": "confirmed_fixture"
+    }
+  ],
+  "refs": [
+    {
+      "id": "r-e01-1",
+      "recordingId": "e01",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e01-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "明天下午三点在主会场进行颁奖环节，大家提前十分钟到场。"
+    },
+    {
+      "id": "r-e01-2",
+      "recordingId": "e01",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e01-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "今天先把产品方向和两个核心交互做好。"
+    },
+    {
+      "id": "r-e02-1",
+      "recordingId": "e02",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e02-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "首页先讲清楚今天做了什么，每段都能展开，别把所有东西铺满。"
+    },
+    {
+      "id": "r-e02-2",
+      "recordingId": "e02",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e02-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "人物交汇和场景时间线可以读同一份记录，只是换一个视角。"
+    },
+    {
+      "id": "r-e02-3",
+      "recordingId": "e02",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e02-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 46000,
+        "end_ms": 58000
+      },
+      "status": "fixture",
+      "text": "那就先做白天，夜间保留预览。今天把时间线和人物线做顺。"
+    },
+    {
+      "id": "r-e03-1",
+      "recordingId": "e03",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e03-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "我想先看到刚才和谁说过什么，别让我一进来就选文件夹。"
+    },
+    {
+      "id": "r-e03-2",
+      "recordingId": "e03",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e03-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "如果点一句话就能回到原声，会比一大段总结更方便吗？"
+    },
+    {
+      "id": "r-e03-3",
+      "recordingId": "e03",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e03-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 46000,
+        "end_ms": 58000
+      },
+      "status": "fixture",
+      "text": "会。但我不希望吃饭聊天也被自动公开。"
+    },
+    {
+      "id": "r-e04-1",
+      "recordingId": "e04",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e04-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "同一个人的两个交流区间如果重叠，要先求并集，不能直接把分钟加起来。"
+    },
+    {
+      "id": "r-e04-2",
+      "recordingId": "e04",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e04-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "录到说话能说明这个时段有交流，沉默不能直接当作离开。"
+    },
+    {
+      "id": "r-e04-3",
+      "recordingId": "e04",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e04-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 46000,
+        "end_ms": 58000
+      },
+      "status": "fixture",
+      "text": "那我们把指标叫已确认交流时段，保留原话和时间边界。"
+    },
+    {
+      "id": "r-e06-1",
+      "recordingId": "e06",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e06-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "我在做时间线展开，返回上一层应该留在原来的位置。"
+    },
+    {
+      "id": "r-e06-2",
+      "recordingId": "e06",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e06-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "人物轨道不要一边滚动一边乱换列，当前相关的人突出就好。"
+    },
+    {
+      "id": "r-e07-1",
+      "recordingId": "e07",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e07-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "明天上午九点半，我们在协作区一起检查页面和数据。"
+    },
+    {
+      "id": "r-e07-2",
+      "recordingId": "e07",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e07-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "录音没取回来的地方要留空，不能写成没有发生。"
+    },
+    {
+      "id": "r-e07-3",
+      "recordingId": "e07",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e07-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 46000,
+        "end_ms": 58000
+      },
+      "status": "fixture",
+      "text": "我负责把引用播放器接上，今晚把新版本发给大家看。"
+    },
+    {
+      "id": "r-e08-1",
+      "recordingId": "e08",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e08-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "这不是否定你的方案，我是担心第一次进来找不到录音按钮。"
+    },
+    {
+      "id": "r-e08-2",
+      "recordingId": "e08",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e08-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "那我把设备条和快速记录放到第一屏，其他内容收起来。"
+    },
+    {
+      "id": "r-e10-1",
+      "recordingId": "e10",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e10-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "今天把方向从两个业务功能，收到了开发者的一天。"
+    },
+    {
+      "id": "r-e10-2",
+      "recordingId": "e10",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e10-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "我这套设计简直精妙绝伦，明天是不是该准备上台领奖了？开个玩笑。"
+    },
+    {
+      "id": "r-e10-3",
+      "recordingId": "e10",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e10-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 46000,
+        "end_ms": 58000
+      },
+      "status": "fixture",
+      "text": "明天先把联调和展示准备好，颁奖环节记得参加就行。"
+    },
+    {
+      "id": "r-e12-1",
+      "recordingId": "e12",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e12-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "昨天提的录音入口已经调整了，今天看着清楚多了。"
+    },
+    {
+      "id": "r-e12-2",
+      "recordingId": "e12",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e12-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "现在点引用能返回正确片段，下一步测试断连状态。"
+    },
+    {
+      "id": "r-e12-3",
+      "recordingId": "e12",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e12-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 46000,
+        "end_ms": 58000
+      },
+      "status": "fixture",
+      "text": "这次先把可操作原型交出来，实际硬件接入单独验证。"
+    },
+    {
+      "id": "r-e13-1",
+      "recordingId": "e13",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e13-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "status": "fixture",
+      "text": "人物线现在能看出何时聊过，别把这叫陪伴的全部时长。"
+    },
+    {
+      "id": "r-e13-2",
+      "recordingId": "e13",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e13-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 28000,
+        "end_ms": 40000
+      },
+      "status": "fixture",
+      "text": "说明里已经写了只统计已记录、确认的交流区间。"
+    },
+    {
+      "id": "r-e14-1",
+      "recordingId": "e14",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e14-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "text": "点击引用时直接带录音和句子的时间，别让用户再从头找。"
+    },
+    {
+      "id": "r-e14-2",
+      "recordingId": "e14",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e14-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 30000,
+        "end_ms": 42000
+      },
+      "text": "我会保存返回的位置，关掉原话后仍回到刚才那张卡。"
+    },
+    {
+      "id": "r-e15-1",
+      "recordingId": "e15",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e15-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "text": "时间线让我能看清今天做了什么。人物这边如果只给一个分数，我看不出是怎么来的。"
+    },
+    {
+      "id": "r-e15-2",
+      "recordingId": "e15",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e15-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 30000,
+        "end_ms": 42000
+      },
+      "text": "如果能点到他说的原话，再看你为什么这样理解，我会更容易判断这个分析有没有价值。"
+    },
+    {
+      "id": "r-e15-3",
+      "recordingId": "e15",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e15-s3",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 50000,
+        "end_ms": 62000
+      },
+      "text": "我们保留几种解释和原话，不把它变成一个人的性格标签。"
+    },
+    {
+      "id": "r-e16-1",
+      "recordingId": "e16",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e16-s1",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 10000,
+        "end_ms": 22000
+      },
+      "text": "先把这次对话的范围说清，后面再接真实模型，别让一个回答拿到所有资料。"
+    },
+    {
+      "id": "r-e16-2",
+      "recordingId": "e16",
+      "assetVersion": 1,
+      "transcriptRevision": 1,
+      "segmentId": "e16-s2",
+      "locator": {
+        "kind": "transcript_span",
+        "start_ms": 30000,
+        "end_ms": 42000
+      },
+      "text": "先用当前记录和同意的关联，切范围也能看得见。"
+    }
+  ],
+  "actions": [
+    {
+      "id": "a-ceremony",
+      "title": "参加颁奖环节",
+      "date": "2026-10-17",
+      "time": "15:00",
+      "duration": 30,
+      "place": "主会场",
+      "sourceRef": "r-e01-1",
+      "sourceRevision": 1,
+      "kind": "event",
+      "subject": "me",
+      "intent": "explicit",
+      "status": "draft",
+      "receipt": null,
+      "category": "本人活动",
+      "description": "演示安排；提前十分钟到场。录音提到颁奖，不代表本人获奖。"
+    },
+    {
+      "id": "a-sync",
+      "title": "和小林、阿远联调",
+      "date": "2026-10-17",
+      "time": "09:30",
+      "duration": 35,
+      "place": "协作区",
+      "sourceRef": "r-e07-1",
+      "sourceRevision": 1,
+      "kind": "event",
+      "subject": "me",
+      "intent": "explicit",
+      "status": "draft",
+      "receipt": null,
+      "category": "本人安排",
+      "description": "核对页面与数据。仅建立本人日历，不自动邀请他人。"
+    },
+    {
+      "id": "a-send",
+      "title": "发出今晚的新版本",
+      "date": "2026-10-16",
+      "time": null,
+      "duration": 15,
+      "place": "",
+      "sourceRef": "r-e07-3",
+      "sourceRevision": 1,
+      "kind": "task",
+      "subject": "me",
+      "intent": "explicit",
+      "status": "needs_details",
+      "receipt": null,
+      "category": "我的承诺",
+      "description": "没有具体时间，保留为待办。"
+    },
+    {
+      "id": "a-wish",
+      "title": "上台领奖（愿望便签）",
+      "date": "2026-10-17",
+      "time": null,
+      "duration": 0,
+      "place": "",
+      "sourceRef": "r-e10-2",
+      "sourceRevision": 1,
+      "kind": "wish",
+      "subject": "me",
+      "intent": "hypothetical",
+      "status": "wish",
+      "receipt": null,
+      "category": "趣味便签",
+      "description": "这是玩笑与期待；不会自动写进日历，也不作为获奖事实。"
+    }
+  ],
+  "blocks": [
+    {
+      "id": "b-arrive",
+      "date": "2026-10-16",
+      "start": "08:45",
+      "end": "09:15",
+      "scene": "生活",
+      "title": "到场",
+      "label": "赛场 · 签到与准备",
+      "tone": "neutral",
+      "events": [
+        "e01"
+      ],
+      "summary": "确认当天安排，准备开始。"
+    },
+    {
+      "id": "b-am",
+      "date": "2026-10-16",
+      "start": "09:15",
+      "end": "12:00",
+      "scene": "工作",
+      "title": "上午 · 项目推进",
+      "label": "VoiceLog · 协作区",
+      "tone": "lime",
+      "events": [
+        "e02",
+        "e03",
+        "e04"
+      ],
+      "summary": "定下主线，带着反馈把关键问题问清。"
+    },
+    {
+      "id": "b-lunch",
+      "date": "2026-10-16",
+      "start": "12:00",
+      "end": "12:40",
+      "scene": "生活",
+      "title": "午饭与休息",
+      "label": "本人补记",
+      "tone": "neutral",
+      "events": [
+        "e05"
+      ],
+      "summary": "暂停记录。"
+    },
+    {
+      "id": "b-pm",
+      "date": "2026-10-16",
+      "start": "13:00",
+      "end": "17:45",
+      "scene": "工作",
+      "title": "下午 · 制作与交流",
+      "label": "VoiceLog · 协作区",
+      "tone": "forest",
+      "events": [
+        "e06",
+        "e14",
+        "e07",
+        "e08",
+        "e15",
+        "e16"
+      ],
+      "summary": "做出页面、接好数据，再把产品交给别人看。"
+    },
+    {
+      "id": "b-dinner",
+      "date": "2026-10-16",
+      "start": "18:00",
+      "end": "18:25",
+      "scene": "生活",
+      "title": "晚饭与休息",
+      "label": "本人补记",
+      "tone": "neutral",
+      "events": [
+        "e09"
+      ],
+      "summary": "暂停记录。"
+    },
+    {
+      "id": "b-review",
+      "date": "2026-10-16",
+      "start": "20:30",
+      "end": "21:00",
+      "scene": "复盘",
+      "title": "晚上 · 整理今天",
+      "label": "我的记录",
+      "tone": "neutral",
+      "events": [
+        "e10"
+      ],
+      "summary": "把今天留下的决定，接到明天的安排。"
+    },
+    {
+      "id": "b-night",
+      "date": "2026-10-16",
+      "start": "23:00",
+      "end": "23:59",
+      "scene": "夜间",
+      "title": "夜间声音",
+      "label": "后续预览",
+      "tone": "night",
+      "events": [
+        "e11"
+      ],
+      "summary": "未来支持夜间声音回看。"
+    },
+    {
+      "id": "b-day2",
+      "date": "2026-10-17",
+      "start": "09:30",
+      "end": "11:00",
+      "scene": "工作",
+      "title": "第二天 · 完成与验证",
+      "label": "VoiceLog · 协作区",
+      "tone": "lime",
+      "events": [
+        "e12",
+        "e13"
+      ],
+      "summary": "沿着昨天的问题继续，把改动再次交给使用者。"
+    }
+  ],
+  "interpretations": [
+    {
+      "id": "ci-lin",
+      "personId": "lin",
+      "episodeId": "e08",
+      "title": "小林在关心什么",
+      "focus": "录音入口",
+      "quoteRef": "r-e08-1",
+      "candidates": [
+        {
+          "id": "reach",
+          "label": "担心第一次使用找不到入口",
+          "reason": "原话直接提到「第一次」「找不到录音按钮」。",
+          "refs": [
+            "r-e08-1"
+          ],
+          "support": "原话支持",
+          "reply": "我先把录音入口留在第一屏。改完我们再走一次，看看还有哪一步不好找。"
+        },
+        {
+          "id": "scope",
+          "label": "希望这一版先收住范围",
+          "reason": "前面的讨论已经把白天主线放在优先位置。",
+          "refs": [
+            "r-e02-3",
+            "r-e08-2"
+          ],
+          "support": "可继续核对",
+          "reply": "这一版先把记录和回看做顺，其余能力放在后面。这样符合你的优先级吗？"
+        },
+        {
+          "id": "reject",
+          "label": "在否定整个产品方向",
+          "reason": "当前原话没有支持这个判断。",
+          "refs": [
+            "r-e08-1"
+          ],
+          "support": "依据不足",
+          "reply": "你主要担心入口，还是整个使用流程？我想先把具体问题确认清楚。"
+        }
+      ]
+    },
+    {
+      "id": "ci-judge",
+      "personId": "judge",
+      "episodeId": "e15",
+      "title": "这次反馈更看重什么",
+      "focus": "可核对的分析",
+      "quoteRef": "r-e15-1",
+      "candidates": [
+        {
+          "id": "evidence",
+          "label": "希望每项分析能打开原话依据",
+          "reason": "明确提出「点到原话」「为什么这样理解」。",
+          "refs": [
+            "r-e15-2"
+          ],
+          "support": "原话支持",
+          "reply": "我打开这段反馈的来源，你可以同时看原话、解释和另一种可能。"
+        },
+        {
+          "id": "simple",
+          "label": "认可时间线，人物页还需更清楚",
+          "reason": "明确认可时间线，并指出单一分数不易理解。",
+          "refs": [
+            "r-e15-1"
+          ],
+          "support": "原话支持",
+          "reply": "时间线继续保持简洁；人物页会先给关切点，再按需展开依据。"
+        },
+        {
+          "id": "winning",
+          "label": "已经决定给我们的作品获奖",
+          "reason": "未出现获奖决定或正式结果。",
+          "refs": [
+            "r-e15-1",
+            "r-e15-2"
+          ],
+          "support": "依据不足",
+          "reply": "谢谢这些建议。我们先把人物分析的核对过程做得更直观。"
+        }
+      ]
+    }
+  ],
+  "moods": [
+    {
+      "id": "m1",
+      "date": "2026-10-16",
+      "time": "09:15",
+      "label": "有些紧张",
+      "basis": "user_report",
+      "note": "第一次一起做，想先把方向定下来。",
+      "value": 2,
+      "ref": "r-e02-1"
+    },
+    {
+      "id": "m2",
+      "date": "2026-10-16",
+      "time": "11:10",
+      "label": "更有方向",
+      "basis": "candidate",
+      "note": "访谈之后，关注点转向「刚才发生了什么」。",
+      "value": 3,
+      "ref": "r-e03-1"
+    },
+    {
+      "id": "m3",
+      "date": "2026-10-16",
+      "time": "16:40",
+      "label": "稍微轻松",
+      "basis": "candidate",
+      "note": "明确了录音入口的位置与下一步。",
+      "value": 4,
+      "ref": "r-e08-2"
+    },
+    {
+      "id": "m4",
+      "date": "2026-10-16",
+      "time": "20:30",
+      "label": "挺有成就感",
+      "basis": "user_report",
+      "note": "最开心的是这一天终于接成了一条线。",
+      "value": 4,
+      "ref": "r-e10-1"
+    }
+  ],
+  "graph": {
+    "nodes": [
+      {
+        "id": "project",
+        "label": "VoiceLog 比赛日",
+        "type": "project",
+        "summary": "开发者的一天与多天接续。",
+        "refs": [
+          "r-e02-3",
+          "r-e10-1"
+        ]
+      },
+      {
+        "id": "b-arrive",
+        "label": "到场",
+        "type": "block",
+        "date": "2026-10-16",
+        "blockId": "b-arrive",
+        "summary": "确认当天安排，准备开始。",
+        "refs": []
+      },
+      {
+        "id": "e01",
+        "label": "到场与今天的安排",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e01",
+        "scene": "arrival",
+        "refs": [
+          "r-e01-1",
+          "r-e01-2"
+        ],
+        "summary": "开场信息里，留下一条明天下午的安排。"
+      },
+      {
+        "id": "r-e01-1",
+        "label": "到场与今天的 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e01",
+        "ref": "r-e01-1",
+        "refs": [
+          "r-e01-1"
+        ],
+        "summary": "明天下午三点在主会场进行颁奖环节，大家提前十分钟到场。"
+      },
+      {
+        "id": "r-e01-2",
+        "label": "到场与今天的 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e01",
+        "ref": "r-e01-2",
+        "refs": [
+          "r-e01-2"
+        ],
+        "summary": "今天先把产品方向和两个核心交互做好。"
+      },
+      {
+        "id": "b-am",
+        "label": "上午 · 项目推进",
+        "type": "block",
+        "date": "2026-10-16",
+        "blockId": "b-am",
+        "summary": "定下主线，带着反馈把关键问题问清。",
+        "refs": []
+      },
+      {
+        "id": "e02",
+        "label": "确定今天的主线",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e02",
+        "scene": "collaboration",
+        "refs": [
+          "r-e02-1",
+          "r-e02-2",
+          "r-e02-3"
+        ],
+        "summary": "用场景收起一天，再从人物视角看交流。"
+      },
+      {
+        "id": "r-e02-1",
+        "label": "确定今天的主 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e02",
+        "ref": "r-e02-1",
+        "refs": [
+          "r-e02-1"
+        ],
+        "summary": "首页先讲清楚今天做了什么，每段都能展开，别把所有东西铺满。"
+      },
+      {
+        "id": "r-e02-2",
+        "label": "确定今天的主 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e02",
+        "ref": "r-e02-2",
+        "refs": [
+          "r-e02-2"
+        ],
+        "summary": "人物交汇和场景时间线可以读同一份记录，只是换一个视角。"
+      },
+      {
+        "id": "r-e02-3",
+        "label": "确定今天的主 · 原话3",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e02",
+        "ref": "r-e02-3",
+        "refs": [
+          "r-e02-3"
+        ],
+        "summary": "那就先做白天，夜间保留预览。今天把时间线和人物线做顺。"
+      },
+      {
+        "id": "e03",
+        "label": "体验者反馈",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e03",
+        "scene": "interview",
+        "refs": [
+          "r-e03-1",
+          "r-e03-2",
+          "r-e03-3"
+        ],
+        "summary": "对方想先回到刚才，不想先选分类。"
+      },
+      {
+        "id": "r-e03-1",
+        "label": "体验者反馈 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e03",
+        "ref": "r-e03-1",
+        "refs": [
+          "r-e03-1"
+        ],
+        "summary": "我想先看到刚才和谁说过什么，别让我一进来就选文件夹。"
+      },
+      {
+        "id": "r-e03-2",
+        "label": "体验者反馈 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e03",
+        "ref": "r-e03-2",
+        "refs": [
+          "r-e03-2"
+        ],
+        "summary": "如果点一句话就能回到原声，会比一大段总结更方便吗？"
+      },
+      {
+        "id": "r-e03-3",
+        "label": "体验者反馈 · 原话3",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e03",
+        "ref": "r-e03-3",
+        "refs": [
+          "r-e03-3"
+        ],
+        "summary": "会。但我不希望吃饭聊天也被自动公开。"
+      },
+      {
+        "id": "e04",
+        "label": "交流时长，怎么算",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e04",
+        "scene": "learning",
+        "refs": [
+          "r-e04-1",
+          "r-e04-2",
+          "r-e04-3"
+        ],
+        "summary": "重叠区间先合并，沉默不等于离开。"
+      },
+      {
+        "id": "r-e04-1",
+        "label": "交流时长，怎 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e04",
+        "ref": "r-e04-1",
+        "refs": [
+          "r-e04-1"
+        ],
+        "summary": "同一个人的两个交流区间如果重叠，要先求并集，不能直接把分钟加起来。"
+      },
+      {
+        "id": "r-e04-2",
+        "label": "交流时长，怎 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e04",
+        "ref": "r-e04-2",
+        "refs": [
+          "r-e04-2"
+        ],
+        "summary": "录到说话能说明这个时段有交流，沉默不能直接当作离开。"
+      },
+      {
+        "id": "r-e04-3",
+        "label": "交流时长，怎 · 原话3",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e04",
+        "ref": "r-e04-3",
+        "refs": [
+          "r-e04-3"
+        ],
+        "summary": "那我们把指标叫已确认交流时段，保留原话和时间边界。"
+      },
+      {
+        "id": "b-lunch",
+        "label": "午饭与休息",
+        "type": "block",
+        "date": "2026-10-16",
+        "blockId": "b-lunch",
+        "summary": "暂停记录。",
+        "refs": []
+      },
+      {
+        "id": "e05",
+        "label": "午饭与休息",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e05",
+        "scene": "break",
+        "refs": [],
+        "summary": "本人标记为休息，这段没有保存谈话。"
+      },
+      {
+        "id": "b-pm",
+        "label": "下午 · 制作与交流",
+        "type": "block",
+        "date": "2026-10-16",
+        "blockId": "b-pm",
+        "summary": "做出页面、接好数据，再把产品交给别人看。",
+        "refs": []
+      },
+      {
+        "id": "e06",
+        "label": "首页与播放器制作",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e06",
+        "scene": "making",
+        "refs": [
+          "r-e06-1",
+          "r-e06-2"
+        ],
+        "summary": "制作进度来自本人补记，录音只保留短口述。"
+      },
+      {
+        "id": "r-e06-1",
+        "label": "首页与播放器 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e06",
+        "ref": "r-e06-1",
+        "refs": [
+          "r-e06-1"
+        ],
+        "summary": "我在做时间线展开，返回上一层应该留在原来的位置。"
+      },
+      {
+        "id": "r-e06-2",
+        "label": "首页与播放器 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e06",
+        "ref": "r-e06-2",
+        "refs": [
+          "r-e06-2"
+        ],
+        "summary": "人物轨道不要一边滚动一边乱换列，当前相关的人突出就好。"
+      },
+      {
+        "id": "e14",
+        "label": "和小宁核对引用接口",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e14",
+        "scene": "collaboration",
+        "refs": [
+          "r-e14-1",
+          "r-e14-2"
+        ],
+        "summary": "把原话播放和页面返回的交接约定说清。"
+      },
+      {
+        "id": "r-e14-1",
+        "label": "和小宁核对引 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e14",
+        "ref": "r-e14-1",
+        "refs": [
+          "r-e14-1"
+        ],
+        "summary": "点击引用时直接带录音和句子的时间，别让用户再从头找。"
+      },
+      {
+        "id": "r-e14-2",
+        "label": "和小宁核对引 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e14",
+        "ref": "r-e14-2",
+        "refs": [
+          "r-e14-2"
+        ],
+        "summary": "我会保存返回的位置，关掉原话后仍回到刚才那张卡。"
+      },
+      {
+        "id": "e07",
+        "label": "页面和数据交接",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e07",
+        "scene": "collaboration",
+        "refs": [
+          "r-e07-1",
+          "r-e07-2",
+          "r-e07-3"
+        ],
+        "summary": "明确下一次碰头时间，也留下一个分歧。"
+      },
+      {
+        "id": "r-e07-1",
+        "label": "页面和数据交 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e07",
+        "ref": "r-e07-1",
+        "refs": [
+          "r-e07-1"
+        ],
+        "summary": "明天上午九点半，我们在协作区一起检查页面和数据。"
+      },
+      {
+        "id": "r-e07-2",
+        "label": "页面和数据交 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e07",
+        "ref": "r-e07-2",
+        "refs": [
+          "r-e07-2"
+        ],
+        "summary": "录音没取回来的地方要留空，不能写成没有发生。"
+      },
+      {
+        "id": "r-e07-3",
+        "label": "页面和数据交 · 原话3",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e07",
+        "ref": "r-e07-3",
+        "refs": [
+          "r-e07-3"
+        ],
+        "summary": "我负责把引用播放器接上，今晚把新版本发给大家看。"
+      },
+      {
+        "id": "e08",
+        "label": "再聊一次录音入口",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e08",
+        "scene": "collaboration",
+        "refs": [
+          "r-e08-1",
+          "r-e08-2"
+        ],
+        "summary": "讨论的是入口可达性，先保留原话再解释。"
+      },
+      {
+        "id": "r-e08-1",
+        "label": "再聊一次录音 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e08",
+        "ref": "r-e08-1",
+        "refs": [
+          "r-e08-1"
+        ],
+        "summary": "这不是否定你的方案，我是担心第一次进来找不到录音按钮。"
+      },
+      {
+        "id": "r-e08-2",
+        "label": "再聊一次录音 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e08",
+        "ref": "r-e08-2",
+        "refs": [
+          "r-e08-2"
+        ],
+        "summary": "那我把设备条和快速记录放到第一屏，其他内容收起来。"
+      },
+      {
+        "id": "e15",
+        "label": "与评审交流产品取舍",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e15",
+        "scene": "interview",
+        "refs": [
+          "r-e15-1",
+          "r-e15-2",
+          "r-e15-3"
+        ],
+        "summary": "这段反馈集中在人物分析的依据与可核对性。"
+      },
+      {
+        "id": "r-e15-1",
+        "label": "与评审交流产 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e15",
+        "ref": "r-e15-1",
+        "refs": [
+          "r-e15-1"
+        ],
+        "summary": "时间线让我能看清今天做了什么。人物这边如果只给一个分数，我看不出是怎么来的。"
+      },
+      {
+        "id": "r-e15-2",
+        "label": "与评审交流产 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e15",
+        "ref": "r-e15-2",
+        "refs": [
+          "r-e15-2"
+        ],
+        "summary": "如果能点到他说的原话，再看你为什么这样理解，我会更容易判断这个分析有没有价值。"
+      },
+      {
+        "id": "r-e15-3",
+        "label": "与评审交流产 · 原话3",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e15",
+        "ref": "r-e15-3",
+        "refs": [
+          "r-e15-3"
+        ],
+        "summary": "我们保留几种解释和原话，不把它变成一个人的性格标签。"
+      },
+      {
+        "id": "e16",
+        "label": "和小方聊下一步接入",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e16",
+        "scene": "collaboration",
+        "refs": [
+          "r-e16-1",
+          "r-e16-2"
+        ],
+        "summary": "明确下一步接入时的数据边界。"
+      },
+      {
+        "id": "r-e16-1",
+        "label": "和小方聊下一 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e16",
+        "ref": "r-e16-1",
+        "refs": [
+          "r-e16-1"
+        ],
+        "summary": "先把这次对话的范围说清，后面再接真实模型，别让一个回答拿到所有资料。"
+      },
+      {
+        "id": "r-e16-2",
+        "label": "和小方聊下一 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e16",
+        "ref": "r-e16-2",
+        "refs": [
+          "r-e16-2"
+        ],
+        "summary": "先用当前记录和同意的关联，切范围也能看得见。"
+      },
+      {
+        "id": "b-dinner",
+        "label": "晚饭与休息",
+        "type": "block",
+        "date": "2026-10-16",
+        "blockId": "b-dinner",
+        "summary": "暂停记录。",
+        "refs": []
+      },
+      {
+        "id": "e09",
+        "label": "晚饭与休息",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e09",
+        "scene": "break",
+        "refs": [],
+        "summary": "本人补记。没有采集，无须补出一段故事。"
+      },
+      {
+        "id": "b-review",
+        "label": "晚上 · 整理今天",
+        "type": "block",
+        "date": "2026-10-16",
+        "blockId": "b-review",
+        "summary": "把今天留下的决定，接到明天的安排。",
+        "refs": []
+      },
+      {
+        "id": "e10",
+        "label": "今天的收获与明天",
+        "type": "event",
+        "date": "2026-10-16",
+        "episodeId": "e10",
+        "scene": "reflection",
+        "refs": [
+          "r-e10-1",
+          "r-e10-2",
+          "r-e10-3"
+        ],
+        "summary": "把今天的决定、疑问和已说定的事接起来。"
+      },
+      {
+        "id": "r-e10-1",
+        "label": "今天的收获与 · 原话1",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e10",
+        "ref": "r-e10-1",
+        "refs": [
+          "r-e10-1"
+        ],
+        "summary": "今天把方向从两个业务功能，收到了开发者的一天。"
+      },
+      {
+        "id": "r-e10-2",
+        "label": "今天的收获与 · 原话2",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e10",
+        "ref": "r-e10-2",
+        "refs": [
+          "r-e10-2"
+        ],
+        "summary": "我这套设计简直精妙绝伦，明天是不是该准备上台领奖了？开个玩笑。"
+      },
+      {
+        "id": "r-e10-3",
+        "label": "今天的收获与 · 原话3",
+        "type": "source",
+        "date": "2026-10-16",
+        "episodeId": "e10",
+        "ref": "r-e10-3",
+        "refs": [
+          "r-e10-3"
+        ],
+        "summary": "明天先把联调和展示准备好，颁奖环节记得参加就行。"
+      },
+      {
+        "id": "b-day2",
+        "label": "第二天 · 完成与验证",
+        "type": "block",
+        "date": "2026-10-17",
+        "blockId": "b-day2",
+        "summary": "沿着昨天的问题继续，把改动再次交给使用者。",
+        "refs": []
+      },
+      {
+        "id": "e12",
+        "label": "接续昨天的联调",
+        "type": "event",
+        "date": "2026-10-17",
+        "episodeId": "e12",
+        "scene": "collaboration",
+        "refs": [
+          "r-e12-1",
+          "r-e12-2",
+          "r-e12-3"
+        ],
+        "summary": "昨天的明确安排，今天有了新的跟进记录。"
+      },
+      {
+        "id": "r-e12-1",
+        "label": "接续昨天的联 · 原话1",
+        "type": "source",
+        "date": "2026-10-17",
+        "episodeId": "e12",
+        "ref": "r-e12-1",
+        "refs": [
+          "r-e12-1"
+        ],
+        "summary": "昨天提的录音入口已经调整了，今天看着清楚多了。"
+      },
+      {
+        "id": "r-e12-2",
+        "label": "接续昨天的联 · 原话2",
+        "type": "source",
+        "date": "2026-10-17",
+        "episodeId": "e12",
+        "ref": "r-e12-2",
+        "refs": [
+          "r-e12-2"
+        ],
+        "summary": "现在点引用能返回正确片段，下一步测试断连状态。"
+      },
+      {
+        "id": "r-e12-3",
+        "label": "接续昨天的联 · 原话3",
+        "type": "source",
+        "date": "2026-10-17",
+        "episodeId": "e12",
+        "ref": "r-e12-3",
+        "refs": [
+          "r-e12-3"
+        ],
+        "summary": "这次先把可操作原型交出来，实际硬件接入单独验证。"
+      },
+      {
+        "id": "e13",
+        "label": "第二版体验反馈",
+        "type": "event",
+        "date": "2026-10-17",
+        "episodeId": "e13",
+        "scene": "interview",
+        "refs": [
+          "r-e13-1",
+          "r-e13-2"
+        ],
+        "summary": "这次针对昨天的交汇统计与解释再核对。"
+      },
+      {
+        "id": "r-e13-1",
+        "label": "第二版体验反 · 原话1",
+        "type": "source",
+        "date": "2026-10-17",
+        "episodeId": "e13",
+        "ref": "r-e13-1",
+        "refs": [
+          "r-e13-1"
+        ],
+        "summary": "人物线现在能看出何时聊过，别把这叫陪伴的全部时长。"
+      },
+      {
+        "id": "r-e13-2",
+        "label": "第二版体验反 · 原话2",
+        "type": "source",
+        "date": "2026-10-17",
+        "episodeId": "e13",
+        "ref": "r-e13-2",
+        "refs": [
+          "r-e13-2"
+        ],
+        "summary": "说明里已经写了只统计已记录、确认的交流区间。"
+      },
+      {
+        "id": "p-lin",
+        "label": "小林",
+        "type": "person",
+        "personId": "lin",
+        "summary": "产品协作",
+        "refs": []
+      },
+      {
+        "id": "p-yuan",
+        "label": "阿远",
+        "type": "person",
+        "personId": "yuan",
+        "summary": "工程协作",
+        "refs": []
+      },
+      {
+        "id": "p-zhou",
+        "label": "小周",
+        "type": "person",
+        "personId": "zhou",
+        "summary": "技术交流",
+        "refs": []
+      },
+      {
+        "id": "p-guest",
+        "label": "访谈对象 A",
+        "type": "person",
+        "personId": "guest",
+        "summary": "本次匿名",
+        "refs": []
+      },
+      {
+        "id": "p-host",
+        "label": "活动说明者",
+        "type": "person",
+        "personId": "host",
+        "summary": "本次匿名",
+        "refs": []
+      },
+      {
+        "id": "p-chen",
+        "label": "阿晨",
+        "type": "person",
+        "personId": "chen",
+        "summary": "设计协作",
+        "refs": []
+      },
+      {
+        "id": "p-ning",
+        "label": "小宁",
+        "type": "person",
+        "personId": "ning",
+        "summary": "接口联调",
+        "refs": []
+      },
+      {
+        "id": "p-judge",
+        "label": "评审交流者",
+        "type": "person",
+        "personId": "judge",
+        "summary": "本次匿名 · 示例",
+        "refs": []
+      },
+      {
+        "id": "p-fang",
+        "label": "小方",
+        "type": "person",
+        "personId": "fang",
+        "summary": "开发者交流",
+        "refs": []
+      },
+      {
+        "id": "decision",
+        "label": "按场景收起一天",
+        "type": "concept",
+        "episodeId": "e02",
+        "refs": [
+          "r-e02-1"
+        ],
+        "summary": "首页先讲清楚今天做了什么，每段都能展开，别把所有东西铺满。"
+      },
+      {
+        "id": "reach",
+        "label": "录音入口在第一屏",
+        "type": "concept",
+        "episodeId": "e08",
+        "refs": [
+          "r-e08-1"
+        ],
+        "summary": "这不是否定你的方案，我是担心第一次进来找不到录音按钮。"
+      },
+      {
+        "id": "union",
+        "label": "重叠区间求并集",
+        "type": "concept",
+        "episodeId": "e04",
+        "refs": [
+          "r-e04-1"
+        ],
+        "summary": "同一个人的两个交流区间如果重叠，要先求并集，不能直接把分钟加起来。"
+      },
+      {
+        "id": "evidence",
+        "label": "分析要能核对原话",
+        "type": "concept",
+        "episodeId": "e15",
+        "refs": [
+          "r-e15-2"
+        ],
+        "summary": "如果能点到他说的原话，再看你为什么这样理解，我会更容易判断这个分析有没有价值。"
+      },
+      {
+        "id": "range",
+        "label": "资料范围可见",
+        "type": "concept",
+        "episodeId": "e16",
+        "refs": [
+          "r-e16-1"
+        ],
+        "summary": "先把这次对话的范围说清，后面再接真实模型，别让一个回答拿到所有资料。"
+      },
+      {
+        "id": "feedback",
+        "label": "先看刚才发生的事",
+        "type": "concept",
+        "episodeId": "e03",
+        "refs": [
+          "r-e03-1"
+        ],
+        "summary": "我想先看到刚才和谁说过什么，别让我一进来就选文件夹。"
+      },
+      {
+        "id": "a-ceremony",
+        "label": "参加颁奖环节",
+        "type": "action",
+        "actionId": "a-ceremony",
+        "refs": [
+          "r-e01-1"
+        ],
+        "summary": "演示安排；提前十分钟到场。录音提到颁奖，不代表本人获奖。"
+      },
+      {
+        "id": "a-sync",
+        "label": "和小林、阿远联调",
+        "type": "action",
+        "actionId": "a-sync",
+        "refs": [
+          "r-e07-1"
+        ],
+        "summary": "核对页面与数据。仅建立本人日历，不自动邀请他人。"
+      },
+      {
+        "id": "a-send",
+        "label": "发出今晚的新版本",
+        "type": "action",
+        "actionId": "a-send",
+        "refs": [
+          "r-e07-3"
+        ],
+        "summary": "没有具体时间，保留为待办。"
+      },
+      {
+        "id": "a-wish",
+        "label": "上台领奖（愿望便签）",
+        "type": "action",
+        "actionId": "a-wish",
+        "refs": [
+          "r-e10-2"
+        ],
+        "summary": "这是玩笑与期待；不会自动写进日历，也不作为获奖事实。"
+      }
+    ],
+    "edges": [
+      {
+        "id": "g1",
+        "source": "project",
+        "target": "b-arrive",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g2",
+        "source": "b-arrive",
+        "target": "e01",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g3",
+        "source": "e01",
+        "target": "r-e01-1",
+        "type": "source",
+        "refs": [
+          "r-e01-1"
+        ]
+      },
+      {
+        "id": "g4",
+        "source": "e01",
+        "target": "r-e01-2",
+        "type": "source",
+        "refs": [
+          "r-e01-2"
+        ]
+      },
+      {
+        "id": "g5",
+        "source": "project",
+        "target": "b-am",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g6",
+        "source": "b-am",
+        "target": "e02",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g7",
+        "source": "e02",
+        "target": "r-e02-1",
+        "type": "source",
+        "refs": [
+          "r-e02-1"
+        ]
+      },
+      {
+        "id": "g8",
+        "source": "e02",
+        "target": "r-e02-2",
+        "type": "source",
+        "refs": [
+          "r-e02-2"
+        ]
+      },
+      {
+        "id": "g9",
+        "source": "e02",
+        "target": "r-e02-3",
+        "type": "source",
+        "refs": [
+          "r-e02-3"
+        ]
+      },
+      {
+        "id": "g10",
+        "source": "b-am",
+        "target": "e03",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g11",
+        "source": "e03",
+        "target": "r-e03-1",
+        "type": "source",
+        "refs": [
+          "r-e03-1"
+        ]
+      },
+      {
+        "id": "g12",
+        "source": "e03",
+        "target": "r-e03-2",
+        "type": "source",
+        "refs": [
+          "r-e03-2"
+        ]
+      },
+      {
+        "id": "g13",
+        "source": "e03",
+        "target": "r-e03-3",
+        "type": "source",
+        "refs": [
+          "r-e03-3"
+        ]
+      },
+      {
+        "id": "g14",
+        "source": "b-am",
+        "target": "e04",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g15",
+        "source": "e04",
+        "target": "r-e04-1",
+        "type": "source",
+        "refs": [
+          "r-e04-1"
+        ]
+      },
+      {
+        "id": "g16",
+        "source": "e04",
+        "target": "r-e04-2",
+        "type": "source",
+        "refs": [
+          "r-e04-2"
+        ]
+      },
+      {
+        "id": "g17",
+        "source": "e04",
+        "target": "r-e04-3",
+        "type": "source",
+        "refs": [
+          "r-e04-3"
+        ]
+      },
+      {
+        "id": "g18",
+        "source": "project",
+        "target": "b-lunch",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g19",
+        "source": "b-lunch",
+        "target": "e05",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g20",
+        "source": "project",
+        "target": "b-pm",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g21",
+        "source": "b-pm",
+        "target": "e06",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g22",
+        "source": "e06",
+        "target": "r-e06-1",
+        "type": "source",
+        "refs": [
+          "r-e06-1"
+        ]
+      },
+      {
+        "id": "g23",
+        "source": "e06",
+        "target": "r-e06-2",
+        "type": "source",
+        "refs": [
+          "r-e06-2"
+        ]
+      },
+      {
+        "id": "g24",
+        "source": "b-pm",
+        "target": "e14",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g25",
+        "source": "e14",
+        "target": "r-e14-1",
+        "type": "source",
+        "refs": [
+          "r-e14-1"
+        ]
+      },
+      {
+        "id": "g26",
+        "source": "e14",
+        "target": "r-e14-2",
+        "type": "source",
+        "refs": [
+          "r-e14-2"
+        ]
+      },
+      {
+        "id": "g27",
+        "source": "b-pm",
+        "target": "e07",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g28",
+        "source": "e07",
+        "target": "r-e07-1",
+        "type": "source",
+        "refs": [
+          "r-e07-1"
+        ]
+      },
+      {
+        "id": "g29",
+        "source": "e07",
+        "target": "r-e07-2",
+        "type": "source",
+        "refs": [
+          "r-e07-2"
+        ]
+      },
+      {
+        "id": "g30",
+        "source": "e07",
+        "target": "r-e07-3",
+        "type": "source",
+        "refs": [
+          "r-e07-3"
+        ]
+      },
+      {
+        "id": "g31",
+        "source": "b-pm",
+        "target": "e08",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g32",
+        "source": "e08",
+        "target": "r-e08-1",
+        "type": "source",
+        "refs": [
+          "r-e08-1"
+        ]
+      },
+      {
+        "id": "g33",
+        "source": "e08",
+        "target": "r-e08-2",
+        "type": "source",
+        "refs": [
+          "r-e08-2"
+        ]
+      },
+      {
+        "id": "g34",
+        "source": "b-pm",
+        "target": "e15",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g35",
+        "source": "e15",
+        "target": "r-e15-1",
+        "type": "source",
+        "refs": [
+          "r-e15-1"
+        ]
+      },
+      {
+        "id": "g36",
+        "source": "e15",
+        "target": "r-e15-2",
+        "type": "source",
+        "refs": [
+          "r-e15-2"
+        ]
+      },
+      {
+        "id": "g37",
+        "source": "e15",
+        "target": "r-e15-3",
+        "type": "source",
+        "refs": [
+          "r-e15-3"
+        ]
+      },
+      {
+        "id": "g38",
+        "source": "b-pm",
+        "target": "e16",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g39",
+        "source": "e16",
+        "target": "r-e16-1",
+        "type": "source",
+        "refs": [
+          "r-e16-1"
+        ]
+      },
+      {
+        "id": "g40",
+        "source": "e16",
+        "target": "r-e16-2",
+        "type": "source",
+        "refs": [
+          "r-e16-2"
+        ]
+      },
+      {
+        "id": "g41",
+        "source": "project",
+        "target": "b-dinner",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g42",
+        "source": "b-dinner",
+        "target": "e09",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g43",
+        "source": "project",
+        "target": "b-review",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g44",
+        "source": "b-review",
+        "target": "e10",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g45",
+        "source": "e10",
+        "target": "r-e10-1",
+        "type": "source",
+        "refs": [
+          "r-e10-1"
+        ]
+      },
+      {
+        "id": "g46",
+        "source": "e10",
+        "target": "r-e10-2",
+        "type": "source",
+        "refs": [
+          "r-e10-2"
+        ]
+      },
+      {
+        "id": "g47",
+        "source": "e10",
+        "target": "r-e10-3",
+        "type": "source",
+        "refs": [
+          "r-e10-3"
+        ]
+      },
+      {
+        "id": "g48",
+        "source": "project",
+        "target": "b-day2",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g49",
+        "source": "b-day2",
+        "target": "e12",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g50",
+        "source": "e12",
+        "target": "r-e12-1",
+        "type": "source",
+        "refs": [
+          "r-e12-1"
+        ]
+      },
+      {
+        "id": "g51",
+        "source": "e12",
+        "target": "r-e12-2",
+        "type": "source",
+        "refs": [
+          "r-e12-2"
+        ]
+      },
+      {
+        "id": "g52",
+        "source": "e12",
+        "target": "r-e12-3",
+        "type": "source",
+        "refs": [
+          "r-e12-3"
+        ]
+      },
+      {
+        "id": "g53",
+        "source": "b-day2",
+        "target": "e13",
+        "type": "contains",
+        "refs": []
+      },
+      {
+        "id": "g54",
+        "source": "e13",
+        "target": "r-e13-1",
+        "type": "source",
+        "refs": [
+          "r-e13-1"
+        ]
+      },
+      {
+        "id": "g55",
+        "source": "e13",
+        "target": "r-e13-2",
+        "type": "source",
+        "refs": [
+          "r-e13-2"
+        ]
+      },
+      {
+        "id": "g56",
+        "source": "e02",
+        "target": "p-lin",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g57",
+        "source": "e07",
+        "target": "p-lin",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g58",
+        "source": "e08",
+        "target": "p-lin",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g59",
+        "source": "e12",
+        "target": "p-lin",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g60",
+        "source": "e02",
+        "target": "p-yuan",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g61",
+        "source": "e07",
+        "target": "p-yuan",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g62",
+        "source": "e12",
+        "target": "p-yuan",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g63",
+        "source": "e04",
+        "target": "p-zhou",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g64",
+        "source": "e13",
+        "target": "p-zhou",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g65",
+        "source": "e03",
+        "target": "p-guest",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g66",
+        "source": "e01",
+        "target": "p-host",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g67",
+        "source": "e02",
+        "target": "p-chen",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g68",
+        "source": "e14",
+        "target": "p-ning",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g69",
+        "source": "e15",
+        "target": "p-judge",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g70",
+        "source": "e16",
+        "target": "p-fang",
+        "type": "participant",
+        "refs": []
+      },
+      {
+        "id": "g71",
+        "source": "e02",
+        "target": "decision",
+        "type": "derived",
+        "refs": [
+          "r-e02-1"
+        ]
+      },
+      {
+        "id": "g72",
+        "source": "e08",
+        "target": "reach",
+        "type": "derived",
+        "refs": [
+          "r-e08-1"
+        ]
+      },
+      {
+        "id": "g73",
+        "source": "e04",
+        "target": "union",
+        "type": "derived",
+        "refs": [
+          "r-e04-1"
+        ]
+      },
+      {
+        "id": "g74",
+        "source": "e15",
+        "target": "evidence",
+        "type": "derived",
+        "refs": [
+          "r-e15-2"
+        ]
+      },
+      {
+        "id": "g75",
+        "source": "e16",
+        "target": "range",
+        "type": "derived",
+        "refs": [
+          "r-e16-1"
+        ]
+      },
+      {
+        "id": "g76",
+        "source": "e03",
+        "target": "feedback",
+        "type": "derived",
+        "refs": [
+          "r-e03-1"
+        ]
+      },
+      {
+        "id": "g77",
+        "source": "feedback",
+        "target": "decision",
+        "type": "supports",
+        "refs": [
+          "r-e03-1",
+          "r-e02-1"
+        ]
+      },
+      {
+        "id": "g78",
+        "source": "reach",
+        "target": "decision",
+        "type": "refines",
+        "refs": [
+          "r-e08-1"
+        ]
+      },
+      {
+        "id": "g79",
+        "source": "union",
+        "target": "e12",
+        "type": "used_in",
+        "refs": [
+          "r-e04-1",
+          "r-e12-1"
+        ]
+      },
+      {
+        "id": "g80",
+        "source": "evidence",
+        "target": "reach",
+        "type": "related",
+        "refs": [
+          "r-e15-2",
+          "r-e08-1"
+        ]
+      },
+      {
+        "id": "g81",
+        "source": "range",
+        "target": "evidence",
+        "type": "related",
+        "refs": [
+          "r-e16-1",
+          "r-e15-2"
+        ]
+      },
+      {
+        "id": "g82",
+        "source": "r-e01-1",
+        "target": "a-ceremony",
+        "type": "proposes",
+        "refs": [
+          "r-e01-1"
+        ]
+      },
+      {
+        "id": "g83",
+        "source": "r-e07-1",
+        "target": "a-sync",
+        "type": "proposes",
+        "refs": [
+          "r-e07-1"
+        ]
+      },
+      {
+        "id": "g84",
+        "source": "r-e07-3",
+        "target": "a-send",
+        "type": "proposes",
+        "refs": [
+          "r-e07-3"
+        ]
+      },
+      {
+        "id": "g85",
+        "source": "r-e10-2",
+        "target": "a-wish",
+        "type": "proposes",
+        "refs": [
+          "r-e10-2"
+        ]
+      },
+      {
+        "id": "event-a-ceremony",
+        "source": "e01",
+        "target": "a-ceremony",
+        "type": "proposes",
+        "refs": [
+          "r-e01-1"
+        ]
+      },
+      {
+        "id": "event-a-sync",
+        "source": "e07",
+        "target": "a-sync",
+        "type": "proposes",
+        "refs": [
+          "r-e07-1"
+        ]
+      },
+      {
+        "id": "event-a-send",
+        "source": "e07",
+        "target": "a-send",
+        "type": "proposes",
+        "refs": [
+          "r-e07-3"
+        ]
+      },
+      {
+        "id": "event-a-wish",
+        "source": "e10",
+        "target": "a-wish",
+        "type": "proposes",
+        "refs": [
+          "r-e10-2"
+        ]
+      }
+    ]
+  }
+}

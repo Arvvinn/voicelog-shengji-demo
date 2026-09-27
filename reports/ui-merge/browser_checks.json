@@ -1,0 +1,1275 @@
+{
+  "mode": "Chromium localhost with actual browser localStorage",
+  "browser_version": "149.0.7827.55",
+  "passed": 211,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Chinese interface text uses real installed system fonts",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "clean initial state never migrates or reads legacy storage",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "HTML starts with 4 destinations",
+      "passed": true,
+      "detail": {
+        "value": 4
+      }
+    },
+    {
+      "name": "7 scene envelopes first day",
+      "passed": true,
+      "detail": {
+        "value": 7
+      }
+    },
+    {
+      "name": "morning contains three distinct events",
+      "passed": true,
+      "detail": {
+        "value": 3
+      }
+    },
+    {
+      "name": "only one block initially expanded",
+      "passed": true,
+      "detail": {
+        "value": 1
+      }
+    },
+    {
+      "name": "actual hardware image embedded",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "navigation floats inside the phone on all sides",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "bottom recap card is fully visible above floating navigation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "afternoon combines six events",
+      "passed": true,
+      "detail": {
+        "value": 6
+      }
+    },
+    {
+      "name": "opening PM collapses AM",
+      "passed": true,
+      "detail": {
+        "value": 1
+      }
+    },
+    {
+      "name": "collapse all blocks possible",
+      "passed": true,
+      "detail": {
+        "value": 0
+      }
+    },
+    {
+      "name": "work filter keeps separate contiguous intervals",
+      "passed": true,
+      "detail": {
+        "value": 2
+      }
+    },
+    {
+      "name": "multi-day remains ordered envelopes",
+      "passed": true,
+      "detail": {
+        "value": 8
+      }
+    },
+    {
+      "name": "block route contains all three records",
+      "passed": true,
+      "detail": {
+        "value": 3
+      }
+    },
+    {
+      "name": "local graph instantiated",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "vertical people chart exists",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "morning active people ordered left",
+      "passed": true,
+      "detail": {
+        "value": [
+          "lin",
+          "yuan"
+        ]
+      }
+    },
+    {
+      "name": "09:50 e02 bars match exact shared and short intervals",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "people plot is inset from both phone edges",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "people chart scrolls vertically with no crossing time cursor",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "personal context includes e06 and excludes private gaps and night preview",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "15–17 window includes the judge encounter",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "afternoon evaluator moves to first contact lane",
+      "passed": true,
+      "detail": {
+        "value": "judge"
+      }
+    },
+    {
+      "name": "judge bar keeps its full 25-minute duration across the old window boundary",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "avatars/lanes positions aligned",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "time-column order stays locked during vertical touch",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "pointer cancellation releases vertical-scroll order lock",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "vertical scrolling changes the visible time and focus",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "fixed order ignores time ranking",
+      "passed": true,
+      "detail": {
+        "value": [
+          "judge",
+          "lin",
+          "yuan",
+          "fang",
+          "chen",
+          "guest",
+          "zhou",
+          "ning"
+        ]
+      }
+    },
+    {
+      "name": "full people list not limited to visible columns",
+      "passed": true,
+      "detail": {
+        "value": 8
+      }
+    },
+    {
+      "name": "people list search",
+      "passed": true,
+      "detail": {
+        "value": 1
+      }
+    },
+    {
+      "name": "pin keeps identity left",
+      "passed": true,
+      "detail": {
+        "value": "lin"
+      }
+    },
+    {
+      "name": "encounter sheet matches interval",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "person page shows three candidate interpretations",
+      "passed": true,
+      "detail": {
+        "value": 3
+      }
+    },
+    {
+      "name": "person identity settings remain available from the page header",
+      "passed": true,
+      "detail": {
+        "value": "person-consent"
+      }
+    },
+    {
+      "name": "candidate can be explicitly selected",
+      "passed": true,
+      "detail": {
+        "value": "evidence"
+      }
+    },
+    {
+      "name": "unsupported interpretation can be opened and rejected",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "reply saves as draft not sent",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "featured understanding points to the approved exact quote",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "quote opens its exact source interval",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "full record highlights the cited segment",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "return from source restores the person tab and selection",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "return to people restores date, time window and focus",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "candidate and reply drafts survive a real browser reload",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "person-scoped graph excludes unrelated episodes",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "full graph has actual nodes and edges",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "phone graph opens focused and invites touch exploration",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "graph zoom control works",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "graph searches nodes",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "search opens exact node detail",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "canvas node hit selects exact node",
+      "passed": true,
+      "detail": {
+        "value": "decision"
+      }
+    },
+    {
+      "name": "dragging one graph node pulls connected and surrounding nodes",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "dragging canvas node changes coordinates",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "background drag pans camera",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "expand adds citation neighbors",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "full evidence view includes every allowed node",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "people filter retains real encounter edges",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "people filter displays its connecting records",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "concept filter keeps actual evidence links",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "source sheet suspends graph",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "return from source restores selected graph node",
+      "passed": true,
+      "detail": {
+        "value": "e15"
+      }
+    },
+    {
+      "name": "accessible node list navigation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "graph enters scoped chat",
+      "passed": true,
+      "detail": {
+        "value": "chat"
+      }
+    },
+    {
+      "name": "graph chat keeps recording scope",
+      "passed": true,
+      "detail": {
+        "value": "episode"
+      }
+    },
+    {
+      "name": "chat composer stays above the floating navigation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "block scope can be selected",
+      "passed": true,
+      "detail": {
+        "value": "block"
+      }
+    },
+    {
+      "name": "chat provides scope-safe citations",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "question outside known fixture does not invent sources",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "voice pause",
+      "passed": true,
+      "detail": {
+        "value": "paused"
+      }
+    },
+    {
+      "name": "voice interruption leaves no open panel",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "scene symbols are centered in their tiles",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "scene retains four shared tabs",
+      "passed": true,
+      "detail": {
+        "value": 4
+      }
+    },
+    {
+      "name": "interactive visualization recomputes union",
+      "passed": true,
+      "detail": {
+        "value": "22"
+      }
+    },
+    {
+      "name": "learning feedback only after answer",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "correction creates revision and stale original ref",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "original quote history retained",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "restore makes new revision not overwrite",
+      "passed": true,
+      "detail": {
+        "value": 3
+      }
+    },
+    {
+      "name": "personal note saved separately",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "local media loads and seeks cited time",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "source jump highlights exact sentence",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "local photo is rendered from saved input",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "photo can be removed",
+      "passed": true,
+      "detail": {
+        "value": 0
+      }
+    },
+    {
+      "name": "sound details route selects sound tab",
+      "passed": true,
+      "detail": {
+        "value": "声音"
+      }
+    },
+    {
+      "name": "calendar cards have no ornamental rail dots",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "17 October timed actions sort by time",
+      "passed": true,
+      "detail": {
+        "value": [
+          "a-sync",
+          "a-ceremony"
+        ]
+      }
+    },
+    {
+      "name": "calendar starts with draft status and both unconfirmed actions",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "16 October no-time task is explicit cross-day todo",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "wish stays in separate note section",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "month selector opens a real month grid",
+      "passed": true,
+      "detail": {
+        "value": 42
+      }
+    },
+    {
+      "name": "month selection changes the calendar date",
+      "passed": true,
+      "detail": {
+        "value": "2026-10-16"
+      }
+    },
+    {
+      "name": "week selection returns to 17 October",
+      "passed": true,
+      "detail": {
+        "value": "2026-10-17"
+      }
+    },
+    {
+      "name": "pending filter shows both draft arrangements",
+      "passed": true,
+      "detail": {
+        "value": 2
+      }
+    },
+    {
+      "name": "calendar requires an explicit confirmation sheet",
+      "passed": true,
+      "detail": {
+        "value": "action-confirm"
+      }
+    },
+    {
+      "name": "explicit save marks one action locally",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "new storage key is used without touching legacy demo data",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "saved filter shows only local saved items",
+      "passed": true,
+      "detail": {
+        "value": [
+          "a-sync"
+        ]
+      }
+    },
+    {
+      "name": "ICS chooser lists saved event only",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "single saved item produces an ICS file",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "export preserves explicit event title and UID",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "overlapping cross-day task cannot be confirmed",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "cancelled action does not return from policy evaluation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "editing a cited source marks its draft action stale",
+      "passed": true,
+      "detail": {
+        "value": "stale"
+      }
+    },
+    {
+      "name": "stale source blocks the calendar confirmation button",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "mood corrected by self-report",
+      "passed": true,
+      "detail": {
+        "value": "其实还有疑问"
+      }
+    },
+    {
+      "name": "mood candidate dismissed",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "record mark state real mock",
+      "passed": true,
+      "detail": {
+        "value": 1
+      }
+    },
+    {
+      "name": "record pause state",
+      "passed": true,
+      "detail": {
+        "value": "paused"
+      }
+    },
+    {
+      "name": "record mock saves note without synthetic transcript",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "new manual note grouped in time envelope",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "disconnect state explicit",
+      "passed": true,
+      "detail": {
+        "value": false
+      }
+    },
+    {
+      "name": "cannot start recording while disconnected",
+      "passed": true,
+      "detail": {
+        "value": "idle"
+      }
+    },
+    {
+      "name": "night only preview and no fake metrics",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "second-day recap does not show first-day decision as today",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "search works with input",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "deleted evidence not resolvable",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "deleted event absent in graph",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "me page starts below header after another route was scrolled",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "recording pod precedes appearance setting in me list",
+      "passed": true,
+      "detail": {
+        "value": [
+          "device",
+          "appearance"
+        ]
+      }
+    },
+    {
+      "name": "glass setting opens with default level and offline refraction map",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "glass setting changes nav lens scale live",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "glass level survives reload in new key",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px document has no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px home content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px scenes content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px calendar content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px recap content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px me content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px mood content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px privacy content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px people columns keep every head on its own identity lane",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px people controls inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px understanding text fits the person page",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px quote sheet stays inside the screen",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px calendar content fits its viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px graph dialog inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px document has no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px home content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px scenes content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px calendar content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px recap content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px me content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px mood content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px privacy content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px people columns keep every head on its own identity lane",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px people controls inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px understanding text fits the person page",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px quote sheet stays inside the screen",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px calendar content fits its viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "360px graph dialog inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px document has no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px home content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px scenes content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px calendar content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px recap content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px me content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px mood content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px privacy content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px people columns keep every head on its own identity lane",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px people controls inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px understanding text fits the person page",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px quote sheet stays inside the screen",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px calendar content fits its viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px graph dialog inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px document has no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px home content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px scenes content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px calendar content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px recap content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px me content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px mood content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px privacy content no horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px people columns keep every head on its own identity lane",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px people controls inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px understanding text fits the person page",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px quote sheet stays inside the screen",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px calendar content fits its viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px graph dialog inside viewport",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "crossing the 375px breakpoint reveals one extra aligned identity",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "200% zoom home fits 160 CSS pixels without horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "200% zoom person view fits 160 CSS pixels",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "200% zoom quote sheet stays inside the screen",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "200% zoom calendar fits 160 CSS pixels without horizontal overflow",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "long person name does not change lane width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "larger content typography still fits width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "reduced motion keeps lane ordering",
+      "passed": true,
+      "detail": {
+        "value": [
+          "judge",
+          "lin",
+          "yuan",
+          "fang",
+          "chen",
+          "guest",
+          "zhou",
+          "ning"
+        ]
+      }
+    },
+    {
+      "name": "Escape dismisses modal",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "keyboard nav still reachable after dialog",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "browser runtime has no exceptions",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "offline release makes zero remote requests",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop judge guide exposes fifteen feature destinations",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop guide opens people intersection",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop guide opens conversation understanding",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop guide opens cited original words",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop guide opens calendar",
+      "passed": true,
+      "detail": {
+        "value": "calendar"
+      }
+    },
+    {
+      "name": "desktop guide opens recording device",
+      "passed": true,
+      "detail": {
+        "value": "device"
+      }
+    },
+    {
+      "name": "desktop guide opens daily recap",
+      "passed": true,
+      "detail": {
+        "value": "recap"
+      }
+    },
+    {
+      "name": "desktop guide reaches privacy controls",
+      "passed": true,
+      "detail": {
+        "value": "privacy"
+      }
+    },
+    {
+      "name": "desktop guide scrolls independently of the phone",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop guide returns to timeline",
+      "passed": true,
+      "detail": {
+        "value": "home"
+      }
+    },
+    {
+      "name": "desktop guide opens scenes",
+      "passed": true,
+      "detail": {
+        "value": "scenes"
+      }
+    },
+    {
+      "name": "desktop guide opens cited conversation",
+      "passed": true,
+      "detail": {
+        "value": "chat"
+      }
+    },
+    {
+      "name": "desktop guide opens glass settings",
+      "passed": true,
+      "detail": {
+        "value": "appearance"
+      }
+    },
+    {
+      "name": "desktop guide opens interval explanation",
+      "passed": true,
+      "detail": {
+        "value": "learning"
+      }
+    },
+    {
+      "name": "desktop guide opens mood history",
+      "passed": true,
+      "detail": {
+        "value": "mood"
+      }
+    },
+    {
+      "name": "desktop guide opens night preview",
+      "passed": true,
+      "detail": {
+        "value": "sleep"
+      }
+    },
+    {
+      "name": "desktop graph remains inside the phone frame",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop people filter shows connected relationships",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "app still opens when browser storage permission is denied",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "storage denial explains the unsaved session without breaking UI",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "storage-denied page also completes without runtime errors",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "page_errors": [],
+  "console_errors": [],
+  "console_warnings": [
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine.",
+    "You have set a custom wheel sensitivity.  This will make your app zoom unnaturally when using mainstream mice.  You should change this value from the default only if you can guarantee that all your users will use the same hardware and OS configuration as your current machine."
+  ],
+  "external_requests": [],
+  "system_fonts": {
+    ".brand": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI",
+        "isCustomFont": false,
+        "glyphCount": 8
+      },
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 2
+      }
+    ],
+    ".date-heading": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI",
+        "isCustomFont": false,
+        "glyphCount": 2
+      },
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 6
+      }
+    ],
+    ".inner-title strong": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 7
+      }
+    ],
+    ".event-heading strong": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 7
+      }
+    ],
+    ".nav-item": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 2
+      }
+    ]
+  },
+  "html_sha256": "78c92995929d78c983f11d4275744ecd9a4b70cd95f0f5d3095494f58f0ae0b1",
+  "limitations": "Chromium viewport simulation; no physical device, Safari, live recording hardware, ASR, or external calendar."
+}

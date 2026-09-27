@@ -1,0 +1,381 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VoiceLog / 声迹 · 交互与状态规格 v1.1</title><style>*{box-sizing:border-box}html{background:#edf1e8}body{margin:0;color:#1d2f25;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.8}article{max-width:980px;margin:22px auto;background:#fff;border:1px solid #dbe4d1}section{padding:40px 52px;border-bottom:1px solid #e5ebdc}h1{font-size:42px;letter-spacing:-1.4px;font-weight:650;line-height:1.2;margin:20px 0 10px}h2{font-size:23px;color:#285e4e;line-height:1.4;margin:6px 0 20px;font-weight:600}h3{font-size:17px;margin:22px 0 10px;color:#243e31}h4{font-size:15px}p{margin:12px 0}table{border-collapse:collapse;width:100%;margin:17px 0;font-size:12px;line-height:1.7}th{text-align:left;background:#e8eedc;color:#274734;padding:10px 12px;font-weight:600}td{border-bottom:1px solid #e0e8d7;padding:9px 12px;vertical-align:top}tbody tr:nth-child(2n){background:#f8faf4}code{font-family:ui-monospace,monospace;font-size:11px;background:#f0f4e9;padding:2px 4px;border-radius:4px;overflow-wrap:anywhere}pre{padding:16px;background:#f3f6ed;overflow:auto;font-size:11px;line-height:1.6}pre code{background:none}a{color:#326bde;overflow-wrap:anywhere}ul,ol{padding-left:21px}li{margin:7px 0}.figure{margin:21px 0 12px;background:#fbfcf8;border:1px solid #e4eadb;border-radius:16px;padding:12px 16px}.figure svg{display:block;width:100%;height:auto;max-height:300px}.figcaption{font-size:10px;color:#7b8b70;margin:7px 0 0}details{font-size:11px;color:#718367;margin:5px 0 15px}summary{cursor:pointer}.toolbar{max-width:980px;margin:20px auto;font-size:12px;display:flex;align-items:center;gap:15px;color:#66785c}.toolbar button{padding:10px 15px;background:#285e4e;border:0;border-radius:10px;color:white;cursor:pointer}.brandbar{height:7px;background:linear-gradient(90deg,#BDDF58 0 33%,#285e4e 33% 66%,#19281f 66% 100%)}.doc-footer{font-size:10px;color:#8a977e;padding:18px 52px}.cover-product{width:125px;float:right;mix-blend-mode:multiply;margin:4px 0 16px 22px}blockquote{margin:15px 0;padding:12px 18px;border-left:3px solid #bddf58;background:#f2f6e9}@media(max-width:720px){article{margin:0}section{padding:26px 20px}h1{font-size:32px}table{font-size:11px}td,th{padding:7px 6px}.toolbar{margin:12px 16px}.figure{padding:8px}.figure svg{min-height:100px}}@media print{@page{size:A4;margin:13mm 14mm 15mm}html,body{background:white;font-size:10.4pt;line-height:1.65}article{border:0;margin:0;max-width:none}section{padding:3mm 0 0;border:0;break-after:page}section:last-child{break-after:auto}.toolbar,details,.doc-footer{display:none}h1,h2,h3,h4{break-after:avoid-page;page-break-after:avoid}h1{font-size:31pt}h2{font-size:18pt;margin-bottom:4mm}h3{font-size:12.4pt;margin:5mm 0 2mm}p{margin:3mm 0}table{font-size:9pt;margin:4mm 0;line-height:1.55}td,th{padding:2.2mm 2.5mm}tr{break-inside:avoid}.figure{margin:4mm 0;padding:2mm 3mm;break-inside:avoid;border-radius:3mm}.figure svg{max-height:65mm}ul,ol{padding-left:4.5mm}li{margin:2mm 0}.brandbar{height:2mm}.cover-product{width:28mm}.figcaption{font-size:7pt}}</style><body><div class="toolbar"><b>VoiceLog / 声迹</b><span>v1.1 · 2026-09-26</span><button onclick="window.print()">打印 / 保存 PDF</button><span>图示可离线查看</span></div><article><div class="brandbar"></div><section><h1>VoiceLog / 声迹 · 交互与状态规格 v1.1</h1>
+<h2>1. 全局约定</h2>
+<p>逻辑设计基准390×844，浏览器宽度随设备适配，检验320／360／390／430及桌面视口。主导航固定总览／场景／对话／我的。快速记录独立于场景选择；设备身份和来源引用使用同一套组件。</p>
+<p>总览的“时间线／人物交汇”消费同一份记录。首页不输出长篇产品解释；必要的模拟状态、数据缺失、候选解读和授权信息仍然清楚保留。</p>
+<h2>2. 页面与动作清单</h2>
+<table>
+<thead>
+<tr>
+  <th>页面</th>
+  <th>主入口</th>
+  <th>关键动作</th>
+  <th>返回状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>我的天／多天</td>
+  <td>总览</td>
+  <td>日期、过滤、折叠、搜索、复盘、记录</td>
+  <td>保存展开块与浏览位置</td>
+</tr>
+<tr>
+  <td>时段回看</td>
+  <td>场景块底部</td>
+  <td>内部事情、局部关系、该时段对话</td>
+  <td>回到原场景块</td>
+</tr>
+<tr>
+  <td>人物交汇</td>
+  <td>总览切换</td>
+  <td>滚动、滑杆、区间、全部人物、固定排列</td>
+  <td>保留焦点时间与人物选择</td>
+</tr>
+<tr>
+  <td>人物详情</td>
+  <td>头像或交汇</td>
+  <td>原话、候选解释、否定、回复、图谱、对话</td>
+  <td>回到该时间段</td>
+</tr>
+<tr>
+  <td>场景列表</td>
+  <td>第二导航</td>
+  <td>类型筛选、项目或场景详情</td>
+  <td>保留类型选择</td>
+</tr>
+<tr>
+  <td>场景详情</td>
+  <td>场景列表</td>
+  <td>总览／记录／分析／关系</td>
+  <td>共用稳定页签</td>
+</tr>
+<tr>
+  <td>记录详情</td>
+  <td>事情条目</td>
+  <td>转写／声音／本次结果、原声、笔记、照片、删除</td>
+  <td>回到来源入口</td>
+</tr>
+<tr>
+  <td>关系画布</td>
+  <td>局部预览</td>
+  <td>拖动、缩放、搜索、过滤、展开、详情、表／节点列表</td>
+  <td>引用关闭后恢复节点和视角</td>
+</tr>
+<tr>
+  <td>统一对话</td>
+  <td>第三导航或上下文</td>
+  <td>范围、输入、示例语音、引用、关系</td>
+  <td>消息按范围保留</td>
+</tr>
+<tr>
+  <td>复盘</td>
+  <td>总览</td>
+  <td>当前日／多天变化、人物、心情、安排</td>
+  <td>时间范围保持</td>
+</tr>
+<tr>
+  <td>日历</td>
+  <td>首页日历图标</td>
+  <td>日期筛选、草稿、确认、规则、冲突、导出和取消</td>
+  <td>显示实际本机状态</td>
+</tr>
+<tr>
+  <td>我的</td>
+  <td>第四导航</td>
+  <td>设备、偏好、心情、关系、日历、隐私</td>
+  <td>不复制另一套消费逻辑</td>
+</tr>
+<tr>
+  <td>设备</td>
+  <td>设备条／我的</td>
+  <td>示例连接、控制、断连恢复</td>
+  <td>状态同源</td>
+</tr>
+<tr>
+  <td>夜间</td>
+  <td>场景列表／晚间卡</td>
+  <td>未来预览、醒后本人笔记</td>
+  <td>无假分析指标</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 首页外层与内层</h2>
+<p>外层场景块顺序依据日期和开始时间。相同工作类型被午饭中断时分成两块，不跨空白强制合并。默认只展开一块；有多个事件时内部仍显示各自时间，个人独立制作与局部交流可以重叠。</p>
+<p>时间标签固定不伸缩；标题容器 <code>min-width:0</code>，长内容换行或在明确的小区间内截断。不能通过变长截图隐藏布局问题。展开保持所点卡片在原位置；内部内容淡入和轻位移约200ms，其他主要操作不增加等待动画。</p>
+<h2>4. 人物轨道的状态</h2>
+
+<div class="figure"><svg width="884pt" height="71pt"
+ viewBox="0.00 0.00 883.80 70.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 56.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M81,-39C81,-39 12,-39 12,-39 6,-39 0,-33 0,-27 0,-27 0,-15 0,-15 0,-9 6,-3 12,-3 12,-3 81,-3 81,-3 87,-3 93,-9 93,-15 93,-15 93,-27 93,-27 93,-33 87,-39 81,-39"/>
+<text text-anchor="middle" x="46.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">浏览时间变化</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M225,-39C225,-39 132,-39 132,-39 126,-39 120,-33 120,-27 120,-27 120,-15 120,-15 120,-9 126,-3 132,-3 132,-3 225,-3 225,-3 231,-3 237,-9 237,-15 237,-15 237,-27 237,-27 237,-33 231,-39 225,-39"/>
+<text text-anchor="middle" x="178.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">计算活跃与临近者</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M93.33,-21C99.96,-21 106.87,-21 113.77,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="114.05,-22.93 119.55,-21 114.05,-19.08 114.05,-22.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M375,-42C375,-42 276,-42 276,-42 270,-42 264,-36 264,-30 264,-30 264,-12 264,-12 264,-6 270,0 276,0 276,0 375,0 375,0 381,0 387,-6 387,-12 387,-12 387,-30 387,-30 387,-36 381,-42 375,-42"/>
+<text text-anchor="middle" x="325.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">固定人物优先 · 同</text>
+<text text-anchor="middle" x="325.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">级稳定</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M237.22,-21C244.01,-21 250.98,-21 257.88,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="258.15,-22.93 263.65,-21 258.15,-19.08 258.15,-22.93"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M543,-42C543,-42 426,-42 426,-42 420,-42 414,-36 414,-30 414,-30 414,-12 414,-12 414,-6 420,0 426,0 426,0 543,0 543,0 549,0 555,-6 555,-12 555,-12 555,-30 555,-30 555,-36 549,-42 543,-42"/>
+<text text-anchor="middle" x="484.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">头像和整条轨道同步变</text>
+<text text-anchor="middle" x="484.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">换</text>
+</g>
+<!-- n2&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M387.2,-21C394.01,-21 401.01,-21 407.97,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="408.31,-22.93 413.81,-21 408.31,-19.08 408.31,-22.93"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M687,-39C687,-39 594,-39 594,-39 588,-39 582,-33 582,-27 582,-27 582,-15 582,-15 582,-9 588,-3 594,-3 594,-3 687,-3 687,-3 693,-3 699,-9 699,-15 699,-15 699,-27 699,-27 699,-33 693,-39 687,-39"/>
+<text text-anchor="middle" x="640.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">点击区间锁定交互</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M555.29,-21C562.25,-21 569.3,-21 576.19,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="576.44,-22.93 581.94,-21 576.44,-19.08 576.44,-22.93"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M843,-39C843,-39 738,-39 738,-39 732,-39 726,-33 726,-27 726,-27 726,-15 726,-15 726,-9 732,-3 738,-3 738,-3 843,-3 843,-3 849,-3 855,-9 855,-15 855,-15 855,-27 855,-27 855,-33 849,-39 843,-39"/>
+<text text-anchor="middle" x="790.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">详情关闭后继续浏览</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M699.14,-21C705.99,-21 713.04,-21 720.03,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="720.38,-22.93 725.88,-21 720.38,-19.08 720.38,-22.93"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 1 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;浏览时间变化&quot;] --&gt; B[&quot;计算活跃与临近者&quot;]
+ B --&gt; C[&quot;固定人物优先 · 同级稳定&quot;]
+ C --&gt; D[&quot;头像和整条轨道同步变换&quot;]
+ D --&gt; E[&quot;点击区间锁定交互&quot;]
+ E --&gt; F[&quot;详情关闭后继续浏览&quot;]</pre></details>
+
+<ul>
+<li>当前活跃、20分钟内、60分钟内、其他分级排序；并列保持先前顺序。</li>
+<li>可搜索当天所有人并固定一个人；减少动态效果时不自动换位。</li>
+<li>拖动／指针按下／详情打开时暂停重排；视觉过渡约260ms，节流约270ms。</li>
+<li>短于38px的区间只显示头像；中短区间用短标题；原时长保留在点击详情和可访问名称中。</li>
+<li>不因重排修改原始区间，不将录音沉默视为离开，也不将多人重叠时段重复算入同一人的统计。</li>
+</ul>
+<h2>5. 关系图状态与操作</h2>
+
+<div class="figure"><svg width="338pt" height="352pt"
+ viewBox="0.00 0.00 337.80 351.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 337.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<ellipse fill="#bddf58" stroke="#cfdcc1" cx="143.5" cy="-305" rx="18" ry="18"/>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M166,-258C166,-258 121,-258 121,-258 115,-258 109,-252 109,-246 109,-246 109,-234 109,-234 109,-228 115,-222 121,-222 121,-222 166,-222 166,-222 172,-222 178,-228 178,-234 178,-234 178,-246 178,-246 178,-252 172,-258 166,-258"/>
+<text text-anchor="middle" x="143.5" y="-236.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">局部预览</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M143.5,-286.78C143.5,-279.7 143.5,-271.39 143.5,-263.82"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="145.43,-263.69 143.5,-258.19 141.58,-263.69 145.43,-263.69"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M166,-184C166,-184 121,-184 121,-184 115,-184 109,-178 109,-172 109,-172 109,-160 109,-160 109,-154 115,-148 121,-148 121,-148 166,-148 166,-148 172,-148 178,-154 178,-160 178,-160 178,-172 178,-172 178,-178 172,-184 166,-184"/>
+<text text-anchor="middle" x="143.5" y="-162.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">完整画布</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M132.33,-221.69C127.75,-214.59 123.5,-208 123.5,-208 123.5,-208 123.5,-198 123.5,-198 123.5,-198 125.99,-194.14 129.21,-189.14"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="130.97,-189.98 132.33,-184.31 127.73,-187.89 130.97,-189.98"/>
+<text text-anchor="middle" x="133" y="-200.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">打开</text>
+</g>
+<!-- n2&#45;&gt;n1 -->
+<g id="edge9" class="edge">
+<title>n2&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M143.5,-184.44C143.5,-194.05 143.5,-206.08 143.5,-216.41"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="141.58,-216.44 143.5,-221.94 145.43,-216.44 141.58,-216.44"/>
+<text text-anchor="middle" x="153" y="-200.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">关闭</text>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M166,-110C166,-110 121,-110 121,-110 115,-110 109,-104 109,-98 109,-98 109,-86 109,-86 109,-80 115,-74 121,-74 121,-74 166,-74 166,-74 172,-74 178,-80 178,-86 178,-86 178,-98 178,-98 178,-104 172,-110 166,-110"/>
+<text text-anchor="middle" x="143.5" y="-88.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">节点选中</text>
+</g>
+<!-- n2&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M143.5,-147.94C143.5,-138.39 143.5,-126.37 143.5,-116"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="145.43,-115.94 143.5,-110.44 141.58,-115.94 145.43,-115.94"/>
+<text text-anchor="middle" x="166.5" y="-126.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">点击或搜索</text>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M57,-36C57,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 57,0 57,0 63,0 69,-6 69,-12 69,-12 69,-24 69,-24 69,-30 63,-36 57,-36"/>
+<text text-anchor="middle" x="34.5" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">邻域扩展</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M108.78,-83.26C67.61,-74.08 4.5,-60 4.5,-60 4.5,-60 4.5,-50 4.5,-50 4.5,-50 8.55,-45.82 13.67,-40.53"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="15.3,-41.6 17.75,-36.31 12.54,-38.93 15.3,-41.6"/>
+<text text-anchor="middle" x="23" y="-52.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">展开关联</text>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M188,-36C188,-36 143,-36 143,-36 137,-36 131,-30 131,-24 131,-24 131,-12 131,-12 131,-6 137,0 143,0 143,0 188,0 188,0 194,0 200,-6 200,-12 200,-12 200,-24 200,-24 200,-30 194,-36 188,-36"/>
+<text text-anchor="middle" x="165.5" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原话侧页</text>
+</g>
+<!-- n3&#45;&gt;n5 -->
+<g id="edge6" class="edge">
+<title>n3&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M143.92,-73.85C144.19,-62.61 144.5,-50 144.5,-50 144.5,-50 147.12,-46.14 150.5,-41.14"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="152.28,-41.95 153.77,-36.31 149.09,-39.79 152.28,-41.95"/>
+<text text-anchor="middle" x="163" y="-52.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">点击引用</text>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M297,-36C297,-36 252,-36 252,-36 246,-36 240,-30 240,-24 240,-24 240,-12 240,-12 240,-6 246,0 252,0 252,0 297,0 297,0 303,0 309,-6 309,-12 309,-12 309,-24 309,-24 309,-30 303,-36 297,-36"/>
+<text text-anchor="middle" x="274.5" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">范围对话</text>
+</g>
+<!-- n3&#45;&gt;n6 -->
+<g id="edge8" class="edge">
+<title>n3&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M178.03,-78.84C202.68,-70.15 231.5,-60 231.5,-60 231.5,-60 241.81,-50.17 252.33,-40.13"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="253.86,-41.34 256.51,-36.15 251.2,-38.55 253.86,-41.34"/>
+<text text-anchor="middle" x="255.5" y="-52.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">继续问</text>
+</g>
+<!-- n4&#45;&gt;n3 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M55.41,-36.15C69.12,-47.39 84.5,-60 84.5,-60 84.5,-60 94.26,-65.13 105.84,-71.21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="105.13,-73.01 110.89,-73.87 106.92,-69.61 105.13,-73.01"/>
+<text text-anchor="middle" x="112" y="-52.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">选择相邻节点</text>
+</g>
+<!-- n5&#45;&gt;n3 -->
+<g id="edge7" class="edge">
+<title>n5&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M174.44,-36.31C178.1,-43.41 181.5,-50 181.5,-50 181.5,-50 181.5,-60 181.5,-60 181.5,-60 175.96,-64.52 169.12,-70.1"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="167.77,-68.72 164.72,-73.69 170.2,-71.7 167.77,-68.72"/>
+<text text-anchor="middle" x="204.5" y="-52.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">返回原视角</text>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 2 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>stateDiagram-v2
+ [*] --&gt; 局部预览
+ 局部预览 --&gt; 完整画布: 打开
+ 完整画布 --&gt; 节点选中: 点击或搜索
+ 节点选中 --&gt; 邻域扩展: 展开关联
+ 邻域扩展 --&gt; 节点选中: 选择相邻节点
+ 节点选中 --&gt; 原话侧页: 点击引用
+ 原话侧页 --&gt; 节点选中: 返回原视角
+ 节点选中 --&gt; 范围对话: 继续问
+ 完整画布 --&gt; 局部预览: 关闭</pre></details>
+
+<p>节点与边有独立选中行为。hover仅在细指针设备启用；未选时恢复普通状态，已选时恢复其邻域状态。搜索结果可以打开当前过滤之外的节点。原话开关控制明细密度。键盘 <code>+/-/0</code> 和方向键提供缩放、适应画布与平移，Esc关闭弹层；Tab保持在当前模态范围。</p>
+<p>完整图采用全屏自适应容器。手机检查器位于底部，最多占约35dvh；桌面使用右侧检查器。图坐标是可移动的画布，边缘节点可以在视口之外，普通文本、按钮及检查器不得溢出页面。</p>
+<h2>6. 原话、修订与媒体</h2>
+<p>蓝色引用 → 标题、时段、原引用版本和定位 → 本机音频可播放 → 原记录句子高亮。没有绑定文件不出现假波形回放；本机文件时長不足则提示。修订保留旧版本，恢复历史也写新版本，影响相关摘要与未执行安排的状态。</p>
+<p>笔记、梦境回忆、照片由本人补充，和转写明确分开。删除当前记录后引用和图谱同步撤回可见性。演示没有服务器访问控制，生产版必须再次校验账号、授权、来源和时间范围。</p>
+<h2>7. 交流理解与心情</h2>
+<p>界面只呈现当次候选解释、支持程度、原话与可编辑回复。选择某项解释会取消该项先前的否定；否定会取消其选择。回复可复制或保留为草稿，不自动发送。Jev为后续判别接口，演示数据不冒充实时推理。</p>
+<p>心情候选允许删除和本人改写；本人感受保留为自述。不得在无数据处补出连续心情曲线。</p>
+<h2>8. 日历、录音和降级</h2>
+<table>
+<thead>
+<tr>
+  <th>输入或动作</th>
+  <th>状态变化</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>明确本人日程</td>
+  <td>草稿 → 预览 → 本机已存</td>
+</tr>
+<tr>
+  <td>缺时间／冲突</td>
+  <td>待补全或核对，不执行</td>
+</tr>
+<tr>
+  <td>有限自动授权</td>
+  <td>到期、对象、来源、冲突全部满足后运行</td>
+</tr>
+<tr>
+  <td>日程内容改动</td>
+  <td>新版本待确认；不沿用旧确认</td>
+</tr>
+<tr>
+  <td>取消</td>
+  <td>本机取消，不宣称已改外部日历</td>
+</tr>
+<tr>
+  <td>ICS导出</td>
+  <td>文件下载，不等于系统日历已导入</td>
+</tr>
+<tr>
+  <td>演示录音</td>
+  <td>计时 → 暂停／标记 → 保存本人笔记，不生成音轨</td>
+</tr>
+<tr>
+  <td>断连</td>
+  <td>状态待核实，不能启动新的演示录音</td>
+</tr>
+<tr>
+  <td>示例语音</td>
+  <td>倾听 → 暂停／回复 → 可打断回文字；不启用麦克风</td>
+</tr>
+<tr>
+  <td>无依据问答</td>
+  <td>无来源回答或提示当前范围不足，不造引用</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 验收与消融</h2>
+<p>验收针对当前交付HTML、数据和脚本：分块不漏事件；时间顺序、日期和区间并集正确；人物轨道换位保持身份；图谱点击与来源返回成立；文本／表单在320px仍可操作；修改、删除与日历规则保持一致；触屏和减少动态效果有替代入口。</p>
+<p>平铺／分块、动态／固定人物、图形／列表是同数据对照。自动检查不等于真实用户实验；查看日志中的加载环境、覆盖视口和限制，不将“脚本通过”解释为所有手机、所有文本和真实模型均已通过。</p>
+</section><div class="doc-footer">VoiceLog / 声迹 · 产品与交互基线 · 数据、模型及服务接入状态分别说明。</div></article></body></html>

@@ -1,0 +1,24 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.2", nodesep="0.27", ranksep="0.38", splines=polyline];
+node [shape=box,style="rounded,filled",fillcolor="#EFF3E7",color="#CFDCC1",penwidth=1,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#203A2C",margin="0.14,0.11"];
+edge [color="#8FA782",arrowsize=.55,penwidth=1.1,fontname="Noto Sans CJK SC",fontsize=9,fontcolor="#6A7F5F"];
+n0 [label="原始音频 · 转写版\n本 · 笔记 · 照\n片",shape=box,fillcolor="#BDDF58"];
+n1 [label="共同声音结果",shape=box,fillcolor="#EFF3E7"];
+n2 [label="场景专有结果包",shape=box,fillcolor="#EFF3E7"];
+n3 [label="关键词与向量索引",shape=box,fillcolor="#EFF3E7"];
+n4 [label="选择性知识与来源关系",shape=box,fillcolor="#EFF3E7"];
+n5 [label="受控查询与引用解析",shape=box,fillcolor="#EFF3E7"];
+n6 [label="时间线 · 人物 ·\n 关系图 · 对话",shape=box,fillcolor="#EFF3E7"];
+n7 [label="行动草稿与确认记录",shape=box,fillcolor="#EFF3E7"];
+n8 [label="本机或外部日历连接器",shape=box,fillcolor="#EFF3E7"];
+n0 -> n1 [label="",style=solid];
+n0 -> n2 [label="",style=solid];
+n0 -> n3 [label="",style=solid];
+n2 -> n4 [label="",style=solid];
+n1 -> n4 [label="",style=solid];
+n3 -> n5 [label="",style=solid];
+n4 -> n5 [label="",style=solid];
+n5 -> n6 [label="",style=solid];
+n2 -> n7 [label="",style=solid];
+n7 -> n8 [label="",style=solid];
+}

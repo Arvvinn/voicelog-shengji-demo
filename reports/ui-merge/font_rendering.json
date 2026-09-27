@@ -1,0 +1,58 @@
+{
+  "browser_version": "149.0.7827.55",
+  "mode": "Chrome DevTools CSS.getPlatformFontsForNode",
+  "nodes": {
+    ".brand": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI",
+        "isCustomFont": false,
+        "glyphCount": 8
+      },
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 2
+      }
+    ],
+    ".date-heading": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI",
+        "isCustomFont": false,
+        "glyphCount": 2
+      },
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 6
+      }
+    ],
+    ".inner-title strong": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 7
+      }
+    ],
+    ".event-heading strong": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 7
+      }
+    ],
+    ".nav-item": [
+      {
+        "familyName": "Microsoft YaHei UI",
+        "postScriptName": "MicrosoftYaHeiUI-Bold",
+        "isCustomFont": false,
+        "glyphCount": 2
+      }
+    ]
+  }
+}

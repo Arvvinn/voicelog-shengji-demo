@@ -1,0 +1,75 @@
+PASS 320px home bounded text
+PASS 320px home document width
+PASS 320px afternoon bounded text
+PASS 320px afternoon document width
+PASS 320px block bounded text
+PASS 320px block document width
+PASS 320px judge bounded text
+PASS 320px judge document width
+PASS 320px record bounded text
+PASS 320px record document width
+PASS 320px recap bounded text
+PASS 320px recap document width
+PASS 320px calendar bounded text
+PASS 320px calendar document width
+PASS 320px scenes bounded text
+PASS 320px scenes document width
+PASS 320px me bounded text
+PASS 320px me document width
+PASS 320px mood bounded text
+PASS 320px mood document width
+PASS 320px people card text bounds
+PASS 390px home bounded text
+PASS 390px home document width
+PASS 390px afternoon bounded text
+PASS 390px afternoon document width
+PASS 390px block bounded text
+PASS 390px block document width
+PASS 390px judge bounded text
+PASS 390px judge document width
+PASS 390px record bounded text
+PASS 390px record document width
+PASS 390px recap bounded text
+PASS 390px recap document width
+PASS 390px calendar bounded text
+PASS 390px calendar document width
+PASS 390px scenes bounded text
+PASS 390px scenes document width
+PASS 390px me bounded text
+PASS 390px me document width
+PASS 390px mood bounded text
+PASS 390px mood document width
+PASS 390px people card text bounds
+PASS 430px home bounded text
+PASS 430px home document width
+PASS 430px afternoon bounded text
+PASS 430px afternoon document width
+PASS 430px block bounded text
+PASS 430px block document width
+PASS 430px judge bounded text
+PASS 430px judge document width
+PASS 430px record bounded text
+PASS 430px record document width
+PASS 430px recap bounded text
+PASS 430px recap document width
+PASS 430px calendar bounded text
+PASS 430px calendar document width
+PASS 430px scenes bounded text
+PASS 430px scenes document width
+PASS 430px me bounded text
+PASS 430px me document width
+PASS 430px mood bounded text
+PASS 430px mood document width
+PASS 430px people card text bounds
+PASS people lane uses nonzero transform transition
+PASS people reorder passes through intermediate positions
+PASS rapid time reversal settles without duplicate identities
+PASS pointer hover highlights one neighborhood
+PASS mouse wheel changes graph zoom
+PASS filter removing selected node clears invalid focus
+PASS interrupted graph camera/expansion stays finite
+PASS reduced motion CSS removes lane animation
+PASS graph keyboard navigation stays usable
+PASS reviewer query uses reviewer citations, not Xiaolin
+PASS all targeted interactions have no runtime error
+QA 74 0 []

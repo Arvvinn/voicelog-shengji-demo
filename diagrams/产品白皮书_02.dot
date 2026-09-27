@@ -1,0 +1,16 @@
+digraph G {
+graph [rankdir=LR, bgcolor="transparent", pad="0.2", nodesep="0.27", ranksep="0.38", splines=polyline];
+node [shape=box,style="rounded,filled",fillcolor="#EFF3E7",color="#CFDCC1",penwidth=1,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#203A2C",margin="0.14,0.11"];
+edge [color="#8FA782",arrowsize=.55,penwidth=1.1,fontname="Noto Sans CJK SC",fontsize=9,fontcolor="#6A7F5F"];
+n0 [label="滚动时间或拖动游标",shape=box,fillcolor="#BDDF58"];
+n1 [label="计算当前交流与临近区\n间",shape=box,fillcolor="#EFF3E7"];
+n2 [label="稳定排序 · 固定人\n物优先",shape=box,fillcolor="#EFF3E7"];
+n3 [label="整条人物轨道平滑换位",shape=box,fillcolor="#EFF3E7"];
+n4 [label="点击区间查看原话和事\n项",shape=box,fillcolor="#EFF3E7"];
+n5 [label="人物交流理解或相关记\n录",shape=box,fillcolor="#EFF3E7"];
+n0 -> n1 [label="",style=solid];
+n1 -> n2 [label="",style=solid];
+n2 -> n3 [label="",style=solid];
+n3 -> n4 [label="",style=solid];
+n4 -> n5 [label="",style=solid];
+}

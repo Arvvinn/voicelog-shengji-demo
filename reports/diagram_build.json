@@ -1,0 +1,89 @@
+{
+  "diagrams": [
+    {
+      "name": "产品白皮书_01",
+      "nodes": 10,
+      "edges": 9,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_02",
+      "nodes": 6,
+      "edges": 5,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_03",
+      "nodes": 6,
+      "edges": 5,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_04",
+      "nodes": 8,
+      "edges": 8,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_05",
+      "nodes": 9,
+      "edges": 10,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_06",
+      "nodes": 11,
+      "edges": 12,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_07",
+      "nodes": 7,
+      "edges": 6,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_08",
+      "nodes": 7,
+      "edges": 6,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_09",
+      "nodes": 6,
+      "edges": 8,
+      "mermaid_kind": "stateDiagram",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "产品白皮书_10",
+      "nodes": 7,
+      "edges": 6,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "交互与状态规格_01",
+      "nodes": 6,
+      "edges": 5,
+      "mermaid_kind": "flowchart",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    },
+    {
+      "name": "交互与状态规格_02",
+      "nodes": 7,
+      "edges": 9,
+      "mermaid_kind": "stateDiagram",
+      "renderer": "Graphviz，同一节点及边拓扑；Mermaid源码另存"
+    }
+  ],
+  "count": 12
+}

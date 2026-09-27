@@ -1,0 +1,24 @@
+digraph G {
+graph [rankdir=TB, bgcolor="transparent", pad="0.2", nodesep="0.27", ranksep="0.38", splines=polyline];
+node [shape=box,style="rounded,filled",fillcolor="#EFF3E7",color="#CFDCC1",penwidth=1,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#203A2C",margin="0.14,0.11"];
+edge [color="#8FA782",arrowsize=.55,penwidth=1.1,fontname="Noto Sans CJK SC",fontsize=9,fontcolor="#6A7F5F"];
+n0 [label="10月16日 · 比\n赛日",shape=box,fillcolor="#BDDF58"];
+n1 [label="09:15—12:0\n0 上午项目推进",shape=box,fillcolor="#EFF3E7"];
+n2 [label="09:15 主线讨论",shape=box,fillcolor="#EFF3E7"];
+n3 [label="10:40 体验访谈",shape=box,fillcolor="#EFF3E7"];
+n4 [label="11:20 技术答疑",shape=box,fillcolor="#EFF3E7"];
+n5 [label="12:00—12:4\n0 午饭休息",shape=box,fillcolor="#EFF3E7"];
+n6 [label="13:00—17:4\n5 制作与交流",shape=box,fillcolor="#EFF3E7"];
+n7 [label="制作 · 接口核对 \n· 交接",shape=box,fillcolor="#EFF3E7"];
+n8 [label="评审交流 · 后续讨\n论",shape=box,fillcolor="#EFF3E7"];
+n9 [label="20:30 晚间复盘",shape=box,fillcolor="#EFF3E7"];
+n0 -> n1 [label="",style=solid];
+n1 -> n2 [label="",style=solid];
+n1 -> n3 [label="",style=solid];
+n1 -> n4 [label="",style=solid];
+n0 -> n5 [label="",style=solid];
+n0 -> n6 [label="",style=solid];
+n6 -> n7 [label="",style=solid];
+n6 -> n8 [label="",style=solid];
+n0 -> n9 [label="",style=solid];
+}

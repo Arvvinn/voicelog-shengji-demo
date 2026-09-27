@@ -1,0 +1,18 @@
+digraph G {
+graph [rankdir=LR, bgcolor="transparent", pad="0.2", nodesep="0.27", ranksep="0.38", splines=polyline];
+node [shape=box,style="rounded,filled",fillcolor="#EFF3E7",color="#CFDCC1",penwidth=1,fontname="Noto Sans CJK SC",fontsize=12,fontcolor="#203A2C",margin="0.14,0.11"];
+edge [color="#8FA782",arrowsize=.55,penwidth=1.1,fontname="Noto Sans CJK SC",fontsize=9,fontcolor="#6A7F5F"];
+n0 [label="原话中的一项安排",shape=box,fillcolor="#BDDF58"];
+n1 [label="提取标题 · 对象 \n· 日期时间",shape=box,fillcolor="#EFF3E7"];
+n2 [label="检查来源 · 明确性\n · 冲突",shape=box,fillcolor="#EFF3E7"];
+n3 [label="本人确认或有限授权",shape=box,fillcolor="#EFF3E7"];
+n4 [label="存入本机演示日历",shape=box,fillcolor="#EFF3E7"];
+n5 [label="导出 ICS",shape=box,fillcolor="#EFF3E7"];
+n6 [label="用户自行导入系统日历",shape=box,fillcolor="#EFF3E7"];
+n0 -> n1 [label="",style=solid];
+n1 -> n2 [label="",style=solid];
+n2 -> n3 [label="",style=solid];
+n3 -> n4 [label="",style=solid];
+n4 -> n5 [label="",style=solid];
+n5 -> n6 [label="",style=solid];
+}

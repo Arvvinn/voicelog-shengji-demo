@@ -1,0 +1,1585 @@
+<!doctype html><html lang="zh-CN"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VoiceLog / 声迹</title><style>*{box-sizing:border-box}html{background:#edf1e8}body{margin:0;color:#1d2f25;font-family:-apple-system,BlinkMacSystemFont,"Noto Sans CJK SC","Microsoft YaHei",sans-serif;font-size:14px;line-height:1.8}article{max-width:980px;margin:22px auto;background:#fff;border:1px solid #dbe4d1}section{padding:40px 52px;border-bottom:1px solid #e5ebdc}h1{font-size:42px;letter-spacing:-1.4px;font-weight:650;line-height:1.2;margin:20px 0 10px}h2{font-size:23px;color:#285e4e;line-height:1.4;margin:6px 0 20px;font-weight:600}h3{font-size:17px;margin:22px 0 10px;color:#243e31}h4{font-size:15px}p{margin:12px 0}table{border-collapse:collapse;width:100%;margin:17px 0;font-size:12px;line-height:1.7}th{text-align:left;background:#e8eedc;color:#274734;padding:10px 12px;font-weight:600}td{border-bottom:1px solid #e0e8d7;padding:9px 12px;vertical-align:top}tbody tr:nth-child(2n){background:#f8faf4}code{font-family:ui-monospace,monospace;font-size:11px;background:#f0f4e9;padding:2px 4px;border-radius:4px;overflow-wrap:anywhere}pre{padding:16px;background:#f3f6ed;overflow:auto;font-size:11px;line-height:1.6}pre code{background:none}a{color:#326bde;overflow-wrap:anywhere}ul,ol{padding-left:21px}li{margin:7px 0}.figure{margin:21px 0 12px;background:#fbfcf8;border:1px solid #e4eadb;border-radius:16px;padding:12px 16px}.figure svg{display:block;width:100%;height:auto;max-height:300px}.figcaption{font-size:10px;color:#7b8b70;margin:7px 0 0}details{font-size:11px;color:#718367;margin:5px 0 15px}summary{cursor:pointer}.toolbar{max-width:980px;margin:20px auto;font-size:12px;display:flex;align-items:center;gap:15px;color:#66785c}.toolbar button{padding:10px 15px;background:#285e4e;border:0;border-radius:10px;color:white;cursor:pointer}.brandbar{height:7px;background:linear-gradient(90deg,#BDDF58 0 33%,#285e4e 33% 66%,#19281f 66% 100%)}.doc-footer{font-size:10px;color:#8a977e;padding:18px 52px}.cover-product{width:125px;float:right;mix-blend-mode:multiply;margin:4px 0 16px 22px}blockquote{margin:15px 0;padding:12px 18px;border-left:3px solid #bddf58;background:#f2f6e9}@media(max-width:720px){article{margin:0}section{padding:26px 20px}h1{font-size:32px}table{font-size:11px}td,th{padding:7px 6px}.toolbar{margin:12px 16px}.figure{padding:8px}.figure svg{min-height:100px}}@media print{@page{size:A4;margin:13mm 14mm 15mm}html,body{background:white;font-size:10.4pt;line-height:1.65}article{border:0;margin:0;max-width:none}section{padding:3mm 0 0;border:0;break-after:page}section:last-child{break-after:auto}.toolbar,details,.doc-footer{display:none}h1,h2,h3,h4{break-after:avoid-page;page-break-after:avoid}h1{font-size:31pt}h2{font-size:18pt;margin-bottom:4mm}h3{font-size:12.4pt;margin:5mm 0 2mm}p{margin:3mm 0}table{font-size:9pt;margin:4mm 0;line-height:1.55}td,th{padding:2.2mm 2.5mm}tr{break-inside:avoid}.figure{margin:4mm 0;padding:2mm 3mm;break-inside:avoid;border-radius:3mm}.figure svg{max-height:65mm}ul,ol{padding-left:4.5mm}li{margin:2mm 0}.brandbar{height:2mm}.cover-product{width:28mm}.figcaption{font-size:7pt}}</style><body><div class="toolbar"><b>VoiceLog / 声迹</b><span>v1.1 · 2026-09-26</span><button onclick="window.print()">打印 / 保存 PDF</button><span>图示可离线查看</span></div><article><div class="brandbar"></div><section><img class="cover-product" src="data:image/webp;base64,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" alt="用户提供的实际产品参考"><h1>VoiceLog / 声迹</h1>
+<h2>产品与交互白皮书 v1.1</h2>
+<p><strong>一日生活记录，按场景展开，沿人物与原话接着使用。</strong></p>
+<table>
+<thead>
+<tr>
+  <th>基线</th>
+  <th>当前决定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>主要使用者</td>
+  <td>经常讨论、学习和制作的个人；首个样例是开发者的比赛日</td>
+</tr>
+<tr>
+  <td>主要时间尺度</td>
+  <td>一天与多天；时间顺序始终保留</td>
+</tr>
+<tr>
+  <td>核心呈现</td>
+  <td>场景分块时间线、人物交汇、可探索的关系图</td>
+</tr>
+<tr>
+  <td>硬件</td>
+  <td>Anker soundcore Work 3200；使用用户提供的实际产品图</td>
+</tr>
+<tr>
+  <td>交付形态</td>
+  <td>离线单 HTML、可编辑资料、测试与浏览器截图</td>
+</tr>
+<tr>
+  <td>当前能力</td>
+  <td>真实前端交互与本机数据操作；转写、识别和理解使用预置样例</td>
+</tr>
+<tr>
+  <td>后续能力</td>
+  <td>SDK、ASR、声纹、Jev／其他判别模型、真实日历连接；夜间仅预览</td>
+</tr>
+</tbody>
+</table>
+<p><strong>这次重构。</strong> 首页将连续工作时段收成外层场景块，会议、访谈和答疑保留内部事件线；人物轨道按浏览时间平滑换位；关系图采用可拖动、缩放、选择、展开和回到原话的真实图组件。页面不再以讲解性长文解释自身。</p>
+<p>数据日期为 <strong>2026-10-16、10-17的虚构样例</strong>，不代表主办方实际日程、真实评审意见或获奖结果。产品规格与已实现行为分开记录。更早的医嘱／老人双场景主线已退出本版。</p>
+</section><section><h2>01 / 一天怎样组织</h2>
+<p>一天按真实顺序浏览。外层“场景时段”是连续经历的容器，内层“事情”保留发生时间、参加者、原话和场景专有结果。主题、场景类型和发生时段是不同维度。</p>
+
+<div class="figure"><svg width="648pt" height="209pt"
+ viewBox="0.00 0.00 648.30 208.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 194.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M406,-180C406,-180 328,-180 328,-180 322,-180 316,-174 316,-168 316,-168 316,-150 316,-150 316,-144 322,-138 328,-138 328,-138 406,-138 406,-138 412,-138 418,-144 418,-150 418,-150 418,-168 418,-168 418,-174 412,-180 406,-180"/>
+<text text-anchor="middle" x="367" y="-162.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">10月16日 · 比</text>
+<text text-anchor="middle" x="367" y="-149.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">赛日</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M226,-111C226,-111 148,-111 148,-111 142,-111 136,-105 136,-99 136,-99 136,-81 136,-81 136,-75 142,-69 148,-69 148,-69 226,-69 226,-69 232,-69 238,-75 238,-81 238,-81 238,-99 238,-99 238,-105 232,-111 226,-111"/>
+<text text-anchor="middle" x="187" y="-93.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">09:15—12:0</text>
+<text text-anchor="middle" x="187" y="-80.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">0 上午项目推进</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M315.9,-138.98C293.29,-130.56 266.62,-120.64 243.43,-112"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="244.05,-110.18 238.23,-110.07 242.71,-113.79 244.05,-110.18"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M344,-111C344,-111 284,-111 284,-111 278,-111 272,-105 272,-99 272,-99 272,-81 272,-81 272,-75 278,-69 284,-69 284,-69 344,-69 344,-69 350,-69 356,-75 356,-81 356,-81 356,-99 356,-99 356,-105 350,-111 344,-111"/>
+<text text-anchor="middle" x="314" y="-93.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">12:00—12:4</text>
+<text text-anchor="middle" x="314" y="-80.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">0 午饭休息</text>
+</g>
+<!-- n0&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n0&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M351.1,-137.9C345.54,-130.88 339.24,-122.91 333.43,-115.57"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="334.81,-114.21 329.89,-111.09 331.79,-116.6 334.81,-114.21"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M453,-111C453,-111 387,-111 387,-111 381,-111 375,-105 375,-99 375,-99 375,-81 375,-81 375,-75 381,-69 387,-69 387,-69 453,-69 453,-69 459,-69 465,-75 465,-81 465,-81 465,-99 465,-99 465,-105 459,-111 453,-111"/>
+<text text-anchor="middle" x="420" y="-93.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">13:00—17:4</text>
+<text text-anchor="middle" x="420" y="-80.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">5 制作与交流</text>
+</g>
+<!-- n0&#45;&gt;n6 -->
+<g id="edge6" class="edge">
+<title>n0&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M382.9,-137.9C388.46,-130.88 394.76,-122.91 400.57,-115.57"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="402.21,-116.6 404.11,-111.09 399.19,-114.21 402.21,-116.6"/>
+</g>
+<!-- n9 -->
+<g id="node10" class="node">
+<title>n9</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M574,-108C574,-108 496,-108 496,-108 490,-108 484,-102 484,-96 484,-96 484,-84 484,-84 484,-78 490,-72 496,-72 496,-72 574,-72 574,-72 580,-72 586,-78 586,-84 586,-84 586,-96 586,-96 586,-102 580,-108 574,-108"/>
+<text text-anchor="middle" x="535" y="-86.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">20:30 晚间复盘</text>
+</g>
+<!-- n0&#45;&gt;n9 -->
+<g id="edge9" class="edge">
+<title>n0&#45;&gt;n9</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M417.41,-137.9C439.51,-129.08 465.32,-118.79 487.13,-110.09"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="487.89,-111.86 492.29,-108.03 486.47,-108.28 487.89,-111.86"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M90,-39C90,-39 12,-39 12,-39 6,-39 0,-33 0,-27 0,-27 0,-15 0,-15 0,-9 6,-3 12,-3 12,-3 90,-3 90,-3 96,-3 102,-9 102,-15 102,-15 102,-27 102,-27 102,-33 96,-39 90,-39"/>
+<text text-anchor="middle" x="51" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">09:15 主线讨论</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M146.2,-68.9C128.75,-60.3 108.45,-50.3 91.09,-41.75"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="91.58,-39.85 85.8,-39.14 89.88,-43.3 91.58,-39.85"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M211,-39C211,-39 133,-39 133,-39 127,-39 121,-33 121,-27 121,-27 121,-15 121,-15 121,-9 127,-3 133,-3 133,-3 211,-3 211,-3 217,-3 223,-9 223,-15 223,-15 223,-27 223,-27 223,-33 217,-39 211,-39"/>
+<text text-anchor="middle" x="172" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">10:40 体验访谈</text>
+</g>
+<!-- n1&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n1&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M182.5,-68.9C180.82,-61.4 178.9,-52.84 177.17,-45.09"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="178.97,-44.31 175.89,-39.37 175.21,-45.15 178.97,-44.31"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M332,-39C332,-39 254,-39 254,-39 248,-39 242,-33 242,-27 242,-27 242,-15 242,-15 242,-9 248,-3 254,-3 254,-3 332,-3 332,-3 338,-3 344,-9 344,-15 344,-15 344,-27 344,-27 344,-33 338,-39 332,-39"/>
+<text text-anchor="middle" x="293" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">11:20 技术答疑</text>
+</g>
+<!-- n1&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n1&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M218.8,-68.9C232.16,-60.45 247.68,-50.65 261.05,-42.19"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="262.26,-43.71 265.88,-39.14 260.2,-40.46 262.26,-43.71"/>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M465,-42C465,-42 375,-42 375,-42 369,-42 363,-36 363,-30 363,-30 363,-12 363,-12 363,-6 369,0 375,0 375,0 465,0 465,0 471,0 477,-6 477,-12 477,-12 477,-30 477,-30 477,-36 471,-42 465,-42"/>
+<text text-anchor="middle" x="420" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">制作 · 接口核对 </text>
+<text text-anchor="middle" x="420" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">· 交接</text>
+</g>
+<!-- n6&#45;&gt;n7 -->
+<g id="edge7" class="edge">
+<title>n6&#45;&gt;n7</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M420,-68.9C420,-62.27 420,-54.81 420,-47.82"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="421.93,-47.59 420,-42.09 418.08,-47.59 421.93,-47.59"/>
+</g>
+<!-- n8 -->
+<g id="node9" class="node">
+<title>n8</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M607.5,-42C607.5,-42 508.5,-42 508.5,-42 502.5,-42 496.5,-36 496.5,-30 496.5,-30 496.5,-12 496.5,-12 496.5,-6 502.5,0 508.5,0 508.5,0 607.5,0 607.5,0 613.5,0 619.5,-6 619.5,-12 619.5,-12 619.5,-30 619.5,-30 619.5,-36 613.5,-42 607.5,-42"/>
+<text text-anchor="middle" x="558" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">评审交流 · 后续讨</text>
+<text text-anchor="middle" x="558" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">论</text>
+</g>
+<!-- n6&#45;&gt;n8 -->
+<g id="edge8" class="edge">
+<title>n6&#45;&gt;n8</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M461.4,-68.9C477.23,-61.21 495.38,-52.4 511.64,-44.51"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="512.52,-46.22 516.62,-42.09 510.84,-42.76 512.52,-46.22"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 1 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart TD
+ D[&quot;10月16日 · 比赛日&quot;] --&gt; A[&quot;09:15—12:00 上午项目推进&quot;]
+ A --&gt; A1[&quot;09:15 主线讨论&quot;]
+ A --&gt; A2[&quot;10:40 体验访谈&quot;]
+ A --&gt; A3[&quot;11:20 技术答疑&quot;]
+ D --&gt; B[&quot;12:00—12:40 午饭休息&quot;]
+ D --&gt; C[&quot;13:00—17:45 制作与交流&quot;]
+ C --&gt; C1[&quot;制作 · 接口核对 · 交接&quot;]
+ C --&gt; C2[&quot;评审交流 · 后续讨论&quot;]
+ D --&gt; E[&quot;20:30 晚间复盘&quot;]</pre></details>
+
+<table>
+<thead>
+<tr>
+  <th>对象</th>
+  <th>用途</th>
+  <th>不承担的职责</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>日期</td>
+  <td>总览的浏览边界</td>
+  <td>不等同于录音持续时长</td>
+</tr>
+<tr>
+  <td>场景时段 block</td>
+  <td>连续工作、休息、复盘的一段；可折叠</td>
+  <td>不将上午和下午两个工作时段移动到一起</td>
+</tr>
+<tr>
+  <td>事情 episode</td>
+  <td>一次讨论、采访或口述；可有重叠</td>
+  <td>不需要每件事都成为一个新的场景包</td>
+</tr>
+<tr>
+  <td>场景类型 scene</td>
+  <td>协作、访谈、答疑、制作等结果模板</td>
+  <td>不改变全局时间顺序</td>
+</tr>
+<tr>
+  <td>项目 topic</td>
+  <td>比赛项目跨日接续的主题</td>
+  <td>不把生活和休息强制解释为工作成果</td>
+</tr>
+</tbody>
+</table>
+<p><strong>交互。</strong> 默认展开上午的工作块，其余收起。打开另一块时收回原块；展开内部事情，再进入同一套记录详情。未录时段、本人补记、夜间预览保留各自状态。日期切换不会把昨天的变化写成今天。</p>
+</section><section><h2>02 / 人物交汇：另一种读同一天的方法</h2>
+<p>时间向下，用户在最左，人物拥有头像、名称与独立轨道。交流区间的高度来自时间；短区间只放能容纳的头像和短题，详情通过点击展开，不撑大区间来伪造时长。</p>
+
+<div class="figure"><svg width="980pt" height="71pt"
+ viewBox="0.00 0.00 979.80 70.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 56.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M117,-39C117,-39 12,-39 12,-39 6,-39 0,-33 0,-27 0,-27 0,-15 0,-15 0,-9 6,-3 12,-3 12,-3 117,-3 117,-3 123,-3 129,-9 129,-15 129,-15 129,-27 129,-27 129,-33 123,-39 117,-39"/>
+<text text-anchor="middle" x="64.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">滚动时间或拖动游标</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M285,-42C285,-42 168,-42 168,-42 162,-42 156,-36 156,-30 156,-30 156,-12 156,-12 156,-6 162,0 168,0 168,0 285,0 285,0 291,0 297,-6 297,-12 297,-12 297,-30 297,-30 297,-36 291,-42 285,-42"/>
+<text text-anchor="middle" x="226.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">计算当前交流与临近区</text>
+<text text-anchor="middle" x="226.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">间</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M129.2,-21C136.07,-21 143.12,-21 150.11,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="150.48,-22.93 155.98,-21 150.48,-19.08 150.48,-22.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M435,-42C435,-42 336,-42 336,-42 330,-42 324,-36 324,-30 324,-30 324,-12 324,-12 324,-6 330,0 336,0 336,0 435,0 435,0 441,0 447,-6 447,-12 447,-12 447,-30 447,-30 447,-36 441,-42 435,-42"/>
+<text text-anchor="middle" x="385.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">稳定排序 · 固定人</text>
+<text text-anchor="middle" x="385.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">物优先</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M297.28,-21C304.19,-21 311.19,-21 318.06,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="318.3,-22.93 323.8,-21 318.3,-19.08 318.3,-22.93"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M603,-39C603,-39 486,-39 486,-39 480,-39 474,-33 474,-27 474,-27 474,-15 474,-15 474,-9 480,-3 486,-3 486,-3 603,-3 603,-3 609,-3 615,-9 615,-15 615,-15 615,-27 615,-27 615,-33 609,-39 603,-39"/>
+<text text-anchor="middle" x="544.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">整条人物轨道平滑换位</text>
+</g>
+<!-- n2&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M447.2,-21C454.01,-21 461.01,-21 467.97,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="468.31,-22.93 473.81,-21 468.31,-19.08 468.31,-22.93"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M771,-42C771,-42 654,-42 654,-42 648,-42 642,-36 642,-30 642,-30 642,-12 642,-12 642,-6 648,0 654,0 654,0 771,0 771,0 777,0 783,-6 783,-12 783,-12 783,-30 783,-30 783,-36 777,-42 771,-42"/>
+<text text-anchor="middle" x="712.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">点击区间查看原话和事</text>
+<text text-anchor="middle" x="712.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">项</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M615.42,-21C622.27,-21 629.25,-21 636.15,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="636.43,-22.93 641.93,-21 636.43,-19.08 636.43,-22.93"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M939,-42C939,-42 822,-42 822,-42 816,-42 810,-36 810,-30 810,-30 810,-12 810,-12 810,-6 816,0 822,0 822,0 939,0 939,0 945,0 951,-6 951,-12 951,-12 951,-30 951,-30 951,-36 945,-42 939,-42"/>
+<text text-anchor="middle" x="880.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">人物交流理解或相关记</text>
+<text text-anchor="middle" x="880.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">录</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M783.42,-21C790.27,-21 797.25,-21 804.15,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="804.43,-22.93 809.93,-21 804.43,-19.08 804.43,-22.93"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 2 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;滚动时间或拖动游标&quot;] --&gt; B[&quot;计算当前交流与临近区间&quot;]
+ B --&gt; C[&quot;稳定排序 · 固定人物优先&quot;]
+ C --&gt; D[&quot;整条人物轨道平滑换位&quot;]
+ D --&gt; E[&quot;点击区间查看原话和事项&quot;]
+ E --&gt; F[&quot;人物交流理解或相关记录&quot;]</pre></details>
+
+<table>
+<thead>
+<tr>
+  <th>规则</th>
+  <th>本版实现</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>当前活跃优先</td>
+  <td>当前发生的交流优先，其次临近时段；同级保持先前顺序</td>
+</tr>
+<tr>
+  <td>身份连续</td>
+  <td>同一个人物 ID 的头像、名称和全部区间整体移动</td>
+</tr>
+<tr>
+  <td>限制抖动</td>
+  <td>重排节流约270ms；拖动与详情交互中保持稳定</td>
+</tr>
+<tr>
+  <td>人物很多</td>
+  <td>同屏按宽度显示2—4条联系轨道；其他人物可以搜索并固定到左侧</td>
+</tr>
+<tr>
+  <td>动画</td>
+  <td>transform 约260ms；中途可继续操作，不运行不可中断的长动画</td>
+</tr>
+<tr>
+  <td>替代操作</td>
+  <td>时间滑杆、人物列表、固定排列、减少动态效果</td>
+</tr>
+<tr>
+  <td>统计</td>
+  <td>仅已确认且已记录的交流区间，先求并集后汇总</td>
+</tr>
+</tbody>
+</table>
+<p>示例中小林部分区间互相重叠。直接累加为117分钟，求并集为110分钟。这是样例数据上的确定性计算，不代表实际陪伴时间、亲密度或对人的关注程度。匿名交流者不自动获得跨日身份和已确认时长。</p>
+<p>原型没有运行声纹。真实版本需要区分说话人分离、参与者确认和同意后的身份匹配；声纹不能自行确定职业或社会角色。</p>
+</section><section><h2>03 / 交流理解与心情历程</h2>
+<p>交流理解围绕<strong>这句话和这件事</strong>给出几个可核对的解释，并提供可编辑的回复草稿。它可用于同伴交接、评审反馈、课堂答疑等场景，不独立复制一套社交资料库。</p>
+
+<div class="figure"><svg width="884pt" height="71pt"
+ viewBox="0.00 0.00 883.80 70.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 56.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M105,-39C105,-39 12,-39 12,-39 6,-39 0,-33 0,-27 0,-27 0,-15 0,-15 0,-9 6,-3 12,-3 12,-3 105,-3 105,-3 111,-3 117,-9 117,-15 117,-15 117,-27 117,-27 117,-33 111,-39 105,-39"/>
+<text text-anchor="middle" x="58.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原话与当次上下文</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M249,-39C249,-39 156,-39 156,-39 150,-39 144,-33 144,-27 144,-27 144,-15 144,-15 144,-9 150,-3 156,-3 156,-3 249,-3 249,-3 255,-3 261,-9 261,-15 261,-15 261,-27 261,-27 261,-33 255,-39 249,-39"/>
+<text text-anchor="middle" x="202.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">生成有限候选解释</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M117.26,-21C124.1,-21 131.1,-21 138.02,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="138.29,-22.93 143.79,-21 138.29,-19.08 138.29,-22.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M405,-39C405,-39 300,-39 300,-39 294,-39 288,-33 288,-27 288,-27 288,-15 288,-15 288,-9 294,-3 300,-3 300,-3 405,-3 405,-3 411,-3 417,-9 417,-15 417,-15 417,-27 417,-27 417,-33 411,-39 405,-39"/>
+<text text-anchor="middle" x="352.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">判别层评估支持程度</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M261.14,-21C267.99,-21 275.04,-21 282.03,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="282.38,-22.93 287.88,-21 282.38,-19.08 282.38,-22.93"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M555,-42C555,-42 456,-42 456,-42 450,-42 444,-36 444,-30 444,-30 444,-12 444,-12 444,-6 450,0 456,0 456,0 555,0 555,0 561,0 567,-6 567,-12 567,-12 567,-30 567,-30 567,-36 561,-42 555,-42"/>
+<text text-anchor="middle" x="505.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">保留候选 · 另一种</text>
+<text text-anchor="middle" x="505.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">解释 · 依据不足</text>
+</g>
+<!-- n2&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M417.1,-21C424.03,-21 431.09,-21 438.05,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="438.37,-22.93 443.87,-21 438.37,-19.08 438.37,-22.93"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M687,-39C687,-39 606,-39 606,-39 600,-39 594,-33 594,-27 594,-27 594,-15 594,-15 594,-9 600,-3 606,-3 606,-3 687,-3 687,-3 693,-3 699,-9 699,-15 699,-15 699,-27 699,-27 699,-33 693,-39 687,-39"/>
+<text text-anchor="middle" x="646.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">本人选择或否定</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M567.06,-21C574.04,-21 581.13,-21 588.06,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="588.34,-22.93 593.84,-21 588.34,-19.08 588.34,-22.93"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M843,-39C843,-39 738,-39 738,-39 732,-39 726,-33 726,-27 726,-27 726,-15 726,-15 726,-9 732,-3 738,-3 738,-3 843,-3 843,-3 849,-3 855,-9 855,-15 855,-15 855,-27 855,-27 855,-33 849,-39 843,-39"/>
+<text text-anchor="middle" x="790.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">回复草稿与后续讨论</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M699.17,-21C705.86,-21 712.8,-21 719.72,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="720.03,-22.93 725.53,-21 720.03,-19.08 720.03,-22.93"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 3 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;原话与当次上下文&quot;] --&gt; B[&quot;生成有限候选解释&quot;]
+ B --&gt; C[&quot;判别层评估支持程度&quot;]
+ C --&gt; D[&quot;保留候选 · 另一种解释 · 依据不足&quot;]
+ D --&gt; E[&quot;本人选择或否定&quot;]
+ E --&gt; F[&quot;回复草稿与后续讨论&quot;]</pre></details>
+
+<p><strong>原型例子。</strong> 评审交流者明确认可时间线，并要求人物分析能打开原话。因此“希望看到依据”有文字支持；“已经决定给作品获奖”没有依据。界面显示候选及原因，用户可以选择、否定、编辑回复并复制；不会自动发送。</p>
+<p><strong>Jev 的位置。</strong> TypeSafe 官方文档描述的 Jev 可接收状态与类型化问题，返回 Choice、Score 或 Noul。未来可作为候选判别接口之一；中文模型生成候选和整理上下文，判别层再比较候选。本版只使用预置候选与理由，没有加载模型或调用其 API，不报告准确率、置信概率或实时吞吐。</p>
+<p><strong>心情历程。</strong> 本人填写的感受与交流中的待核对线索分开。候选可删除，也可由本人重新表述。数值不作为心理测量，不从声音推断诊断、人格、隐藏意图或“别人到底有多喜欢我”。缺少材料时不补齐一条完美曲线。</p>
+<p><strong>共同声音分析。</strong> 每件事情均可查看环境与收声结果：重叠人声、背景声音、有效片段等。原型明确标为示例声音事件，不把噪声解释为个人不认真或负面情绪。</p>
+</section><section><h2>04 / 关系图：能探索，也能回到出处</h2>
+<p>场景里先显示少量邻域。打开完整图，进入独立的可交互画布：桌面右侧检查器，手机底部检查器。图、列表和对话消费同一份经过范围限制的数据。</p>
+
+<div class="figure"><svg width="656pt" height="190pt"
+ viewBox="0.00 0.00 655.80 189.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 175.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M81,-72C81,-72 12,-72 12,-72 6,-72 0,-66 0,-60 0,-60 0,-48 0,-48 0,-42 6,-36 12,-36 12,-36 81,-36 81,-36 87,-36 93,-42 93,-48 93,-48 93,-60 93,-60 93,-66 87,-72 81,-72"/>
+<text text-anchor="middle" x="46.5" y="-50.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">局部关系预览</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M201,-72C201,-72 132,-72 132,-72 126,-72 120,-66 120,-60 120,-60 120,-48 120,-48 120,-42 126,-36 132,-36 132,-36 201,-36 201,-36 207,-36 213,-42 213,-48 213,-48 213,-60 213,-60 213,-66 207,-72 201,-72"/>
+<text text-anchor="middle" x="166.5" y="-50.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">完整关系画布</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M93.12,-54C100.01,-54 107.16,-54 114.16,-54"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="114.5,-55.93 120,-54 114.5,-52.08 114.5,-55.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M333,-72C333,-72 252,-72 252,-72 246,-72 240,-66 240,-60 240,-60 240,-48 240,-48 240,-42 246,-36 252,-36 252,-36 333,-36 333,-36 339,-36 345,-42 345,-48 345,-48 345,-60 345,-60 345,-66 339,-72 333,-72"/>
+<text text-anchor="middle" x="292.5" y="-50.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">点击或搜索节点</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M213.32,-54C220,-54 226.96,-54 233.84,-54"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="234.09,-55.93 239.59,-54 234.09,-52.08 234.09,-55.93"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M483,-161C483,-161 384,-161 384,-161 378,-161 372,-155 372,-149 372,-149 372,-131 372,-131 372,-125 378,-119 384,-119 384,-119 483,-119 483,-119 489,-119 495,-125 495,-131 495,-131 495,-149 495,-149 495,-155 489,-161 483,-161"/>
+<text text-anchor="middle" x="433.5" y="-143.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">强调邻域 · 弱化其</text>
+<text text-anchor="middle" x="433.5" y="-130.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">他</text>
+</g>
+<!-- n2&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M318.77,-72.03C341.72,-88.4 372,-110 372,-110 372,-110 377.36,-112.66 384.89,-116.39"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="384.04,-118.12 389.82,-118.84 385.75,-114.67 384.04,-118.12"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M462,-100C462,-100 405,-100 405,-100 399,-100 393,-94 393,-88 393,-88 393,-76 393,-76 393,-70 399,-64 405,-64 405,-64 462,-64 462,-64 468,-64 474,-70 474,-76 474,-76 474,-88 474,-88 474,-94 468,-100 462,-100"/>
+<text text-anchor="middle" x="433.5" y="-78.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原话检查器</text>
+</g>
+<!-- n2&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n2&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M345.26,-64.43C359.04,-67.2 373.81,-70.18 387.21,-72.88"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="387.09,-74.82 392.87,-74.02 387.85,-71.04 387.09,-74.82"/>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M474,-45C474,-45 393,-45 393,-45 387,-45 381,-39 381,-33 381,-33 381,-21 381,-21 381,-15 387,-9 393,-9 393,-9 474,-9 474,-9 480,-9 486,-15 486,-21 486,-21 486,-33 486,-33 486,-39 480,-45 474,-45"/>
+<text text-anchor="middle" x="433.5" y="-23.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">带范围继续对话</text>
+</g>
+<!-- n2&#45;&gt;n7 -->
+<g id="edge8" class="edge">
+<title>n2&#45;&gt;n7</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M345.26,-43.95C355.03,-42.05 365.3,-40.05 375.22,-38.13"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="375.67,-40 380.7,-37.06 374.93,-36.22 375.67,-40"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M609,-158C609,-158 540,-158 540,-158 534,-158 528,-152 528,-146 528,-146 528,-134 528,-134 528,-128 534,-122 540,-122 540,-122 609,-122 609,-122 615,-122 621,-128 621,-134 621,-134 621,-146 621,-146 621,-152 615,-158 609,-158"/>
+<text text-anchor="middle" x="574.5" y="-136.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">展开一阶关联</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M495.06,-140C504.07,-140 513.27,-140 522.06,-140"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="522.27,-141.93 527.77,-140 522.27,-138.08 522.27,-141.93"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M615,-49C615,-49 534,-49 534,-49 528,-49 522,-43 522,-37 522,-37 522,-25 522,-25 522,-19 528,-13 534,-13 534,-13 615,-13 615,-13 621,-13 627,-19 627,-25 627,-25 627,-37 627,-37 627,-43 621,-49 615,-49"/>
+<text text-anchor="middle" x="574.5" y="-27.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">定位音频与转写</text>
+</g>
+<!-- n5&#45;&gt;n6 -->
+<g id="edge6" class="edge">
+<title>n5&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M474.33,-67.39C488.19,-62.3 503.99,-56.5 518.84,-51.05"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="519.77,-52.77 524.27,-49.06 518.44,-49.15 519.77,-52.77"/>
+</g>
+<!-- n6&#45;&gt;n2 -->
+<g id="edge7" class="edge">
+<title>n6&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M527.84,-12.97C510.57,-6.15 495,0 495,0 495,0 372,0 372,0 372,0 346.59,-17.48 324.69,-32.55"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="323.52,-31.01 320.08,-35.72 325.7,-34.19 323.52,-31.01"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 4 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;局部关系预览&quot;] --&gt; B[&quot;完整关系画布&quot;]
+ B --&gt; C[&quot;点击或搜索节点&quot;]
+ C --&gt; D[&quot;强调邻域 · 弱化其他&quot;]
+ D --&gt; E[&quot;展开一阶关联&quot;]
+ C --&gt; F[&quot;原话检查器&quot;]
+ F --&gt; G[&quot;定位音频与转写&quot;]
+ G --&gt; C
+ C --&gt; H[&quot;带范围继续对话&quot;]</pre></details>
+
+<table>
+<thead>
+<tr>
+  <th>行为</th>
+  <th>规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>平移、缩放、拖动</td>
+  <td>背景拖动平移，节点拖动改变位置；滚轮、触控与按钮控制视角</td>
+</tr>
+<tr>
+  <td>聚焦</td>
+  <td>默认关注一个节点；选中后突出实际邻接关系，允许适应全图</td>
+</tr>
+<tr>
+  <td>展开</td>
+  <td>增加节点的原话或相邻内容；保持选中身份，布局过渡可中断</td>
+</tr>
+<tr>
+  <td>查找和过滤</td>
+  <td>搜索人物、概念或记录；人物／要点过滤与原话开关</td>
+</tr>
+<tr>
+  <td>来源</td>
+  <td>蓝色小引用进入原话；关闭后回到原节点和视角</td>
+</tr>
+<tr>
+  <td>可访问替代</td>
+  <td>节点列表、关系表、键盘缩放和方向移动，不要求精确点小圆点</td>
+</tr>
+<tr>
+  <td>删除／修订</td>
+  <td>已删除记录退出可见图；有修订的来源显示版本状态</td>
+</tr>
+</tbody>
+</table>
+<p>图采用 Cytoscape.js 的真实画布和布局能力，MIT 许可随包附上。交互借鉴 Obsidian 的全局／局部图、hover 邻域与导航语义；未使用 Obsidian 专有实现。</p>
+<p><strong>连线语义保持准确。</strong> 包含、原话来源、参加、整理自、支持、细化、关联和行动草稿分开。有出处不等于因果成立；同一时间发生也不写成因果。未验证解释只可标为假设。</p>
+</section><section><h2>05 / 数据模型与范围</h2>
+<p>原始资料、场景结果、检索、关系与行动有不同职责。场景分块和人物排序是视图，不迁移、复制或改写原始录音。</p>
+
+<div class="figure"><svg width="460pt" height="342pt"
+ viewBox="0.00 0.00 459.80 341.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 327.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M292,-313C292,-313 193,-313 193,-313 187,-313 181,-307 181,-301 181,-301 181,-270 181,-270 181,-264 187,-258 193,-258 193,-258 292,-258 292,-258 298,-258 304,-264 304,-270 304,-270 304,-301 304,-301 304,-307 298,-313 292,-313"/>
+<text text-anchor="middle" x="242.5" y="-295.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原始音频 · 转写版</text>
+<text text-anchor="middle" x="242.5" y="-282.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">本 · 笔记 · 照</text>
+<text text-anchor="middle" x="242.5" y="-269.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">片</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M277,-231C277,-231 208,-231 208,-231 202,-231 196,-225 196,-219 196,-219 196,-207 196,-207 196,-201 202,-195 208,-195 208,-195 277,-195 277,-195 283,-195 289,-201 289,-207 289,-207 289,-219 289,-219 289,-225 283,-231 277,-231"/>
+<text text-anchor="middle" x="242.5" y="-209.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">共同声音结果</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M242.5,-257.85C242.5,-251.04 242.5,-243.78 242.5,-237.16"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="244.43,-236.8 242.5,-231.3 240.58,-236.8 244.43,-236.8"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M165,-231C165,-231 84,-231 84,-231 78,-231 72,-225 72,-219 72,-219 72,-207 72,-207 72,-201 78,-195 84,-195 84,-195 165,-195 165,-195 171,-195 177,-201 177,-207 177,-207 177,-219 177,-219 177,-225 171,-231 165,-231"/>
+<text text-anchor="middle" x="124.5" y="-209.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">场景专有结果包</text>
+</g>
+<!-- n0&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n0&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M197.89,-257.85C184.64,-249.93 170.35,-241.4 157.94,-233.98"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="158.81,-232.26 153.1,-231.09 156.84,-235.56 158.81,-232.26"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M419,-168C419,-168 326,-168 326,-168 320,-168 314,-162 314,-156 314,-156 314,-144 314,-144 314,-138 320,-132 326,-132 326,-132 419,-132 419,-132 425,-132 431,-138 431,-144 431,-144 431,-156 431,-156 431,-162 425,-168 419,-168"/>
+<text text-anchor="middle" x="372.5" y="-146.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">关键词与向量索引</text>
+</g>
+<!-- n0&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n0&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M270.5,-257.75C284.5,-244.38 298.5,-231 298.5,-231 298.5,-231 330.56,-196.34 352.48,-172.64"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="354.12,-173.7 356.44,-168.36 351.3,-171.09 354.12,-173.7"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M283,-168C283,-168 166,-168 166,-168 160,-168 154,-162 154,-156 154,-156 154,-144 154,-144 154,-138 160,-132 166,-132 166,-132 283,-132 283,-132 289,-132 295,-138 295,-144 295,-144 295,-156 295,-156 295,-162 289,-168 283,-168"/>
+<text text-anchor="middle" x="224.5" y="-146.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">选择性知识与来源关系</text>
+</g>
+<!-- n1&#45;&gt;n4 -->
+<g id="edge5" class="edge">
+<title>n1&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M237.39,-194.68C235.47,-188.19 233.27,-180.71 231.23,-173.79"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="232.96,-172.88 229.56,-168.15 229.27,-173.97 232.96,-172.88"/>
+</g>
+<!-- n2&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n2&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M152.62,-194.85C164.76,-187.44 179.04,-178.73 191.66,-171.03"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="192.9,-172.53 196.59,-168.03 190.89,-169.25 192.9,-172.53"/>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M123,-168C123,-168 18,-168 18,-168 12,-168 6,-162 6,-156 6,-156 6,-144 6,-144 6,-138 12,-132 18,-132 18,-132 123,-132 123,-132 129,-132 135,-138 135,-144 135,-144 135,-156 135,-156 135,-162 129,-168 123,-168"/>
+<text text-anchor="middle" x="70.5" y="-146.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">行动草稿与确认记录</text>
+</g>
+<!-- n2&#45;&gt;n7 -->
+<g id="edge9" class="edge">
+<title>n2&#45;&gt;n7</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M109.17,-194.68C103.08,-187.8 96,-179.81 89.58,-172.55"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="90.77,-170.99 85.68,-168.15 87.89,-173.54 90.77,-170.99"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M351,-105C351,-105 246,-105 246,-105 240,-105 234,-99 234,-93 234,-93 234,-81 234,-81 234,-75 240,-69 246,-69 246,-69 351,-69 351,-69 357,-69 363,-75 363,-81 363,-81 363,-93 363,-93 363,-99 357,-105 351,-105"/>
+<text text-anchor="middle" x="298.5" y="-83.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">受控查询与引用解析</text>
+</g>
+<!-- n3&#45;&gt;n5 -->
+<g id="edge6" class="edge">
+<title>n3&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M351.49,-131.68C342.83,-124.54 332.71,-116.2 323.65,-108.74"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="324.77,-107.16 319.3,-105.15 322.32,-110.13 324.77,-107.16"/>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge7" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M245.51,-131.68C254.17,-124.54 264.29,-116.2 273.35,-108.74"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="274.68,-110.13 277.7,-105.15 272.23,-107.16 274.68,-110.13"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M343.5,-42C343.5,-42 253.5,-42 253.5,-42 247.5,-42 241.5,-36 241.5,-30 241.5,-30 241.5,-12 241.5,-12 241.5,-6 247.5,0 253.5,0 253.5,0 343.5,0 343.5,0 349.5,0 355.5,-6 355.5,-12 355.5,-12 355.5,-30 355.5,-30 355.5,-36 349.5,-42 343.5,-42"/>
+<text text-anchor="middle" x="298.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">时间线 · 人物 ·</text>
+<text text-anchor="middle" x="298.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c"> 关系图 · 对话</text>
+</g>
+<!-- n5&#45;&gt;n6 -->
+<g id="edge8" class="edge">
+<title>n5&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M298.5,-68.85C298.5,-62.49 298.5,-55.11 298.5,-48.13"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="300.43,-47.88 298.5,-42.38 296.58,-47.88 300.43,-47.88"/>
+</g>
+<!-- n8 -->
+<g id="node9" class="node">
+<title>n8</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M129,-105C129,-105 12,-105 12,-105 6,-105 0,-99 0,-93 0,-93 0,-81 0,-81 0,-75 6,-69 12,-69 12,-69 129,-69 129,-69 135,-69 141,-75 141,-81 141,-81 141,-93 141,-93 141,-99 135,-105 129,-105"/>
+<text text-anchor="middle" x="70.5" y="-83.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">本机或外部日历连接器</text>
+</g>
+<!-- n7&#45;&gt;n8 -->
+<g id="edge10" class="edge">
+<title>n7&#45;&gt;n8</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M70.5,-131.68C70.5,-125.19 70.5,-117.71 70.5,-110.79"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="72.43,-110.65 70.5,-105.15 68.58,-110.65 72.43,-110.65"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 5 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart TD
+ A[&quot;原始音频 · 转写版本 · 笔记 · 照片&quot;] --&gt; B[&quot;共同声音结果&quot;]
+ A --&gt; C[&quot;场景专有结果包&quot;]
+ A --&gt; D[&quot;关键词与向量索引&quot;]
+ C --&gt; E[&quot;选择性知识与来源关系&quot;]
+ B --&gt; E
+ D --&gt; F[&quot;受控查询与引用解析&quot;]
+ E --&gt; F
+ F --&gt; G[&quot;时间线 · 人物 · 关系图 · 对话&quot;]
+ C --&gt; H[&quot;行动草稿与确认记录&quot;]
+ H --&gt; I[&quot;本机或外部日历连接器&quot;]</pre></details>
+
+<table>
+<thead>
+<tr>
+  <th>数据</th>
+  <th>当前原型</th>
+  <th>正式实现建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>原始媒体</td>
+  <td>本人临时选择的本机音频；引用样例不附现场原声</td>
+  <td>私有对象存储、哈希和格式元数据</td>
+</tr>
+<tr>
+  <td>转写与笔记</td>
+  <td>有时间戳的示例句段、修订历史、本人笔记</td>
+  <td>版本化正文与句段，来源稳定</td>
+</tr>
+<tr>
+  <td>分块</td>
+  <td><code>blocks</code>引用episode IDs，跨日与空白清楚</td>
+  <td>根据明确上下文提出边界，允许用户纠正</td>
+</tr>
+<tr>
+  <td>人物</td>
+  <td>参与者、交流区间、身份确认状态</td>
+  <td>授权后的识别与确认，匿名和登记分开</td>
+</tr>
+<tr>
+  <td>结果包</td>
+  <td>不同事件的items、itemRefs、sound与候选解释</td>
+  <td>固定信封＋每包Schema，长数组外置</td>
+</tr>
+<tr>
+  <td>图谱</td>
+  <td>可见节点／类型化边及引用</td>
+  <td>按资料和确认信息投影，可重建</td>
+</tr>
+<tr>
+  <td>行动</td>
+  <td>草稿、版本、规则、演示回执</td>
+  <td>独立事务状态、幂等和实际连接器回执</td>
+</tr>
+</tbody>
+</table>
+<p>查询范围包含日期、场景、时段块、单条记录、人物和项目。每一个引用先检查来源可见性，再检查范围与时间区间。统计使用确定性工具；索引帮助找资料，图谱帮助找关联，不用语言模型估算时长。</p>
+</section><section><h2>06 / 统一页面与定制边界</h2>
+<p><strong>一级导航：总览 / 场景 / 对话 / 我的。</strong> 首页设备条和其他页面同位置的快捷按钮进入录音控制。日历位于总览的明显入口与“我的”中，不成为第五套业务导航。</p>
+
+<div class="figure"><svg width="373pt" height="386pt"
+ viewBox="0.00 0.00 372.80 385.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 371.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M136.5,-357C136.5,-357 106.5,-357 106.5,-357 100.5,-357 94.5,-351 94.5,-345 94.5,-345 94.5,-333 94.5,-333 94.5,-327 100.5,-321 106.5,-321 106.5,-321 136.5,-321 136.5,-321 142.5,-321 148.5,-327 148.5,-333 148.5,-333 148.5,-345 148.5,-345 148.5,-351 142.5,-357 136.5,-357"/>
+<text text-anchor="middle" x="121.5" y="-335.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">总览</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M201,-294C201,-294 144,-294 144,-294 138,-294 132,-288 132,-282 132,-282 132,-270 132,-270 132,-264 138,-258 144,-258 144,-258 201,-258 201,-258 207,-258 213,-264 213,-270 213,-270 213,-282 213,-282 213,-288 207,-294 201,-294"/>
+<text text-anchor="middle" x="172.5" y="-272.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">分块时间线</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M135.98,-320.68C141.73,-313.8 148.42,-305.81 154.48,-298.55"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="156.11,-299.6 158.16,-294.15 153.16,-297.13 156.11,-299.6"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M97,-294C97,-294 52,-294 52,-294 46,-294 40,-288 40,-282 40,-282 40,-270 40,-270 40,-264 46,-258 52,-258 52,-258 97,-258 97,-258 103,-258 109,-264 109,-270 109,-270 109,-282 109,-282 109,-288 103,-294 97,-294"/>
+<text text-anchor="middle" x="74.5" y="-272.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">人物交汇</text>
+</g>
+<!-- n0&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n0&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M108.16,-320.68C102.85,-313.8 96.69,-305.81 91.11,-298.55"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="92.6,-297.33 87.71,-294.15 89.55,-299.68 92.6,-297.33"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M203,-228C203,-228 146,-228 146,-228 140,-228 134,-222 134,-216 134,-216 134,-204 134,-204 134,-198 140,-192 146,-192 146,-192 203,-192 203,-192 209,-192 215,-198 215,-204 215,-204 215,-216 215,-216 215,-222 209,-228 203,-228"/>
+<text text-anchor="middle" x="174.5" y="-206.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">时段内事情</text>
+</g>
+<!-- n1&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n1&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M173.04,-257.85C173.26,-250.53 173.53,-241.88 173.78,-234.02"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="175.71,-233.76 173.96,-228.2 171.87,-233.64 175.71,-233.76"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M93,-162C93,-162 12,-162 12,-162 6,-162 0,-156 0,-150 0,-150 0,-138 0,-138 0,-132 6,-126 12,-126 12,-126 93,-126 93,-126 99,-126 105,-132 105,-138 105,-138 105,-150 105,-150 105,-156 99,-162 93,-162"/>
+<text text-anchor="middle" x="52.5" y="-140.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">人物与交流理解</text>
+</g>
+<!-- n2&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n2&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M71.58,-257.74C67.67,-234.62 60.72,-193.55 56.37,-167.88"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="58.25,-167.44 55.43,-162.33 54.45,-168.08 58.25,-167.44"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M217,-162C217,-162 136,-162 136,-162 130,-162 124,-156 124,-150 124,-150 124,-138 124,-138 124,-132 130,-126 136,-126 136,-126 217,-126 217,-126 223,-126 229,-132 229,-138 229,-138 229,-150 229,-150 229,-156 223,-162 217,-162"/>
+<text text-anchor="middle" x="176.5" y="-140.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">记录详情与原话</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M175.04,-191.85C175.26,-184.53 175.53,-175.88 175.78,-168.02"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="177.71,-167.76 175.96,-162.2 173.87,-167.64 177.71,-167.76"/>
+</g>
+<!-- n9 -->
+<g id="node10" class="node">
+<title>n9</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M211,-99C211,-99 142,-99 142,-99 136,-99 130,-93 130,-87 130,-87 130,-75 130,-75 130,-69 136,-63 142,-63 142,-63 211,-63 211,-63 217,-63 223,-69 223,-75 223,-75 223,-87 223,-87 223,-93 217,-99 211,-99"/>
+<text text-anchor="middle" x="176.5" y="-77.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">统一范围对话</text>
+</g>
+<!-- n4&#45;&gt;n9 -->
+<g id="edge9" class="edge">
+<title>n4&#45;&gt;n9</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M176.5,-125.68C176.5,-119.19 176.5,-111.71 176.5,-104.79"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="178.43,-104.65 176.5,-99.15 174.58,-104.65 178.43,-104.65"/>
+</g>
+<!-- n5&#45;&gt;n9 -->
+<g id="edge10" class="edge">
+<title>n5&#45;&gt;n9</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M87.37,-125.85C102.69,-118.31 120.76,-109.42 136.61,-101.62"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="137.81,-103.18 141.89,-99.03 136.11,-99.73 137.81,-103.18"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M306.5,-294C306.5,-294 276.5,-294 276.5,-294 270.5,-294 264.5,-288 264.5,-282 264.5,-282 264.5,-270 264.5,-270 264.5,-264 270.5,-258 276.5,-258 276.5,-258 306.5,-258 306.5,-258 312.5,-258 318.5,-264 318.5,-270 318.5,-270 318.5,-282 318.5,-282 318.5,-288 312.5,-294 306.5,-294"/>
+<text text-anchor="middle" x="291.5" y="-272.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">场景</text>
+</g>
+<!-- n7 -->
+<g id="node8" class="node">
+<title>n7</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M332,-231C332,-231 251,-231 251,-231 245,-231 239,-225 239,-219 239,-219 239,-201 239,-201 239,-195 245,-189 251,-189 251,-189 332,-189 332,-189 338,-189 344,-195 344,-201 344,-201 344,-219 344,-219 344,-225 338,-231 332,-231"/>
+<text text-anchor="middle" x="291.5" y="-213.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">总览 · 记录 · </text>
+<text text-anchor="middle" x="291.5" y="-200.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">分析 · 关系</text>
+</g>
+<!-- n6&#45;&gt;n7 -->
+<g id="edge6" class="edge">
+<title>n6&#45;&gt;n7</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M291.5,-257.85C291.5,-251.49 291.5,-244.11 291.5,-237.13"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="293.43,-236.88 291.5,-231.38 289.58,-236.88 293.43,-236.88"/>
+</g>
+<!-- n7&#45;&gt;n4 -->
+<g id="edge7" class="edge">
+<title>n7&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M255.43,-188.93C241.7,-181.29 226.07,-172.59 212.36,-164.96"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="213.15,-163.19 207.41,-162.2 211.28,-166.56 213.15,-163.19"/>
+</g>
+<!-- n8 -->
+<g id="node9" class="node">
+<title>n8</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M329,-162C329,-162 260,-162 260,-162 254,-162 248,-156 248,-150 248,-150 248,-138 248,-138 248,-132 254,-126 260,-126 260,-126 329,-126 329,-126 335,-126 341,-132 341,-138 341,-138 341,-150 341,-150 341,-156 335,-162 329,-162"/>
+<text text-anchor="middle" x="294.5" y="-140.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">完整关系画布</text>
+</g>
+<!-- n7&#45;&gt;n8 -->
+<g id="edge8" class="edge">
+<title>n7&#45;&gt;n8</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M292.45,-188.75C292.76,-182.11 293.11,-174.69 293.43,-167.87"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="295.35,-167.9 293.69,-162.32 291.51,-167.72 295.35,-167.9"/>
+</g>
+<!-- n8&#45;&gt;n9 -->
+<g id="edge11" class="edge">
+<title>n8&#45;&gt;n9</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M261.32,-125.85C246.74,-118.31 229.55,-109.42 214.46,-101.62"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="215.2,-99.84 209.43,-99.03 213.44,-103.26 215.2,-99.84"/>
+</g>
+<!-- n10 -->
+<g id="node11" class="node">
+<title>n10</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M217,-36C217,-36 136,-36 136,-36 130,-36 124,-30 124,-24 124,-24 124,-12 124,-12 124,-6 130,0 136,0 136,0 217,0 217,0 223,0 229,-6 229,-12 229,-12 229,-24 229,-24 229,-30 223,-36 217,-36"/>
+<text text-anchor="middle" x="176.5" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">日历草稿与回执</text>
+</g>
+<!-- n9&#45;&gt;n10 -->
+<g id="edge12" class="edge">
+<title>n9&#45;&gt;n10</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M176.5,-62.68C176.5,-56.19 176.5,-48.71 176.5,-41.79"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="178.43,-41.65 176.5,-36.15 174.58,-41.65 178.43,-41.65"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 6 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart TD
+ A[&quot;总览&quot;] --&gt; B[&quot;分块时间线&quot;]
+ A --&gt; C[&quot;人物交汇&quot;]
+ B --&gt; D[&quot;时段内事情&quot;]
+ D --&gt; E[&quot;记录详情与原话&quot;]
+ C --&gt; F[&quot;人物与交流理解&quot;]
+ G[&quot;场景&quot;] --&gt; H[&quot;总览 · 记录 · 分析 · 关系&quot;]
+ H --&gt; E
+ H --&gt; I[&quot;完整关系画布&quot;]
+ E --&gt; J[&quot;统一范围对话&quot;]
+ F --&gt; J
+ I --&gt; J
+ J --&gt; K[&quot;日历草稿与回执&quot;]</pre></details>
+
+<table>
+<thead>
+<tr>
+  <th>位置</th>
+  <th>固定外框</th>
+  <th>内容差异</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>时段块</td>
+  <td>时间、名称、条目数、折叠动作</td>
+  <td>会议、访谈、答疑或生活事件的内部时间线</td>
+</tr>
+<tr>
+  <td>记录详情</td>
+  <td>记录／声音／本次结果、播放器、来源、笔记、照片</td>
+  <td>协作决定、访谈诉求、学习重点等</td>
+</tr>
+<tr>
+  <td>场景分析</td>
+  <td>范围、模块标题、原话引用</td>
+  <td>该类型事项的聚合与专有消费</td>
+</tr>
+<tr>
+  <td>对话</td>
+  <td>范围胶囊、消息、小引用、输入</td>
+  <td>默认资料和可用工具</td>
+</tr>
+<tr>
+  <td>关系</td>
+  <td>相同画布和检查器</td>
+  <td>初始节点与可见子图</td>
+</tr>
+</tbody>
+</table>
+<p>首屏不塞全部图谱，不出现解释设计理念的大段文字。输入、表单和可变数字使用可收缩容器；小区间标题截断时保留头像、可访问名称和详情入口。主要操作有明确可点区域，手势提供快捷方式而非唯一入口。</p>
+</section><section><h2>07 / 录音豆与真实媒体</h2>
+
+<div class="figure"><svg width="597pt" height="175pt"
+ viewBox="0.00 0.00 596.80 174.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 160.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M78,-146C78,-146 33,-146 33,-146 27,-146 21,-140 21,-134 21,-134 21,-122 21,-122 21,-116 27,-110 33,-110 33,-110 78,-110 78,-110 84,-110 90,-116 90,-122 90,-122 90,-134 90,-134 90,-140 84,-146 78,-146"/>
+<text text-anchor="middle" x="55.5" y="-124.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">随身使用</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M219,-91C219,-91 150,-91 150,-91 144,-91 138,-85 138,-79 138,-79 138,-67 138,-67 138,-61 144,-55 150,-55 150,-55 219,-55 219,-55 225,-55 231,-61 231,-67 231,-67 231,-79 231,-79 231,-85 225,-91 219,-91"/>
+<text text-anchor="middle" x="184.5" y="-69.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">同一颗录音豆</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M90.2,-113.41C104.46,-107.23 121.31,-99.93 136.75,-93.25"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="137.64,-94.96 141.92,-91.01 136.11,-91.43 137.64,-94.96"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M316,-91C316,-91 270,-91 270,-91 264,-91 258,-85 258,-79 258,-79 258,-67 258,-67 258,-61 264,-55 270,-55 270,-55 316,-55 316,-55 322,-55 328,-61 328,-67 328,-67 328,-79 328,-79 328,-85 322,-91 316,-91"/>
+<text text-anchor="middle" x="293" y="-69.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">同一 App</text>
+</g>
+<!-- n1&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n1&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M231.28,-73C238.24,-73 245.38,-73 252.19,-73"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="252.34,-74.93 257.84,-73 252.34,-71.08 252.34,-74.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M78,-91C78,-91 33,-91 33,-91 27,-91 21,-85 21,-79 21,-79 21,-67 21,-67 21,-61 27,-55 33,-55 33,-55 78,-55 78,-55 84,-55 90,-61 90,-67 90,-67 90,-79 90,-79 90,-85 84,-91 78,-91"/>
+<text text-anchor="middle" x="55.5" y="-69.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">桌面使用</text>
+</g>
+<!-- n2&#45;&gt;n1 -->
+<g id="edge2" class="edge">
+<title>n2&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M90.2,-73C103.05,-73 117.99,-73 132.11,-73"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="132.19,-74.93 137.69,-73 132.19,-71.08 132.19,-74.93"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M99,-36C99,-36 12,-36 12,-36 6,-36 0,-30 0,-24 0,-24 0,-12 0,-12 0,-6 6,0 12,0 12,0 99,0 99,0 105,0 111,-6 111,-12 111,-12 111,-24 111,-24 111,-30 105,-36 99,-36"/>
+<text text-anchor="middle" x="55.5" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">床头使用 · 后续</text>
+</g>
+<!-- n3&#45;&gt;n1 -->
+<g id="edge3" class="edge">
+<title>n3&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M98.08,-36.01C110.36,-41.33 123.89,-47.18 136.49,-52.64"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="136.01,-54.53 141.82,-54.95 137.54,-51 136.01,-54.53"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M448,-91C448,-91 367,-91 367,-91 361,-91 355,-85 355,-79 355,-79 355,-67 355,-67 355,-61 361,-55 367,-55 367,-55 448,-55 448,-55 454,-55 460,-61 460,-67 460,-67 460,-79 460,-79 460,-85 454,-91 448,-91"/>
+<text text-anchor="middle" x="407.5" y="-69.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原声与引用体系</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M328.06,-73C334.76,-73 341.96,-73 349.18,-73"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="349.2,-74.93 354.7,-73 349.2,-71.08 349.2,-74.93"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M556,-91C556,-91 499,-91 499,-91 493,-91 487,-85 487,-79 487,-79 487,-67 487,-67 487,-61 493,-55 499,-55 499,-55 556,-55 556,-55 562,-55 568,-61 568,-67 568,-67 568,-79 568,-79 568,-85 562,-91 556,-91"/>
+<text text-anchor="middle" x="527.5" y="-69.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">按场景消费</text>
+</g>
+<!-- n5&#45;&gt;n6 -->
+<g id="edge6" class="edge">
+<title>n5&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M460.26,-73C467.22,-73 474.33,-73 481.17,-73"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="481.35,-74.93 486.85,-73 481.35,-71.08 481.35,-74.93"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 7 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;随身使用&quot;] --&gt; D[&quot;同一颗录音豆&quot;]
+ B[&quot;桌面使用&quot;] --&gt; D
+ C[&quot;床头使用 · 后续&quot;] --&gt; D
+ D --&gt; E[&quot;同一 App&quot;]
+ E --&gt; F[&quot;原声与引用体系&quot;]
+ F --&gt; G[&quot;按场景消费&quot;]</pre></details>
+
+<p>实际产品图用于设备条、设备页与桌面侧栏，保持原结构与比例。首页第一屏可以直接开始记录，不需要先选三层场景。记录中可以暂停、标记、结束和补记。</p>
+<p><strong>本版真实与模拟的分界：</strong> 计时、标记、状态切换及笔记保存实际运行；设备连接与同步是演示状态，没有读取设备、开启浏览器麦克风或生成音轨。未绑定音频时显示“原声未绑定”。选入本机文件后，浏览器真实解码播放并按引用时间跳转；文件不上传，文件长度不够时明确提示。</p>
+<table>
+<thead>
+<tr>
+  <th>异常</th>
+  <th>消费端反馈</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>连接中断</td>
+  <td>设备状态待核实；不假定设备本体一定停止</td>
+</tr>
+<tr>
+  <td>原声缺失</td>
+  <td>转写示例可看，播放器不伪造回放</td>
+</tr>
+<tr>
+  <td>引用区间超出文件</td>
+  <td>不跳到错误片段，提示核对文件</td>
+</tr>
+<tr>
+  <td>原话更正</td>
+  <td>新版本与原版本共存，相关整理待更新</td>
+</tr>
+<tr>
+  <td>导入照片</td>
+  <td>本人附件，与模型结果分开；可移除</td>
+</tr>
+</tbody>
+</table>
+<p>睡眠只保留夜间入口、未来指标占位和醒后笔记。不显示未实际计算的睡眠时长、翻身次数、呼吸诊断或分期。</p>
+</section><section><h2>08 / 日历：从记录进入已有安排</h2>
+<p>日历读取是未来场景识别线索；日历写入是行动出口。原型将完整确认逻辑落在本机演示日历，并支持真实生成 <code>.ics</code> 文件，由用户决定是否导入系统日历。</p>
+
+<div class="figure"><svg width="998pt" height="71pt"
+ viewBox="0.00 0.00 997.80 70.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 56.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M105,-39C105,-39 12,-39 12,-39 6,-39 0,-33 0,-27 0,-27 0,-15 0,-15 0,-9 6,-3 12,-3 12,-3 105,-3 105,-3 111,-3 117,-9 117,-15 117,-15 117,-27 117,-27 117,-33 111,-39 105,-39"/>
+<text text-anchor="middle" x="58.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原话中的一项安排</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M246,-42C246,-42 156,-42 156,-42 150,-42 144,-36 144,-30 144,-30 144,-12 144,-12 144,-6 150,0 156,0 156,0 246,0 246,0 252,0 258,-6 258,-12 258,-12 258,-30 258,-30 258,-36 252,-42 246,-42"/>
+<text text-anchor="middle" x="201" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">提取标题 · 对象 </text>
+<text text-anchor="middle" x="201" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">· 日期时间</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M117.05,-21C123.92,-21 130.96,-21 137.88,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="138.17,-22.93 143.67,-21 138.17,-19.08 138.17,-22.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M396,-42C396,-42 297,-42 297,-42 291,-42 285,-36 285,-30 285,-30 285,-12 285,-12 285,-6 291,0 297,0 297,0 396,0 396,0 402,0 408,-6 408,-12 408,-12 408,-30 408,-30 408,-36 402,-42 396,-42"/>
+<text text-anchor="middle" x="346.5" y="-24.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">检查来源 · 明确性</text>
+<text text-anchor="middle" x="346.5" y="-11.4" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c"> · 冲突</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M258.3,-21C265.05,-21 271.99,-21 278.87,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="279.12,-22.93 284.62,-21 279.12,-19.08 279.12,-22.93"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M552,-39C552,-39 447,-39 447,-39 441,-39 435,-33 435,-27 435,-27 435,-15 435,-15 435,-9 441,-3 447,-3 447,-3 552,-3 552,-3 558,-3 564,-9 564,-15 564,-15 564,-27 564,-27 564,-33 558,-39 552,-39"/>
+<text text-anchor="middle" x="499.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">本人确认或有限授权</text>
+</g>
+<!-- n2&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M408.05,-21C414.97,-21 422.07,-21 429.09,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="429.48,-22.93 434.98,-21 429.48,-19.08 429.48,-22.93"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M696,-39C696,-39 603,-39 603,-39 597,-39 591,-33 591,-27 591,-27 591,-15 591,-15 591,-9 597,-3 603,-3 603,-3 696,-3 696,-3 702,-3 708,-9 708,-15 708,-15 708,-27 708,-27 708,-33 702,-39 696,-39"/>
+<text text-anchor="middle" x="649.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">存入本机演示日历</text>
+</g>
+<!-- n3&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n3&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M564.12,-21C570.98,-21 577.96,-21 584.81,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="585.04,-22.93 590.54,-21 585.04,-19.08 585.04,-22.93"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M789,-39C789,-39 747,-39 747,-39 741,-39 735,-33 735,-27 735,-27 735,-15 735,-15 735,-9 741,-3 747,-3 747,-3 789,-3 789,-3 795,-3 801,-9 801,-15 801,-15 801,-27 801,-27 801,-33 795,-39 789,-39"/>
+<text text-anchor="middle" x="768" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">导出 ICS</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M708.07,-21C715.23,-21 722.41,-21 729.17,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="729.24,-22.93 734.74,-21 729.24,-19.08 729.24,-22.93"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M957,-39C957,-39 840,-39 840,-39 834,-39 828,-33 828,-27 828,-27 828,-15 828,-15 828,-9 834,-3 840,-3 840,-3 957,-3 957,-3 963,-3 969,-9 969,-15 969,-15 969,-27 969,-27 969,-33 963,-39 957,-39"/>
+<text text-anchor="middle" x="898.5" y="-17.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">用户自行导入系统日历</text>
+</g>
+<!-- n5&#45;&gt;n6 -->
+<g id="edge6" class="edge">
+<title>n5&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M801.09,-21C807.67,-21 814.85,-21 822.23,-21"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="822.41,-22.93 827.91,-21 822.41,-19.08 822.41,-22.93"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 8 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;原话中的一项安排&quot;] --&gt; B[&quot;提取标题 · 对象 · 日期时间&quot;]
+ B --&gt; C[&quot;检查来源 · 明确性 · 冲突&quot;]
+ C --&gt; D[&quot;本人确认或有限授权&quot;]
+ D --&gt; E[&quot;存入本机演示日历&quot;]
+ E --&gt; F[&quot;导出 ICS&quot;]
+ F --&gt; G[&quot;用户自行导入系统日历&quot;]</pre></details>
+
+
+<div class="figure"><svg width="470pt" height="278pt"
+ viewBox="0.00 0.00 469.80 277.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 263.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<ellipse fill="#bddf58" stroke="#cfdcc1" cx="192" cy="-231" rx="18" ry="18"/>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M207,-184C207,-184 177,-184 177,-184 171,-184 165,-178 165,-172 165,-172 165,-160 165,-160 165,-154 171,-148 177,-148 177,-148 207,-148 207,-148 213,-148 219,-154 219,-160 219,-160 219,-172 219,-172 219,-178 213,-184 207,-184"/>
+<text text-anchor="middle" x="192" y="-162.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">草稿</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M192,-212.78C192,-205.7 192,-197.39 192,-189.82"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="193.93,-189.69 192,-184.19 190.08,-189.69 193.93,-189.69"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M70.5,-110C70.5,-110 37.5,-110 37.5,-110 31.5,-110 25.5,-104 25.5,-98 25.5,-98 25.5,-86 25.5,-86 25.5,-80 31.5,-74 37.5,-74 37.5,-74 70.5,-74 70.5,-74 76.5,-74 82.5,-80 82.5,-86 82.5,-86 82.5,-98 82.5,-98 82.5,-104 76.5,-110 70.5,-110"/>
+<text text-anchor="middle" x="54" y="-88.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">待补全</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M164.9,-160.62C111.97,-152.08 0,-134 0,-134 0,-134 0,-124 0,-124 0,-124 9.54,-118.52 20.61,-112.17"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="21.61,-113.82 25.42,-109.41 19.69,-110.48 21.61,-113.82"/>
+<text text-anchor="middle" x="27.5" y="-126.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">日期时间不明</text>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M178.5,-110C178.5,-110 145.5,-110 145.5,-110 139.5,-110 133.5,-104 133.5,-98 133.5,-98 133.5,-86 133.5,-86 133.5,-80 139.5,-74 145.5,-74 145.5,-74 178.5,-74 178.5,-74 184.5,-74 190.5,-80 190.5,-86 190.5,-86 190.5,-98 190.5,-98 190.5,-104 184.5,-110 178.5,-110"/>
+<text text-anchor="middle" x="162" y="-88.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">待核对</text>
+</g>
+<!-- n1&#45;&gt;n3 -->
+<g id="edge4" class="edge">
+<title>n1&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M164.78,-148.77C152.2,-141.27 140,-134 140,-134 140,-134 140,-124 140,-124 140,-124 142.85,-119.98 146.5,-114.84"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="148.1,-115.91 149.71,-110.31 144.96,-113.68 148.1,-115.91"/>
+<text text-anchor="middle" x="181" y="-126.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">来源修订或时间冲突</text>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M348.5,-110C348.5,-110 303.5,-110 303.5,-110 297.5,-110 291.5,-104 291.5,-98 291.5,-98 291.5,-86 291.5,-86 291.5,-80 297.5,-74 303.5,-74 303.5,-74 348.5,-74 348.5,-74 354.5,-74 360.5,-80 360.5,-86 360.5,-86 360.5,-98 360.5,-98 360.5,-104 354.5,-110 348.5,-110"/>
+<text text-anchor="middle" x="326" y="-88.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">已存本机</text>
+</g>
+<!-- n1&#45;&gt;n4 -->
+<g id="edge6" class="edge">
+<title>n1&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M219.08,-154.5C242.29,-145.51 272,-134 272,-134 272,-134 285.41,-123.82 298.87,-113.6"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="300.2,-115.01 303.41,-110.15 297.87,-111.94 300.2,-115.01"/>
+<text text-anchor="middle" x="327" y="-126.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">有效确认或授权规则</text>
+</g>
+<!-- n2&#45;&gt;n1 -->
+<g id="edge3" class="edge">
+<title>n2&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M72.82,-110.15C85.15,-121.39 99,-134 99,-134 99,-134 132.55,-145.18 159.34,-154.11"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="158.77,-155.95 164.6,-155.87 159.99,-152.3 158.77,-155.95"/>
+<text text-anchor="middle" x="117.5" y="-126.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">用户补充</text>
+</g>
+<!-- n3&#45;&gt;n1 -->
+<g id="edge5" class="edge">
+<title>n3&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M190.59,-107.77C206.05,-115.76 222,-124 222,-124 222,-124 222,-134 222,-134 222,-134 217.95,-138.18 212.83,-143.47"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="211.2,-142.4 208.75,-147.69 213.96,-145.07 211.2,-142.4"/>
+<text text-anchor="middle" x="245" y="-126.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">核对后编辑</text>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M380.5,-36C380.5,-36 347.5,-36 347.5,-36 341.5,-36 335.5,-30 335.5,-24 335.5,-24 335.5,-12 335.5,-12 335.5,-6 341.5,0 347.5,0 347.5,0 380.5,0 380.5,0 386.5,0 392.5,-6 392.5,-12 392.5,-12 392.5,-24 392.5,-24 392.5,-30 386.5,-36 380.5,-36"/>
+<text text-anchor="middle" x="364" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">已撤销</text>
+</g>
+<!-- n4&#45;&gt;n5 -->
+<g id="edge7" class="edge">
+<title>n4&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M335.01,-73.94C340.14,-64.22 346.62,-51.92 352.16,-41.43"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="353.93,-42.2 354.8,-36.44 350.53,-40.41 353.93,-42.2"/>
+<text text-anchor="middle" x="366.5" y="-52.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">用户撤销</text>
+</g>
+<!-- n5&#45;&gt;n1 -->
+<g id="edge8" class="edge">
+<title>n5&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M377.96,-36.31C383.69,-43.41 389,-50 389,-50 389,-50 389,-60 389,-60 389,-60 372,-134 372,-134 372,-134 276.76,-150.4 224.83,-159.35"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="224.43,-157.46 219.34,-160.29 225.09,-161.26 224.43,-157.46"/>
+<text text-anchor="middle" x="413.5" y="-89.8" font-family="Noto Sans CJK SC" font-size="9.00" fill="#6a7f5f">用户重新编辑</text>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 9 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>stateDiagram-v2
+ [*] --&gt; 草稿
+ 草稿 --&gt; 待补全: 日期时间不明
+ 待补全 --&gt; 草稿: 用户补充
+ 草稿 --&gt; 待核对: 来源修订或时间冲突
+ 待核对 --&gt; 草稿: 核对后编辑
+ 草稿 --&gt; 已存本机: 有效确认或授权规则
+ 已存本机 --&gt; 已撤销: 用户撤销
+ 已撤销 --&gt; 草稿: 用户重新编辑</pre></details>
+
+<p>有限规则由本人主动开启：仅本人、时间明确、来源有效、无冲突、有到期日的新安排。它不邀请他人，不重排已创建事件，不把玩笑、愿望或模糊时间写成事实。内容改变后旧确认失效。</p>
+<p><strong>样例里的两种“颁奖”。</strong> “明天下午三点参加颁奖环节”有活动说明原话，可以成为明确安排；“精妙绝伦，明天上台领奖”是一条愿望便签。节目效果不改变资料真实性。</p>
+</section><section><h2>09 / 修订、隐私与长期使用</h2>
+
+<div class="figure"><svg width="554pt" height="230pt"
+ viewBox="0.00 0.00 553.80 229.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(14.4 215.4)">
+<title>G</title>
+<!-- n0 -->
+<g id="node1" class="node">
+<title>n0</title>
+<path fill="#bddf58" stroke="#cfdcc1" d="M69,-118C69,-118 12,-118 12,-118 6,-118 0,-112 0,-106 0,-106 0,-94 0,-94 0,-88 6,-82 12,-82 12,-82 69,-82 69,-82 75,-82 81,-88 81,-94 81,-94 81,-106 81,-106 81,-112 75,-118 69,-118"/>
+<text text-anchor="middle" x="40.5" y="-96.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原句被纠正</text>
+</g>
+<!-- n1 -->
+<g id="node2" class="node">
+<title>n1</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M201,-118C201,-118 120,-118 120,-118 114,-118 108,-112 108,-106 108,-106 108,-94 108,-94 108,-88 114,-82 120,-82 120,-82 201,-82 201,-82 207,-82 213,-88 213,-94 213,-94 213,-106 213,-106 213,-112 207,-118 201,-118"/>
+<text text-anchor="middle" x="160.5" y="-96.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">保存转写新版本</text>
+</g>
+<!-- n0&#45;&gt;n1 -->
+<g id="edge1" class="edge">
+<title>n0&#45;&gt;n1</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M81.12,-100C87.82,-100 94.89,-100 101.93,-100"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="102.33,-101.93 107.83,-100 102.33,-98.08 102.33,-101.93"/>
+</g>
+<!-- n2 -->
+<g id="node3" class="node">
+<title>n2</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M357,-201C357,-201 252,-201 252,-201 246,-201 240,-195 240,-189 240,-189 240,-177 240,-177 240,-171 246,-165 252,-165 252,-165 357,-165 357,-165 363,-165 369,-171 369,-177 369,-177 369,-189 369,-189 369,-195 363,-201 357,-201"/>
+<text text-anchor="middle" x="304.5" y="-179.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">原引用保留历史版本</text>
+</g>
+<!-- n1&#45;&gt;n2 -->
+<g id="edge2" class="edge">
+<title>n1&#45;&gt;n2</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M186.77,-118.03C209.72,-134.4 240,-156 240,-156 240,-156 246.76,-158.87 255.87,-162.75"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="255.33,-164.61 261.14,-164.99 256.84,-161.07 255.33,-164.61"/>
+</g>
+<!-- n3 -->
+<g id="node4" class="node">
+<title>n3</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M357,-146C357,-146 252,-146 252,-146 246,-146 240,-140 240,-134 240,-134 240,-122 240,-122 240,-116 246,-110 252,-110 252,-110 357,-110 357,-110 363,-110 369,-116 369,-122 369,-122 369,-134 369,-134 369,-140 363,-146 357,-146"/>
+<text text-anchor="middle" x="304.5" y="-124.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">相关整理标为待更新</text>
+</g>
+<!-- n1&#45;&gt;n3 -->
+<g id="edge3" class="edge">
+<title>n1&#45;&gt;n3</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M213.17,-110.19C219.86,-111.51 226.8,-112.88 233.72,-114.24"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="233.76,-116.21 239.53,-115.39 234.5,-112.43 233.76,-116.21"/>
+</g>
+<!-- n4 -->
+<g id="node5" class="node">
+<title>n4</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M357,-91C357,-91 252,-91 252,-91 246,-91 240,-85 240,-79 240,-79 240,-67 240,-67 240,-61 246,-55 252,-55 252,-55 357,-55 357,-55 363,-55 369,-61 369,-67 369,-67 369,-79 369,-79 369,-85 363,-91 357,-91"/>
+<text text-anchor="middle" x="304.5" y="-69.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">未执行安排暂停核对</text>
+</g>
+<!-- n1&#45;&gt;n4 -->
+<g id="edge4" class="edge">
+<title>n1&#45;&gt;n4</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M213.17,-90.18C219.86,-88.9 226.8,-87.58 233.72,-86.27"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="234.48,-88.08 239.53,-85.16 233.76,-84.3 234.48,-88.08"/>
+</g>
+<!-- n5 -->
+<g id="node6" class="node">
+<title>n5</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M351,-36C351,-36 258,-36 258,-36 252,-36 246,-30 246,-24 246,-24 246,-12 246,-12 246,-6 252,0 258,0 258,0 351,0 351,0 357,0 363,-6 363,-12 363,-12 363,-24 363,-24 363,-30 357,-36 351,-36"/>
+<text text-anchor="middle" x="304.5" y="-14.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">已存安排提示变更</text>
+</g>
+<!-- n1&#45;&gt;n5 -->
+<g id="edge5" class="edge">
+<title>n1&#45;&gt;n5</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M188.08,-81.72C210.85,-66.05 240,-46 240,-46 240,-46 247.59,-42.65 257.53,-38.27"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="258.31,-40.03 262.57,-36.05 256.76,-36.51 258.31,-40.03"/>
+</g>
+<!-- n6 -->
+<g id="node7" class="node">
+<title>n6</title>
+<path fill="#eff3e7" stroke="#cfdcc1" d="M513,-201C513,-201 408,-201 408,-201 402,-201 396,-195 396,-189 396,-189 396,-177 396,-177 396,-171 402,-165 408,-165 408,-165 513,-165 513,-165 519,-165 525,-171 525,-177 525,-177 525,-189 525,-189 525,-195 519,-201 513,-201"/>
+<text text-anchor="middle" x="460.5" y="-179.9" font-family="Noto Sans CJK SC" font-size="12.00" fill="#203a2c">用户仍可回到原引用</text>
+</g>
+<!-- n2&#45;&gt;n6 -->
+<g id="edge6" class="edge">
+<title>n2&#45;&gt;n6</title>
+<path fill="none" stroke="#8fa782" stroke-width="1.1" d="M369.03,-183C375.89,-183 382.9,-183 389.83,-183"/>
+<polygon fill="#8fa782" stroke="#8fa782" stroke-width="1.1" points="390.12,-184.93 395.62,-183 390.12,-181.08 390.12,-184.93"/>
+</g>
+</g>
+</svg>
+<p class="figcaption">图 10 · 同一拓扑的离线矢量示意；可编辑 Mermaid 源随包提供。</p></div>
+<details><summary>展开 Mermaid 源码</summary><pre>flowchart LR
+ A[&quot;原句被纠正&quot;] --&gt; B[&quot;保存转写新版本&quot;]
+ B --&gt; C[&quot;原引用保留历史版本&quot;]
+ B --&gt; D[&quot;相关整理标为待更新&quot;]
+ B --&gt; E[&quot;未执行安排暂停核对&quot;]
+ B --&gt; F[&quot;已存安排提示变更&quot;]
+ C --&gt; G[&quot;用户仍可回到原引用&quot;]</pre></details>
+
+<table>
+<thead>
+<tr>
+  <th>控制</th>
+  <th>本版规定</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>记录授权</td>
+  <td>多人交流需告知与同意；私人时段可以只保留本人时间标签</td>
+</tr>
+<tr>
+  <td>角色与身份</td>
+  <td>分离说话人、确认角色、经同意登记；不把身份推断藏在统计里</td>
+</tr>
+<tr>
+  <td>心情与意图</td>
+  <td>原话支持、候选解释、本人自述明确区分；可以拒绝与修改</td>
+</tr>
+<tr>
+  <td>资料范围</td>
+  <td>单条记录对话不自动检索整个生活史；图谱按相同范围生成</td>
+</tr>
+<tr>
+  <td>修订</td>
+  <td>恢复旧文字也形成新版本，不擦除历史</td>
+</tr>
+<tr>
+  <td>删除</td>
+  <td>本机记录撤回后，引用解析与图谱都不再提供它</td>
+</tr>
+<tr>
+  <td>外部影响</td>
+  <td>删除资料不静默删除真实日历；当前没有外部服务连接</td>
+</tr>
+<tr>
+  <td>数据导出</td>
+  <td>本机JSON与ICS可下载；导入音频URL只在当前会话有效</td>
+</tr>
+</tbody>
+</table>
+<p>真实部署还需实现服务器验权、存储保留政策、账户及共享授权、审计、模型输入隔离和加密。离线原型的前端过滤不等同于生产权限保障。日常分析授权不等同于训练、公开展示或第三方共享授权。</p>
+</section><section><h2>10 / 设计消融与检验</h2>
+<p>本轮通过同一批样例比较布局与交互机制，保留可切换的“分块／平铺”对照。检验分为确定性数据测试、浏览器交互和视觉复核，未进行真实用户效率或模型准确率实验。</p>
+<table>
+<thead>
+<tr>
+  <th>消融或修复</th>
+  <th>检验目标</th>
+  <th>取舍</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>平铺每件事 → 连续场景块</td>
+  <td>内容不丢、日期和顺序不改，首层更少入口</td>
+  <td>保留分块与内部时间线</td>
+</tr>
+<tr>
+  <td>固定人物 → 时间相关换位</td>
+  <td>头像与区间同步移动，同级不抖动</td>
+  <td>默认自动靠近，可固定、可减少动态</td>
+</tr>
+<tr>
+  <td>关系图只展示 → 可操作画布</td>
+  <td>点击、搜索、展开、原话返回可贯通</td>
+  <td>使用真实图组件</td>
+</tr>
+<tr>
+  <td>每页长解释 → 操作与状态文案</td>
+  <td>内容仍可理解，释放首屏空间</td>
+  <td>说明集中在帮助、资料和规格</td>
+</tr>
+<tr>
+  <td>无原声仍显示播放 → 缺失状态</td>
+  <td>不制造假音轨或假定位</td>
+  <td>允许导入真实本机文件</td>
+</tr>
+<tr>
+  <td>单次解读变成人格 → 当次候选</td>
+  <td>用户可核对、否定与修正</td>
+  <td>不做人物定性分数</td>
+</tr>
+<tr>
+  <td>完整日程产品 → 小型行动桥</td>
+  <td>有明确现实出口，范围不过度扩大</td>
+  <td>本机规则＋导出，真实连接后续</td>
+</tr>
+</tbody>
+</table>
+<p>检验结果与原始日志见 <code>reports/TEST_REPORT.md</code>、<code>browser_checks.json</code> 与 <code>data_checks.json</code>。统计数字由检查脚本生成，本文不复制一套易过时的计数。</p>
+<p><strong>环境边界。</strong> 浏览器策略阻止 file:// 和 localhost 导航；自动测试以同一HTML的内存文档运行。存储使用明确的测试替身，文件来源持久化、Safari和实体手机仍需实际验证。所有真实硬件、ASR、声纹、Jev与外部日历接入状态保持“未连接”。</p>
+</section><section><h2>11 / 本轮交付与后续</h2>
+<table>
+<thead>
+<tr>
+  <th>层次</th>
+  <th>本轮交付</th>
+  <th>后续接入</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>产品消费</td>
+  <td>分块一天、多天、人物换位、来源、图谱、交流候选、复盘</td>
+  <td>用真实比赛当天资料替换样例</td>
+</tr>
+<tr>
+  <td>媒体</td>
+  <td>本机音频与照片导入、播放、定位、删除</td>
+  <td>官方SDK取回音频和实体标记</td>
+</tr>
+<tr>
+  <td>理解</td>
+  <td>预置转写与场景结果，互动规则真实运行</td>
+  <td>ASR、说话人分离、中文候选生成与Jev对照</td>
+</tr>
+<tr>
+  <td>行动</td>
+  <td>本机日历、确认、有限规则、ICS导出</td>
+  <td>连接器读取、真实回执与增量同步</td>
+</tr>
+<tr>
+  <td>扩展</td>
+  <td>同一个壳承载工作／访谈／学习／生活；夜间UI预览</td>
+  <td>夜间声学模块单独建立数据与验证</td>
+</tr>
+</tbody>
+</table>
+<p>24小时开发优先贯通一段真实记录：设备取回 → 时间对齐转写 → 场景块 → 一次交流理解 → 引用回放 → 一项明确安排。完整白天样例用于保持产品展示连续。预处理、实时运行与模拟部分分别标记，不将一整天虚构成已经实录。</p>
+<p><strong>交付结构。</strong> 单HTML可以单独带走；ZIP包含源码、固定样例、第三方许可、文档、Mermaid与对应SVG、测试脚本、原始结果、实际截图以及讲解稿。代码不依赖远程CDN，不含密钥、模型权重或字体文件。</p>
+<p>产品名称、四项导航和一天主线继续冻结。本版不再以陪诊、老人或框架平台作为主要叙事。</p>
+</section><section><h2>12 / 来源与设计依据</h2>
+<p><strong>用户材料。</strong> 2026-09-26团队转写明确选择VoiceLog、一天为核心、白天优先、按场景收起时间线、人物交流通用能力及日历连接。本轮最新反馈进一步要求连续时段外框、动态人物换位、Obsidian式关系探索和消除穿模。当前要求优先于更早的医嘱和睡眠主线。</p>
+<table>
+<thead>
+<tr>
+  <th>来源</th>
+  <th>本轮使用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>Emil Kowalski / skills</td>
+  <td>操作反馈、动效时长、变换属性、触控与减少动态效果的审查参照</td>
+</tr>
+<tr>
+  <td>Obsidian Graph view 官方帮助</td>
+  <td>全局／局部图、选中邻域、图形导航与过滤的交互参照</td>
+</tr>
+<tr>
+  <td>Cytoscape.js 文档及许可证</td>
+  <td>实际使用的离线图组件，3.33.1，MIT许可证</td>
+</tr>
+<tr>
+  <td>TypeSafe / Jev 官方介绍</td>
+  <td>类型化判别接口的规划依据；没有执行其模型或接受营销效果作为项目结果</td>
+</tr>
+<tr>
+  <td>用户提供的UI母版与产品图</td>
+  <td>配色、排版和真实硬件形象；没有新增AI生图</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>https://github.com/emilkowalski/skills</li>
+<li>https://help.obsidian.md/plugins/graph</li>
+<li>https://js.cytoscape.org/</li>
+<li>https://github.com/cytoscape/cytoscape.js/blob/v3.33.1/LICENSE</li>
+<li>https://typesafe.ai/</li>
+<li>https://docs.typesafe.ai/introduction</li>
+</ul>
+<p>外部交互经验和技术文档用于指导实现，不替代本项目可用性和模型验证。所有样例人物、交流内容、时间与安排为演示构造。</p>
+</section><div class="doc-footer">VoiceLog / 声迹 · 产品与交互基线 · 数据、模型及服务接入状态分别说明。</div></article></body></html>

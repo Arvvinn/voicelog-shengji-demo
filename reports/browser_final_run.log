@@ -1,0 +1,131 @@
+PASS HTML starts with 4 destinations
+PASS 7 scene envelopes first day
+PASS morning contains three distinct events
+PASS only one block initially expanded
+PASS actual hardware image embedded
+PASS afternoon combines six events
+PASS opening PM collapses AM
+PASS collapse all blocks possible
+PASS work filter keeps separate contiguous intervals
+PASS multi-day remains ordered envelopes
+PASS block route contains all three records
+PASS local graph instantiated
+PASS vertical people chart exists
+PASS morning active people ordered left
+PASS afternoon evaluator moves to first contact lane
+PASS avatars/lanes positions aligned
+PASS vertical scroll updates selected time
+PASS fixed order ignores time ranking
+PASS full people list not limited to visible columns
+PASS people list search
+PASS pin keeps identity left
+PASS encounter sheet matches interval
+PASS person page shows three candidate interpretations
+PASS candidate can be explicitly selected
+PASS unsupported interpretation can be rejected
+PASS reply saves as draft not sent
+PASS person-scoped graph excludes unrelated episodes
+PASS full graph has actual nodes and edges
+PASS graph initially focuses chosen neighborhood
+PASS graph zoom control works
+PASS graph searches nodes
+PASS search opens exact node detail
+PASS canvas node hit selects exact node
+PASS dragging canvas node changes coordinates
+PASS background drag pans camera
+PASS expand adds citation neighbors
+PASS full evidence view includes every allowed node
+PASS graph type filter
+PASS source sheet suspends graph
+PASS return from source restores selected graph node
+PASS accessible node list navigation
+PASS graph enters scoped chat
+PASS graph chat keeps recording scope
+PASS block scope can be selected
+PASS chat provides scope-safe citations
+PASS question outside known fixture does not invent sources
+PASS voice pause
+PASS voice interruption leaves no open panel
+PASS scene retains four shared tabs
+PASS interactive visualization recomputes union
+PASS learning feedback only after answer
+PASS correction creates revision and stale original ref
+PASS original quote history retained
+PASS restore makes new revision not overwrite
+PASS personal note saved separately
+PASS local media loads and seeks cited time
+PASS source jump highlights exact sentence
+PASS local photo is rendered from saved input
+PASS photo can be removed
+PASS sound details route selects sound tab
+PASS calendar all filter does not highlight a false day
+PASS calendar selected day only shows that day
+PASS calendar has confirmation step
+PASS confirmed local calendar receipt
+PASS ICS downloadable and includes explicit event
+PASS bounded auto rule creates only remaining explicit eligible event
+PASS award joke not scheduled
+PASS unspecified time remains unscheduled
+PASS overlap identified before confirm
+PASS cancel does not rebuild via rule
+PASS mood corrected by self-report
+PASS mood candidate dismissed
+PASS record mark state real mock
+PASS record pause state
+PASS record mock saves note without synthetic transcript
+PASS new manual note grouped in time envelope
+PASS disconnect state explicit
+PASS cannot start recording while disconnected
+PASS night only preview and no fake metrics
+PASS second-day recap does not show first-day decision as today
+PASS search works with input
+PASS deleted evidence not resolvable
+PASS deleted event absent in graph
+PASS 320px document has no horizontal overflow
+PASS 320px home content no horizontal overflow
+PASS 320px scenes content no horizontal overflow
+PASS 320px calendar content no horizontal overflow
+PASS 320px recap content no horizontal overflow
+PASS 320px me content no horizontal overflow
+PASS 320px mood content no horizontal overflow
+PASS 320px privacy content no horizontal overflow
+PASS 320px people controls inside viewport
+PASS 320px graph dialog inside viewport
+PASS 360px document has no horizontal overflow
+PASS 360px home content no horizontal overflow
+PASS 360px scenes content no horizontal overflow
+PASS 360px calendar content no horizontal overflow
+PASS 360px recap content no horizontal overflow
+PASS 360px me content no horizontal overflow
+PASS 360px mood content no horizontal overflow
+PASS 360px privacy content no horizontal overflow
+PASS 360px people controls inside viewport
+PASS 360px graph dialog inside viewport
+PASS 390px document has no horizontal overflow
+PASS 390px home content no horizontal overflow
+PASS 390px scenes content no horizontal overflow
+PASS 390px calendar content no horizontal overflow
+PASS 390px recap content no horizontal overflow
+PASS 390px me content no horizontal overflow
+PASS 390px mood content no horizontal overflow
+PASS 390px privacy content no horizontal overflow
+PASS 390px people controls inside viewport
+PASS 390px graph dialog inside viewport
+PASS 430px document has no horizontal overflow
+PASS 430px home content no horizontal overflow
+PASS 430px scenes content no horizontal overflow
+PASS 430px calendar content no horizontal overflow
+PASS 430px recap content no horizontal overflow
+PASS 430px me content no horizontal overflow
+PASS 430px mood content no horizontal overflow
+PASS 430px privacy content no horizontal overflow
+PASS 430px people controls inside viewport
+PASS 430px graph dialog inside viewport
+PASS long person name does not change lane width
+PASS larger content typography still fits width
+PASS reduced motion keeps lane ordering
+PASS Escape dismisses modal
+PASS keyboard nav still reachable after dialog
+PASS browser runtime has no exceptions
+PASS offline release makes zero remote requests
+BROWSER 130 passed; 0 failed; errors []

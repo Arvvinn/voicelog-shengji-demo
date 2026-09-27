@@ -1,0 +1,461 @@
+{
+  "browser_version": "149.0.7827.55",
+  "passed": 75,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "320px home bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px home document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px afternoon bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px afternoon document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px block bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px block document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px judge bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px judge document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px record bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px record document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px recap bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px recap document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px calendar bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px calendar document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px scenes bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px scenes document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px me bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px me document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px mood bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "320px mood document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "320px people card text bounds",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px home bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px home document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px afternoon bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px afternoon document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px block bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px block document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px judge bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px judge document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px record bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px record document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px recap bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px recap document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px calendar bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px calendar document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px scenes bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px scenes document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px me bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px me document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px mood bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "390px mood document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "390px people card text bounds",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px home bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px home document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px afternoon bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px afternoon document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px block bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px block document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px judge bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px judge document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px record bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px record document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px recap bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px recap document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px calendar bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px calendar document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px scenes bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px scenes document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px me bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px me document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px mood bounded text",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "430px mood document width",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "430px people card text bounds",
+      "passed": true,
+      "detail": {
+        "clipped_text": 0
+      }
+    },
+    {
+      "name": "people lane uses nonzero transform transition",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "people reorder passes through intermediate positions",
+      "passed": true,
+      "detail": {
+        "start": 487,
+        "middle": 280.4737243652344,
+        "end": 132
+      }
+    },
+    {
+      "name": "rapid time reversal settles without duplicate identities",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "pointer hover highlights one neighborhood",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "mouse wheel changes graph zoom",
+      "passed": true,
+      "detail": {
+        "before": 0.68,
+        "after": 0.685660155277855
+      }
+    },
+    {
+      "name": "filter removing selected node clears invalid focus",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "interrupted graph camera/expansion stays finite",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "desktop graph drag moves the surrounding cluster",
+      "passed": true,
+      "detail": {
+        "moving_followers": 37,
+        "visible_nodes": 38
+      }
+    },
+    {
+      "name": "reduced motion CSS removes lane animation",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "graph keyboard navigation stays usable",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "reviewer query uses reviewer citations, not Xiaolin",
+      "passed": true,
+      "detail": true
+    },
+    {
+      "name": "all targeted interactions have no runtime error",
+      "passed": true,
+      "detail": true
+    }
+  ],
+  "errors": [],
+  "limitations": "Chromium viewport simulation; no physical touchscreen / Safari / live models. Intentional ellipsis and virtual graph/lane clipping excluded from text audit.",
+  "html_sha256": "78c92995929d78c983f11d4275744ecd9a4b70cd95f0f5d3095494f58f0ae0b1"
+}
