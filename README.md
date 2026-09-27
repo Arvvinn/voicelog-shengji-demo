@@ -8,6 +8,8 @@
 
 ## 立即打开
 
+公开演示地址：[voicelog-shengji-arvvinn.netlify.app](https://voicelog-shengji-arvvinn.netlify.app/)；源码与验收材料：[GitHub 仓库](https://github.com/Arvvinn/voicelog-shengji-demo)。这是 Netlify 正式站点地址，不是一次性预览链接。发布核验见 `reports/ui-merge/DEPLOYMENT.md`。
+
 双击 `demo/VoiceLog_声迹_交互Demo.html`。这是一个自包含HTML，CSS、JavaScript、样例数据、图组件与实际产品图都在文件内，不依赖网络CDN、API Key或模型服务。
 
 如果系统的文件预览器不执行JavaScript，请用浏览器打开；或运行 `python3 serve.py`，再访问终端显示的本机地址。macOS可双击 `启动预览.command`，Windows可运行 `启动预览.bat`。启动器只绑定本机回环地址，不向公网开放。
