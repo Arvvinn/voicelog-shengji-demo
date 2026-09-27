@@ -1,0 +1,46 @@
+{
+  "normal": {
+    "has_entry": 1,
+    "board": 0
+  },
+  "after_click": {
+    "active": true,
+    "playing": true,
+    "step": 0,
+    "route": "home"
+  },
+  "people": {
+    "step": 3,
+    "mode": "people",
+    "focus": 590
+  },
+  "graph": {
+    "step": 12,
+    "graph": true,
+    "phoneWidth": 390,
+    "graphWidth": 390
+  },
+  "calendar": {
+    "step": 17,
+    "route": "calendar",
+    "date": "2026-10-17"
+  },
+  "manual": {
+    "manual": true,
+    "playing": false,
+    "step": 17
+  },
+  "exit": {
+    "active": false,
+    "board": false,
+    "route": "calendar"
+  },
+  "mobile": {
+    "active": true,
+    "board": true,
+    "phoneWidth": 390,
+    "bodyScrollWidth": 390,
+    "viewportWidth": 390
+  },
+  "errors": []
+}

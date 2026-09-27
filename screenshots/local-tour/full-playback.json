@@ -1,0 +1,22 @@
+{
+  "full_playback_seconds": 31.2,
+  "steps": 25,
+  "last_state": {
+    "ended": true,
+    "step": 24,
+    "route": "home",
+    "graph": false
+  },
+  "application_data_unchanged": true,
+  "manual_takeover": {
+    "manual": true,
+    "playing": false,
+    "step": 3
+  },
+  "idle_resume": {
+    "manual": false,
+    "playing": true,
+    "step": 3
+  },
+  "errors": []
+}
